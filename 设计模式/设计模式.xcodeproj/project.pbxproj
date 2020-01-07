@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E74D261423C4DB1C006E438B /* DPDynamicProtocol in Resources */ = {isa = PBXBuildFile; fileRef = E74D261323C4DB1C006E438B /* DPDynamicProtocol */; };
+		E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261623C4DC52006E438B /* MZResponderChain.m */; };
 		E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288DD23C37D0B00ED74CA /* AppDelegate.m */; };
 		E7C288E123C37D0B00ED74CA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288E023C37D0B00ED74CA /* SceneDelegate.m */; };
 		E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288E323C37D0B00ED74CA /* ViewController.m */; };
@@ -14,13 +16,15 @@
 		E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C288E823C37D0C00ED74CA /* Assets.xcassets */; };
 		E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C288EA23C37D0C00ED74CA /* LaunchScreen.storyboard */; };
 		E7C288EF23C37D0C00ED74CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288EE23C37D0C00ED74CA /* main.m */; };
-		E7C288F923C37EAE00ED74CA /* MZManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288F823C37EAE00ED74CA /* MZManager.m */; };
 		E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288FD23C38FA300ED74CA /* MZHMManager.m */; };
 		E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2890023C38FC400ED74CA /* MZHMOne.m */; };
 		E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2890323C38FD100ED74CA /* MZHMTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E74D261323C4DB1C006E438B /* DPDynamicProtocol */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DPDynamicProtocol; sourceTree = "<group>"; };
+		E74D261523C4DC52006E438B /* MZResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChain.h; sourceTree = "<group>"; };
+		E74D261623C4DC52006E438B /* MZResponderChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChain.m; sourceTree = "<group>"; };
 		E7C288D923C37D0B00ED74CA /* 设计模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "设计模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C288DC23C37D0B00ED74CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7C288DD23C37D0B00ED74CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,9 +37,6 @@
 		E7C288EB23C37D0C00ED74CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7C288ED23C37D0C00ED74CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7C288EE23C37D0C00ED74CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E7C288F623C37E6500ED74CA /* MZManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZManagerProtocol.h; sourceTree = "<group>"; };
-		E7C288F723C37EAE00ED74CA /* MZManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZManager.h; sourceTree = "<group>"; };
-		E7C288F823C37EAE00ED74CA /* MZManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZManager.m; sourceTree = "<group>"; };
 		E7C288FB23C38F8F00ED74CA /* MZHMProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMProtocol.h; sourceTree = "<group>"; };
 		E7C288FC23C38FA300ED74CA /* MZHMManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMManager.h; sourceTree = "<group>"; };
 		E7C288FD23C38FA300ED74CA /* MZHMManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHMManager.m; sourceTree = "<group>"; };
@@ -96,9 +97,8 @@
 		E7C288F523C37D1E00ED74CA /* 1_责任链 */ = {
 			isa = PBXGroup;
 			children = (
-				E7C288F623C37E6500ED74CA /* MZManagerProtocol.h */,
-				E7C288F723C37EAE00ED74CA /* MZManager.h */,
-				E7C288F823C37EAE00ED74CA /* MZManager.m */,
+				E74D261523C4DC52006E438B /* MZResponderChain.h */,
+				E74D261623C4DC52006E438B /* MZResponderChain.m */,
 			);
 			path = "1_责任链";
 			sourceTree = "<group>";
@@ -120,6 +120,7 @@
 		E7C2890523C392F100ED74CA /* 3_代理 */ = {
 			isa = PBXGroup;
 			children = (
+				E74D261323C4DB1C006E438B /* DPDynamicProtocol */,
 			);
 			path = "3_代理";
 			sourceTree = "<group>";
@@ -182,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74D261423C4DB1C006E438B /* DPDynamicProtocol in Resources */,
 				E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */,
 				E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */,
 				E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */,
@@ -196,9 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */,
+				E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */,
 				E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */,
 				E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */,
-				E7C288F923C37EAE00ED74CA /* MZManager.m in Sources */,
 				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
 				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
