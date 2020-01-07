@@ -12,6 +12,7 @@
 #import "MZDynamicProxy.h"
 #import "MZNormalObject.h"
 #import "MZNormalTest.h"
+#import "MZStrategyViewController.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    [self dynamicProtocol];
+    [self strategyMode];
     
 }
 
@@ -59,6 +60,15 @@
     [obj doOtherThing];
     [obj optionalThing];
     [(MZNormalTest *)vc mzOptionalThing];
+}
+
+
+
+/// 4_策略模式
+- (void)strategyMode
+{
+    MZStrategyViewController *VC = [[MZStrategyViewController alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 @end
