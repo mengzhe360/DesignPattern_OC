@@ -8,7 +8,7 @@
 
 #import "MZBViewController.h"
 
-@interface MZBViewController ()
+@interface MZBViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -21,14 +21,27 @@
     self.navigationItem.title = @"MZB";
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    webView.delegate = self;
+    webView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:webView];
+    //    webView.delegate = self;
+    
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
+ 
 }
-*/
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"-1-webViewDidStartLoad:");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"-2-webViewDidFinishLoad:");
+}
+
 
 @end

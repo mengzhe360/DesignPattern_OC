@@ -14,13 +14,14 @@
 - (BOOL)validate {
     
     BOOL result = [self.inputValidateManager validateInputTextField:self];
+    NSLog(@"%@",self.inputValidateManager.attributeInputStr);
     if (result) {
-        NSLog(@"-输入正确--%@",self.inputValidateManager.attributeInputStr);
+        NSLog(@"-输入正确处理逻辑-");
     }else{
-        NSLog(@"-输入错误--%@",self.inputValidateManager.attributeInputStr);
+        NSLog(@"-输入错误处理逻辑-");
     }
+   
     return result;
-    
 }
 
 - (void)setInputValidateManager:(MZInputValidator *)inputValidateManager

@@ -12,7 +12,7 @@
 
 - (BOOL)validateInputTextField:(UITextField *)textField
 {
-    self.attributeInputStr = @"抽象父类";
+    self.attributeInputStr = @"抽象基类";
     return YES;
 }
 

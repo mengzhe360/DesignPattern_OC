@@ -34,12 +34,13 @@
     
     [self.twoInput addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
     
+    [self.threeInput addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
+    
     self.oneInput.inputValidateManager = [MZAlphaInputValidator new];
     self.twoInput.inputValidateManager = [MZNumericInputValidator new];
     self.threeInput.inputValidateManager = [MZInputValidator new];
     
 }
-
 
 - (IBAction)clickBtnCheck:(id)sender {
     
@@ -52,11 +53,6 @@
           NSLog(@"textField:%@",textField.text);
          [(MZCustomTextField *)textField  validate];
      }
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
- 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

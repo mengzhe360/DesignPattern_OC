@@ -19,6 +19,7 @@ typedef void(^ResultBlock)(MZResponderChain *handler, BOOL handled);
 
 // 下一个响应者(响应链构成的关键)
 @property (nonatomic, strong) MZResponderChain *nextBusiness;
+
 // 响应者的处理方法
 - (void)handle:(ResultBlock)result;
 

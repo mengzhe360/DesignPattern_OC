@@ -21,8 +21,7 @@
             // 沿着责任链，指派给下一个业务处理
             if (self.nextBusiness) {
                 [self.nextBusiness handle:result];
-            }
-            else{
+            }else{
                 // 没有业务处理, 上抛
                 result(nil, NO);
             }
