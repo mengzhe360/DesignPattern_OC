@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		166C5724A49140C5959A8069 /* libPods-设计模式.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */; };
+		43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FC323C5717D003DEC4C /* SceneDelegate.m */; };
+		43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FCB23C57A4A003DEC4C /* MZTabBarController.m */; };
+		43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FCE23C57A88003DEC4C /* MZAViewController.m */; };
+		43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FD123C57A93003DEC4C /* MZBViewController.m */; };
+		43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FD423C57A9A003DEC4C /* MZCViewController.m */; };
+		E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261623C4DC52006E438B /* MZResponderChain.m */; };
+		E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261B23C4E0B2006E438B /* MZDynamicProxy.m */; };
+		E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261E23C4E0E0006E438B /* MZNormalObject.m */; };
+		E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262123C4E0F7006E438B /* MZNormalTest.m */; };
+		E74D262523C4E588006E438B /* MZAbstarctManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262423C4E588006E438B /* MZAbstarctManager.m */; };
+		E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262823C4EFF9006E438B /* MZNumericInputValidator.m */; };
+		E74D263323C4EFFA006E438B /* MZStrategyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E74D262A23C4EFFA006E438B /* MZStrategyViewController.xib */; };
+		E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262B23C4EFFA006E438B /* MZInputValidator.m */; };
+		E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262D23C4EFFA006E438B /* MZAlphaInputValidator.m */; };
+		E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */; };
+		E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D263023C4EFFA006E438B /* MZCustomTextField.m */; };
+		E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288DD23C37D0B00ED74CA /* AppDelegate.m */; };
+		E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288E323C37D0B00ED74CA /* ViewController.m */; };
+		E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C288E523C37D0B00ED74CA /* Main.storyboard */; };
+		E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C288E823C37D0C00ED74CA /* Assets.xcassets */; };
+		E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C288EA23C37D0C00ED74CA /* LaunchScreen.storyboard */; };
+		E7C288EF23C37D0C00ED74CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288EE23C37D0C00ED74CA /* main.m */; };
+		E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288FD23C38FA300ED74CA /* MZHMManager.m */; };
+		E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2890023C38FC400ED74CA /* MZHMOne.m */; };
+		E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C2890323C38FD100ED74CA /* MZHMTwo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43307FC323C5717D003DEC4C /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		43307FC523C5718F003DEC4C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		43307FCA23C57A4A003DEC4C /* MZTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTabBarController.h; sourceTree = "<group>"; };
+		43307FCB23C57A4A003DEC4C /* MZTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTabBarController.m; sourceTree = "<group>"; };
+		43307FCD23C57A88003DEC4C /* MZAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAViewController.h; sourceTree = "<group>"; };
+		43307FCE23C57A88003DEC4C /* MZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAViewController.m; sourceTree = "<group>"; };
+		43307FD023C57A93003DEC4C /* MZBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBViewController.h; sourceTree = "<group>"; };
+		43307FD123C57A93003DEC4C /* MZBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBViewController.m; sourceTree = "<group>"; };
+		43307FD323C57A9A003DEC4C /* MZCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCViewController.h; sourceTree = "<group>"; };
+		43307FD423C57A9A003DEC4C /* MZCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCViewController.m; sourceTree = "<group>"; };
+		43307FD723C57DA8003DEC4C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
+		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
+		E74D261523C4DC52006E438B /* MZResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChain.h; sourceTree = "<group>"; };
+		E74D261623C4DC52006E438B /* MZResponderChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChain.m; sourceTree = "<group>"; };
+		E74D261923C4E07D006E438B /* MZDynamicProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDynamicProtocol.h; sourceTree = "<group>"; };
+		E74D261A23C4E0B2006E438B /* MZDynamicProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDynamicProxy.h; sourceTree = "<group>"; };
+		E74D261B23C4E0B2006E438B /* MZDynamicProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDynamicProxy.m; sourceTree = "<group>"; };
+		E74D261D23C4E0E0006E438B /* MZNormalObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZNormalObject.h; sourceTree = "<group>"; };
+		E74D261E23C4E0E0006E438B /* MZNormalObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZNormalObject.m; sourceTree = "<group>"; };
+		E74D262023C4E0F7006E438B /* MZNormalTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZNormalTest.h; sourceTree = "<group>"; };
+		E74D262123C4E0F7006E438B /* MZNormalTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZNormalTest.m; sourceTree = "<group>"; };
+		E74D262323C4E588006E438B /* MZAbstarctManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAbstarctManager.h; sourceTree = "<group>"; };
+		E74D262423C4E588006E438B /* MZAbstarctManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAbstarctManager.m; sourceTree = "<group>"; };
+		E74D262723C4EFF9006E438B /* MZCustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCustomTextField.h; sourceTree = "<group>"; };
+		E74D262823C4EFF9006E438B /* MZNumericInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZNumericInputValidator.m; sourceTree = "<group>"; };
+		E74D262923C4EFF9006E438B /* MZStrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZStrategyViewController.h; sourceTree = "<group>"; };
+		E74D262A23C4EFFA006E438B /* MZStrategyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MZStrategyViewController.xib; sourceTree = "<group>"; };
+		E74D262B23C4EFFA006E438B /* MZInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZInputValidator.m; sourceTree = "<group>"; };
+		E74D262C23C4EFFA006E438B /* MZAlphaInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZAlphaInputValidator.h; sourceTree = "<group>"; };
+		E74D262D23C4EFFA006E438B /* MZAlphaInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZAlphaInputValidator.m; sourceTree = "<group>"; };
+		E74D262E23C4EFFA006E438B /* MZNumericInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZNumericInputValidator.h; sourceTree = "<group>"; };
+		E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStrategyViewController.m; sourceTree = "<group>"; };
+		E74D263023C4EFFA006E438B /* MZCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCustomTextField.m; sourceTree = "<group>"; };
+		E74D263123C4EFFA006E438B /* MZInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZInputValidator.h; sourceTree = "<group>"; };
+		E7C288D923C37D0B00ED74CA /* 设计模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "设计模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7C288DC23C37D0B00ED74CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7C288DD23C37D0B00ED74CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7C288E223C37D0B00ED74CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E7C288E323C37D0B00ED74CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E7C288E623C37D0B00ED74CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7C288E823C37D0C00ED74CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7C288EB23C37D0C00ED74CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7C288ED23C37D0C00ED74CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C288EE23C37D0C00ED74CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7C288FB23C38F8F00ED74CA /* MZHMProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMProtocol.h; sourceTree = "<group>"; };
+		E7C288FC23C38FA300ED74CA /* MZHMManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMManager.h; sourceTree = "<group>"; };
+		E7C288FD23C38FA300ED74CA /* MZHMManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHMManager.m; sourceTree = "<group>"; };
+		E7C288FF23C38FC400ED74CA /* MZHMOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMOne.h; sourceTree = "<group>"; };
+		E7C2890023C38FC400ED74CA /* MZHMOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHMOne.m; sourceTree = "<group>"; };
+		E7C2890223C38FD100ED74CA /* MZHMTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHMTwo.h; sourceTree = "<group>"; };
+		E7C2890323C38FD100ED74CA /* MZHMTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHMTwo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7C288D623C37D0B00ED74CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166C5724A49140C5959A8069 /* libPods-设计模式.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43307FC923C579F5003DEC4C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				43307FCA23C57A4A003DEC4C /* MZTabBarController.h */,
+				43307FCB23C57A4A003DEC4C /* MZTabBarController.m */,
+				43307FCD23C57A88003DEC4C /* MZAViewController.h */,
+				43307FCE23C57A88003DEC4C /* MZAViewController.m */,
+				43307FD023C57A93003DEC4C /* MZBViewController.h */,
+				43307FD123C57A93003DEC4C /* MZBViewController.m */,
+				43307FD323C57A9A003DEC4C /* MZCViewController.h */,
+				43307FD423C57A9A003DEC4C /* MZCViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B90B251B254467CC871626A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA05940230014DF74F5BE7F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */,
+				BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E74D261823C4E046006E438B /* DynamicProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				E74D261923C4E07D006E438B /* MZDynamicProtocol.h */,
+				E74D262323C4E588006E438B /* MZAbstarctManager.h */,
+				E74D262423C4E588006E438B /* MZAbstarctManager.m */,
+				E74D261A23C4E0B2006E438B /* MZDynamicProxy.h */,
+				E74D261B23C4E0B2006E438B /* MZDynamicProxy.m */,
+				E74D261D23C4E0E0006E438B /* MZNormalObject.h */,
+				E74D261E23C4E0E0006E438B /* MZNormalObject.m */,
+				E74D262023C4E0F7006E438B /* MZNormalTest.h */,
+				E74D262123C4E0F7006E438B /* MZNormalTest.m */,
+			);
+			path = DynamicProtocol;
+			sourceTree = "<group>";
+		};
+		E74D262623C4EF96006E438B /* 4_策略模式 */ = {
+			isa = PBXGroup;
+			children = (
+				E74D263123C4EFFA006E438B /* MZInputValidator.h */,
+				E74D262B23C4EFFA006E438B /* MZInputValidator.m */,
+				E74D262C23C4EFFA006E438B /* MZAlphaInputValidator.h */,
+				E74D262D23C4EFFA006E438B /* MZAlphaInputValidator.m */,
+				E74D262E23C4EFFA006E438B /* MZNumericInputValidator.h */,
+				E74D262823C4EFF9006E438B /* MZNumericInputValidator.m */,
+				E74D262723C4EFF9006E438B /* MZCustomTextField.h */,
+				E74D263023C4EFFA006E438B /* MZCustomTextField.m */,
+				E74D262923C4EFF9006E438B /* MZStrategyViewController.h */,
+				E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */,
+				E74D262A23C4EFFA006E438B /* MZStrategyViewController.xib */,
+			);
+			path = "4_策略模式";
+			sourceTree = "<group>";
+		};
+		E7C288D023C37D0B00ED74CA = {
+			isa = PBXGroup;
+			children = (
+				E7C288DB23C37D0B00ED74CA /* 设计模式 */,
+				E7C288DA23C37D0B00ED74CA /* Products */,
+				CA05940230014DF74F5BE7F0 /* Pods */,
+				B90B251B254467CC871626A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E7C288DA23C37D0B00ED74CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7C288D923C37D0B00ED74CA /* 设计模式.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7C288DB23C37D0B00ED74CA /* 设计模式 */ = {
+			isa = PBXGroup;
+			children = (
+				43307FC923C579F5003DEC4C /* Main */,
+				E7C288F523C37D1E00ED74CA /* 1_责任链 */,
+				E7C288FA23C38F3D00ED74CA /* 2_模板方法 */,
+				E7C2890523C392F100ED74CA /* 3_代理 */,
+				E74D262623C4EF96006E438B /* 4_策略模式 */,
+				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
+				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
+				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
+				43307FC323C5717D003DEC4C /* SceneDelegate.m */,
+				E7C288E223C37D0B00ED74CA /* ViewController.h */,
+				E7C288E323C37D0B00ED74CA /* ViewController.m */,
+				E7C288E523C37D0B00ED74CA /* Main.storyboard */,
+				E7C288E823C37D0C00ED74CA /* Assets.xcassets */,
+				E7C288EA23C37D0C00ED74CA /* LaunchScreen.storyboard */,
+				E7C288ED23C37D0C00ED74CA /* Info.plist */,
+				E7C288EE23C37D0C00ED74CA /* main.m */,
+				43307FD723C57DA8003DEC4C /* PrefixHeader.pch */,
+			);
+			path = "设计模式";
+			sourceTree = "<group>";
+		};
+		E7C288F523C37D1E00ED74CA /* 1_责任链 */ = {
+			isa = PBXGroup;
+			children = (
+				E74D261523C4DC52006E438B /* MZResponderChain.h */,
+				E74D261623C4DC52006E438B /* MZResponderChain.m */,
+			);
+			path = "1_责任链";
+			sourceTree = "<group>";
+		};
+		E7C288FA23C38F3D00ED74CA /* 2_模板方法 */ = {
+			isa = PBXGroup;
+			children = (
+				E7C288FB23C38F8F00ED74CA /* MZHMProtocol.h */,
+				E7C288FC23C38FA300ED74CA /* MZHMManager.h */,
+				E7C288FD23C38FA300ED74CA /* MZHMManager.m */,
+				E7C288FF23C38FC400ED74CA /* MZHMOne.h */,
+				E7C2890023C38FC400ED74CA /* MZHMOne.m */,
+				E7C2890223C38FD100ED74CA /* MZHMTwo.h */,
+				E7C2890323C38FD100ED74CA /* MZHMTwo.m */,
+			);
+			path = "2_模板方法";
+			sourceTree = "<group>";
+		};
+		E7C2890523C392F100ED74CA /* 3_代理 */ = {
+			isa = PBXGroup;
+			children = (
+				E74D261823C4E046006E438B /* DynamicProtocol */,
+			);
+			path = "3_代理";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7C288D823C37D0B00ED74CA /* 设计模式 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C288F223C37D0C00ED74CA /* Build configuration list for PBXNativeTarget "设计模式" */;
+			buildPhases = (
+				88B129C1BED6F5B33D10BB36 /* [CP] Check Pods Manifest.lock */,
+				E7C288D523C37D0B00ED74CA /* Sources */,
+				E7C288D623C37D0B00ED74CA /* Frameworks */,
+				E7C288D723C37D0B00ED74CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "设计模式";
+			productName = "设计模式";
+			productReference = E7C288D923C37D0B00ED74CA /* 设计模式.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7C288D123C37D0B00ED74CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MZ;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "孟哲";
+				TargetAttributes = {
+					E7C288D823C37D0B00ED74CA = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = E7C288D423C37D0B00ED74CA /* Build configuration list for PBXProject "设计模式" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7C288D023C37D0B00ED74CA;
+			productRefGroup = E7C288DA23C37D0B00ED74CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7C288D823C37D0B00ED74CA /* 设计模式 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7C288D723C37D0B00ED74CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */,
+				E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */,
+				E74D263323C4EFFA006E438B /* MZStrategyViewController.xib in Resources */,
+				E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88B129C1BED6F5B33D10BB36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-设计模式-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7C288D523C37D0B00ED74CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
+				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
+				E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */,
+				E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */,
+				E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */,
+				E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */,
+				43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */,
+				E74D262523C4E588006E438B /* MZAbstarctManager.m in Sources */,
+				E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */,
+				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
+				43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */,
+				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
+				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
+				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
+				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
+				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
+				E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */,
+				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,
+				E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */,
+				43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */,
+				E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E7C288E523C37D0B00ED74CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7C288E623C37D0B00ED74CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7C288EA23C37D0C00ED74CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7C288EB23C37D0C00ED74CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7C288F023C37D0C00ED74CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E7C288F123C37D0C00ED74CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7C288F323C37D0C00ED74CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66W524W7K3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/设计模式/PrefixHeader.pch";
+				INFOPLIST_FILE = "设计模式/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mz.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7C288F423C37D0C00ED74CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66W524W7K3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/设计模式/PrefixHeader.pch";
+				INFOPLIST_FILE = "设计模式/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mz.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7C288D423C37D0B00ED74CA /* Build configuration list for PBXProject "设计模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C288F023C37D0C00ED74CA /* Debug */,
+				E7C288F123C37D0C00ED74CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7C288F223C37D0C00ED74CA /* Build configuration list for PBXNativeTarget "设计模式" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C288F323C37D0C00ED74CA /* Debug */,
+				E7C288F423C37D0C00ED74CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7C288D123C37D0B00ED74CA /* Project object */;
+}
