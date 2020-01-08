@@ -10,6 +10,11 @@
 
 @implementation MZResponderChainB
 
+- (HandleLevel)getHandleLevel
+{
+    return HandleLevelB;
+}
+
 - (void)handleResponder:(MZResponderChain *)responder completion:(CompletionBlock)completion
 {
     if (completion) {

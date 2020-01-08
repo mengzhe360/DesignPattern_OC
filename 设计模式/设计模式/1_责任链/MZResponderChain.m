@@ -60,4 +60,9 @@
 
 }
 
+- (HandleLevel)getHandleLevel
+{
+    return NULL;
+}
+
 @end

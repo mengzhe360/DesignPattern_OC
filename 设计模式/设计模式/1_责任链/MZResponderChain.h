@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^CompletionBlock)(BOOL isHandled);
 typedef void(^ResultBlock)(MZResponderChain *handler, BOOL handled);
 
+typedef NS_ENUM(NSInteger,HandleLevel) {
+    HandleLevelA,
+    HandleLevelB,
+    HandleLevelC
+};
+
 @interface MZResponderChain : NSObject
 
 // 下一个响应者(响应链构成的关键)
@@ -23,6 +29,8 @@ typedef void(^ResultBlock)(MZResponderChain *handler, BOOL handled);
 
 // 响应者的处理方法
 - (void)handle:(ResultBlock)result;
+
+- (HandleLevel)getHandleLevel;
 
 // 各个业务在该方法当中做实际业务处理
 - (void)handleResponder:(MZResponderChain *)responder completion:(CompletionBlock)completion;
