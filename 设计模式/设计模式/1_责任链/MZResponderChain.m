@@ -14,30 +14,50 @@
 - (void)handle:(ResultBlock)result
 {
     CompletionBlock completion = ^(BOOL handled){
-        // 当前业务处理掉了，上抛结果
+        
         if (handled) {
+            NSLog(@"-1-%@:可以处理掉了当前业务，上抛结果",self.name);
             result(self, handled);
         } else{
-            // 沿着责任链，指派给下一个业务处理
-            if (self.nextBusiness) {
-                [self.nextBusiness handle:result];
+            
+            if (self.nextResponder) {
+                
+                NSLog(@"-2-沿着责任链，指派给下一个:%@处理业务",self.nextResponder.name);
+                [self.nextResponder handle:result];
+                
             }else{
-                // 没有业务处理, 上抛
+            
                 result(nil, NO);
+                NSLog(@"-4-没有业务处理");
+                
             }
         }
     };
     
     // 当前业务进行处理
-    [self handleBusiness:completion];
+    [self handleResponder:self completion:completion];
 }
 
-- (void)handleBusiness:(CompletionBlock)completion
+- (void)handleResponder:(MZResponderChain *)responder completion:(CompletionBlock)completion
 {
     /*
      业务逻辑处理
      如网络请求、本地照片查询等
      */
+     
+    if ([responder.name isEqualToString:@"responder8"]) {
+        if (completion) {
+//            NSLog(@"-3-%@:能处理业务逻辑",responder.name);
+            completion(YES);
+        }
+    }else{
+        if (completion) {
+            NSLog(@"-3-%@:不能处理业务逻辑",responder.name);
+            completion(NO);
+        }
+    }
+
+
 }
 
 @end

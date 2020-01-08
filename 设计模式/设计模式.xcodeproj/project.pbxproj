@@ -14,6 +14,9 @@
 		43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FD123C57A93003DEC4C /* MZBViewController.m */; };
 		43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FD423C57A9A003DEC4C /* MZCViewController.m */; };
 		4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330800023C5B9C7003DEC4C /* UIWebView+MZHook.m */; };
+		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
+		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
+		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
 		E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261623C4DC52006E438B /* MZResponderChain.m */; };
 		E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261B23C4E0B2006E438B /* MZDynamicProxy.m */; };
 		E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D261E23C4E0E0006E438B /* MZNormalObject.m */; };
@@ -54,6 +57,12 @@
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
+		E73B28AD23C633D3006190DC /* MZResponderChainA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainA.h; sourceTree = "<group>"; };
+		E73B28AE23C633D3006190DC /* MZResponderChainA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChainA.m; sourceTree = "<group>"; };
+		E73B28B023C633DE006190DC /* MZResponderChainB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainB.h; sourceTree = "<group>"; };
+		E73B28B123C633DE006190DC /* MZResponderChainB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChainB.m; sourceTree = "<group>"; };
+		E73B28B323C633EB006190DC /* MZResponderChainC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainC.h; sourceTree = "<group>"; };
+		E73B28B423C633EB006190DC /* MZResponderChainC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChainC.m; sourceTree = "<group>"; };
 		E74D261523C4DC52006E438B /* MZResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChain.h; sourceTree = "<group>"; };
 		E74D261623C4DC52006E438B /* MZResponderChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChain.m; sourceTree = "<group>"; };
 		E74D261923C4E07D006E438B /* MZDynamicProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDynamicProtocol.h; sourceTree = "<group>"; };
@@ -239,6 +248,12 @@
 			children = (
 				E74D261523C4DC52006E438B /* MZResponderChain.h */,
 				E74D261623C4DC52006E438B /* MZResponderChain.m */,
+				E73B28AD23C633D3006190DC /* MZResponderChainA.h */,
+				E73B28AE23C633D3006190DC /* MZResponderChainA.m */,
+				E73B28B023C633DE006190DC /* MZResponderChainB.h */,
+				E73B28B123C633DE006190DC /* MZResponderChainB.m */,
+				E73B28B323C633EB006190DC /* MZResponderChainC.h */,
+				E73B28B423C633EB006190DC /* MZResponderChainC.m */,
 			);
 			path = "1_责任链";
 			sourceTree = "<group>";
@@ -374,6 +389,9 @@
 				E74D262523C4E588006E438B /* MZAbstarctManager.m in Sources */,
 				E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */,
 				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
+				E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */,
+				E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */,
+				E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */,
 				43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */,
 				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
