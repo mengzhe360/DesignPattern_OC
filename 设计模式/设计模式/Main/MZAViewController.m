@@ -31,7 +31,8 @@
 - (void)strategyMode
 {
     MZStrategyViewController *VC = [[MZStrategyViewController alloc] init];
-    [self.navigationController pushViewController:VC animated:YES];
+    struct mj_objc_class *cls = (__bridge struct mj_objc_class *)[MZStrategyViewController class];
+//    [self.navigationController pushViewController:VC animated:YES];
 }
 
 
