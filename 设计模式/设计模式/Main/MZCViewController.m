@@ -20,14 +20,13 @@
     self.navigationItem.title = @"MZC";
 }
 
-/*
-#pragma mark - Navigation
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    void(^MZBlock1)(NSString *) = ^(NSString *mz) {
+        NSLog(@"mz:%@",mz);
+    };
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self performClassName:@"MZAViewController" selector:@"mztest:callBlock:" withObjects:@[@"perform测试",MZBlock1] type:kClassMethod];
 }
-*/
 
 @end

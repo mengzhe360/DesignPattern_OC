@@ -11,7 +11,9 @@
 #import "MZResponderChain.h"
 #import "MZResponderChainA.h"
 #import "MZResponderChainB.h"
-#import "MZResponderChainC.h""
+#import "MZResponderChainC.h"
+
+typedef void(^MZBlock)(NSString *mz);
 
 @interface MZAViewController ()
 
@@ -85,5 +87,13 @@
     [self.navigationController pushViewController:VC animated:YES];
 }
 
+/// NSObject+MZPerformSelector 调用
++ (void)mztest:(NSString *)mz callBlock:(MZBlock)block
+{
+    if (mz && block) {
+        NSLog(@"%@",mz);
+        block(@"perform测试-回调");
+    }
+}
 
 @end

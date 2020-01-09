@@ -62,7 +62,7 @@
 
 - (HandleLevel)getHandleLevel
 {
-    return NULL;
+    return 0;
 }
 
 @end

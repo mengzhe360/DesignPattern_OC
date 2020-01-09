@@ -18,7 +18,6 @@
 - (void)handleResponder:(MZResponderChain *)responder completion:(CompletionBlock)completion
 {
     if (completion) {
-        NSLog(@"-3-%@:能处理业务逻辑",responder.name);
         completion(YES);
     }
 }
