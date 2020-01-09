@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.yellowColor;
-    self.navigationController.title = @"MZRouterEvent";
+    self.navigationItem.title = @"MZRouterEvent";
     
 }
 
