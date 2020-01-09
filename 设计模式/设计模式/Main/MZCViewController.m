@@ -22,11 +22,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    void(^MZBlock1)(NSString *) = ^(NSString *mz) {
-        NSLog(@"mz:%@",mz);
-    };
-
-    [self performClassName:@"MZAViewController" selector:@"mztest:callBlock:" withObjects:@[@"perform测试",MZBlock1] type:kClassMethod];
+    
 }
 
 @end

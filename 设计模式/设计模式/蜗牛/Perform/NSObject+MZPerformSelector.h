@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger,RequestMethodType) {
 
 - (id)performClassName:(NSString *)className selector:(NSString *)selectorStr withObjects:(NSArray <id> *)objects type:(RequestMethodType)type;
 
++ (id)objectForClassName:(NSString *)className;
+
 @end
 
 NS_ASSUME_NONNULL_END

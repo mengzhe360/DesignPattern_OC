@@ -14,5 +14,6 @@
 
 //#import "MJClassInfo.h"
 #import "NSObject+MZPerformSelector.h"
+#import "UIResponder+MZRouter.h"
 
 #endif /* PrefixHeader_pch */

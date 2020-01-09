@@ -59,22 +59,25 @@ typedef void(^MZBlock)(NSString *mz);
 //
 //    }];
     
-    MZResponderChain *responderA = [MZResponderChainA new];
-    responderA.name = @"responderA";
-    MZResponderChain *responderB = [MZResponderChainB new];
-    responderB.name = @"responderB";
-    MZResponderChain *responderC = [MZResponderChainC new];
-    responderC.name = @"responderC";
+//    MZResponderChain *responderA = [MZResponderChainA new];
+//    responderA.name = @"responderA";
+//    MZResponderChain *responderB = [MZResponderChainB new];
+//    responderB.name = @"responderB";
+//    MZResponderChain *responderC = [MZResponderChainC new];
+//    responderC.name = @"responderC";
+//    
+//    responderA.nextResponder = responderB;
+//    responderB.nextResponder = responderC;
+//    responderC.nextResponder = responderA;
+//  
+//    [responderA handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
+//        
+//         NSLog(@"-5-%@:处理当前业务",handler.name);
+//        
+//    }];
     
-    responderA.nextResponder = responderB;
-    responderB.nextResponder = responderC;
-    responderC.nextResponder = responderA;
-  
-    [responderA handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
-        
-         NSLog(@"-5-%@:处理当前业务",handler.name);
-        
-    }];
+    UIViewController *VC = [NSObject objectForClassName:@"MZRouterEventViewController"];
+    [self.navigationController pushViewController:VC animated:YES];
     
  
 }
@@ -82,10 +85,11 @@ typedef void(^MZBlock)(NSString *mz);
 /// 4_策略模式
 - (void)strategyMode
 {
-    MZStrategyViewController *VC = [[MZStrategyViewController alloc] init];
-//    struct mj_objc_class *cls = (__bridge struct mj_objc_class *)[MZStrategyViewController class];
+    UIViewController *VC = [NSObject objectForClassName:@"MZStrategyViewController"];
     [self.navigationController pushViewController:VC animated:YES];
 }
+
+
 
 /// NSObject+MZPerformSelector 调用
 + (void)mztest:(NSString *)mz callBlock:(MZBlock)block

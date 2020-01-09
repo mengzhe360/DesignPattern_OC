@@ -58,5 +58,9 @@
     return res;
 }
 
++ (id)objectForClassName:(NSString *)className{
+    Class aClass = NSClassFromString(className);
+    return [[aClass alloc] init];
+}
 
 @end
