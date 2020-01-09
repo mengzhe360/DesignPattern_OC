@@ -109,14 +109,14 @@ typedef void(^MZBlock)(NSString *mz);
     MZSubjectClassA *subject = [[MZSubjectClassA alloc] init];
     MZObserverClassA *observerA = [NSObject objectForClassName:@"MZObserverClassA"];
     MZObserverClassB *observerB = [NSObject objectForClassName:@"MZObserverClassB"];
-    [subject addObserver:observerA];
-    [subject addObserver:observerB];
-    [subject doSomething:@"观察者开始活动了"];
     
-//    [self performClassName:@"MZSubjectClass" selector:@"addObserver:" withObjects:@[observerA] type:kInstanceMethod];
-//    [self performClassName:@"MZSubjectClass" selector:@"addObserver:" withObjects:@[observerB] type:kInstanceMethod];
-//    [self performClassName:@"MZSubjectClassA" selector:@"doSomething:" withObjects:@[@"观察者开始活动了"] type:kInstanceMethod];
+//    [subject addObserver:observerA];
+//    [subject addObserver:observerB];
+//    [subject doSomething:@"观察者开始活动了"];
     
+    [self performClass:subject selector:@"addObserver:" withObjects:@[observerA] type:kInstanceMethod];
+    [self performClass:subject selector:@"addObserver:" withObjects:@[observerB] type:kInstanceMethod];
+    [self performClass:subject selector:@"doSomething:" withObjects:@[@"观察者开始活动了"] type:kInstanceMethod];
 }
 
 @end
