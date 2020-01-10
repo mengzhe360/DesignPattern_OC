@@ -18,6 +18,7 @@
 		4330800D23C706FF003DEC4C /* NSObject+MZPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330800C23C706FF003DEC4C /* NSObject+MZPerformSelector.m */; };
 		4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330801923C72B7F003DEC4C /* MZRouterEventViewController.m */; };
 		4330801C23C72B7F003DEC4C /* MZRouterEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */; };
+		4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -70,6 +71,9 @@
 		4330801823C72B7F003DEC4C /* MZRouterEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZRouterEventViewController.h; sourceTree = "<group>"; };
 		4330801923C72B7F003DEC4C /* MZRouterEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZRouterEventViewController.m; sourceTree = "<group>"; };
 		4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MZRouterEventViewController.xib; sourceTree = "<group>"; };
+		4330802223C84AB8003DEC4C /* MZSubscriptionServiceCenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubscriptionServiceCenterProtocol.h; sourceTree = "<group>"; };
+		4330802323C84AF6003DEC4C /* MZSubscriptionServiceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubscriptionServiceCenter.h; sourceTree = "<group>"; };
+		4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubscriptionServiceCenter.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +225,35 @@
 			path = "5_工厂模式";
 			sourceTree = "<group>";
 		};
+		4330802123C84A71003DEC4C /* SubscriptionServiceCenter */ = {
+			isa = PBXGroup;
+			children = (
+				4330802223C84AB8003DEC4C /* MZSubscriptionServiceCenterProtocol.h */,
+				4330802323C84AF6003DEC4C /* MZSubscriptionServiceCenter.h */,
+				4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */,
+			);
+			path = SubscriptionServiceCenter;
+			sourceTree = "<group>";
+		};
+		4330802623C84B69003DEC4C /* SubjectObserver */ = {
+			isa = PBXGroup;
+			children = (
+				E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */,
+				E79F5B0923C77DCC00257841 /* MZSubjectClass.h */,
+				E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */,
+				E79F5B1823C7844200257841 /* MZSubjectClassA.h */,
+				E79F5B1923C7844200257841 /* MZSubjectClassA.m */,
+				E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */,
+				E79F5B0F23C7818500257841 /* MZObserverClass.h */,
+				E79F5B1023C7818500257841 /* MZObserverClass.m */,
+				E79F5B1223C781FC00257841 /* MZObserverClassA.h */,
+				E79F5B1323C781FC00257841 /* MZObserverClassA.m */,
+				E79F5B1523C7820F00257841 /* MZObserverClassB.h */,
+				E79F5B1623C7820F00257841 /* MZObserverClassB.m */,
+			);
+			path = SubjectObserver;
+			sourceTree = "<group>";
+		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +271,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E74D261823C4E046006E438B /* DynamicProtocol */ = {
+		E74D261823C4E046006E438B /* 动态代理 */ = {
 			isa = PBXGroup;
 			children = (
 				E74D261923C4E07D006E438B /* MZDynamicProtocol.h */,
@@ -251,7 +284,7 @@
 				E74D262023C4E0F7006E438B /* MZNormalTest.h */,
 				E74D262123C4E0F7006E438B /* MZNormalTest.m */,
 			);
-			path = DynamicProtocol;
+			path = "动态代理";
 			sourceTree = "<group>";
 		};
 		E74D262623C4EF96006E438B /* 4_策略模式 */ = {
@@ -272,23 +305,13 @@
 			path = "4_策略模式";
 			sourceTree = "<group>";
 		};
-		E79F5B0623C779D100257841 /* 5_观察者模式 */ = {
+		E79F5B0623C779D100257841 /* 6_观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
-				E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */,
-				E79F5B0923C77DCC00257841 /* MZSubjectClass.h */,
-				E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */,
-				E79F5B1823C7844200257841 /* MZSubjectClassA.h */,
-				E79F5B1923C7844200257841 /* MZSubjectClassA.m */,
-				E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */,
-				E79F5B0F23C7818500257841 /* MZObserverClass.h */,
-				E79F5B1023C7818500257841 /* MZObserverClass.m */,
-				E79F5B1223C781FC00257841 /* MZObserverClassA.h */,
-				E79F5B1323C781FC00257841 /* MZObserverClassA.m */,
-				E79F5B1523C7820F00257841 /* MZObserverClassB.h */,
-				E79F5B1623C7820F00257841 /* MZObserverClassB.m */,
+				4330802623C84B69003DEC4C /* SubjectObserver */,
+				4330802123C84A71003DEC4C /* SubscriptionServiceCenter */,
 			);
-			path = "5_观察者模式";
+			path = "6_观察者模式";
 			sourceTree = "<group>";
 		};
 		E7C288D023C37D0B00ED74CA = {
@@ -315,11 +338,11 @@
 				43307FC923C579F5003DEC4C /* Main */,
 				43307FFD23C5B93F003DEC4C /* 蜗牛 */,
 				E7C288F523C37D1E00ED74CA /* 1_责任链模式 */,
-				E7C288FA23C38F3D00ED74CA /* 2_模板方法 */,
-				E7C2890523C392F100ED74CA /* 3_代理 */,
+				E7C288FA23C38F3D00ED74CA /* 2_模板模式 */,
+				E7C2890523C392F100ED74CA /* 3_代理模式 */,
 				E74D262623C4EF96006E438B /* 4_策略模式 */,
 				4330801D23C73848003DEC4C /* 5_工厂模式 */,
-				E79F5B0623C779D100257841 /* 5_观察者模式 */,
+				E79F5B0623C779D100257841 /* 6_观察者模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -345,7 +368,7 @@
 			path = "1_责任链模式";
 			sourceTree = "<group>";
 		};
-		E7C288FA23C38F3D00ED74CA /* 2_模板方法 */ = {
+		E7C288FA23C38F3D00ED74CA /* 2_模板模式 */ = {
 			isa = PBXGroup;
 			children = (
 				E7C288FB23C38F8F00ED74CA /* MZHMProtocol.h */,
@@ -356,15 +379,15 @@
 				E7C2890223C38FD100ED74CA /* MZHMTwo.h */,
 				E7C2890323C38FD100ED74CA /* MZHMTwo.m */,
 			);
-			path = "2_模板方法";
+			path = "2_模板模式";
 			sourceTree = "<group>";
 		};
-		E7C2890523C392F100ED74CA /* 3_代理 */ = {
+		E7C2890523C392F100ED74CA /* 3_代理模式 */ = {
 			isa = PBXGroup;
 			children = (
-				E74D261823C4E046006E438B /* DynamicProtocol */,
+				E74D261823C4E046006E438B /* 动态代理 */,
 			);
-			path = "3_代理";
+			path = "3_代理模式";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
 				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,

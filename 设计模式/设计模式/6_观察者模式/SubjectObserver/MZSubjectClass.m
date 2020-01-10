@@ -25,18 +25,18 @@
 
 - (void)deleteObserver:(MZObserverClass *)observer
 {
-    [self.observers removeObject:observer];
+    [self.observers enumerateObjectsUsingBlock:^(MZObserverClass * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj == observer) {
+            [self.observers removeObject:observer];
+        }
+    }];
 }
 
 - (void)postNotifyObervers
 {
-    
     [self.observers enumerateObjectsUsingBlock:^(MZObserverClass * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
         [obj update];//执行
-        
     }];
-    
 }
 
 - (NSMutableArray<MZObserverClass *> *)observers
