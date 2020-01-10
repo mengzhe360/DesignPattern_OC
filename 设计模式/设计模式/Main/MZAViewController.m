@@ -15,6 +15,9 @@
 #import "MZSubscriptionServiceCenterProtocol.h"
 #import "MZSubscriptionServiceCenter.h"
 
+#import "MZComposite.h"
+#import "MZLeaf.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -35,7 +38,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self observerMode];
+    [self componentMode];
 }
 
 ///1_责任链
@@ -147,5 +150,52 @@ typedef void(^MZBlock)(NSString *mz);
         NSLog(@"MZAViewController-来自于科学美国人杂志的信息 - %@", message);
     }
 }
+
+
+//组合模式
+- (void)componentMode
+{
+  
+    MZComposite *root = [[MZComposite alloc] init];
+    root.name = @"总经理";
+    
+    MZComposite *branchA = [[MZComposite alloc] init];
+    branchA.name = @"技术部经理";
+    MZComposite *branchB = [[MZComposite alloc] init];
+    branchB.name = @"产品部经理";
+    
+    MZLeaf *leafA = [[MZLeaf alloc] init];
+    leafA.name = @"技术部A";
+    MZLeaf *leafB = [[MZLeaf alloc] init];
+    leafB.name = @"技术部B";
+    MZLeaf *leafC = [[MZLeaf alloc] init];
+    leafC.name = @"产品部C";
+    
+    [root add:branchA];
+    [root add:branchB];
+    
+    [branchA add:leafA];
+    [branchA add:leafB];
+    [branchB add:leafC];
+    
+    //递归遍历
+    [self displayComposite:root];
+    
+}
+
+- (void)displayComposite:(MZComposite *)root
+{
+    [root operationSomething];//每一层遍历
+    
+    [root.getChildren enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:MZLeaf.class]) {
+            MZLeaf *leaf = (MZLeaf *)obj;
+            [leaf operationSomething];
+        }else{
+            [self displayComposite:obj];
+        }
+    }];
+}
+
 
 @end

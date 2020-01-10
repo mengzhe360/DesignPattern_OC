@@ -33,6 +33,9 @@
 		E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262D23C4EFFA006E438B /* MZAlphaInputValidator.m */; };
 		E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */; };
 		E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D263023C4EFFA006E438B /* MZCustomTextField.m */; };
+		E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492123C8DDA100F7F98B /* MZComponent.m */; };
+		E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492423C8DE5D00F7F98B /* MZComposite.m */; };
+		E76C492823C8DF9C00F7F98B /* MZLeaf.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492723C8DF9C00F7F98B /* MZLeaf.m */; };
 		E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */; };
 		E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1023C7818500257841 /* MZObserverClass.m */; };
 		E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1323C781FC00257841 /* MZObserverClassA.m */; };
@@ -105,6 +108,12 @@
 		E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZStrategyViewController.m; sourceTree = "<group>"; };
 		E74D263023C4EFFA006E438B /* MZCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCustomTextField.m; sourceTree = "<group>"; };
 		E74D263123C4EFFA006E438B /* MZInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZInputValidator.h; sourceTree = "<group>"; };
+		E76C492023C8DDA100F7F98B /* MZComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZComponent.h; sourceTree = "<group>"; };
+		E76C492123C8DDA100F7F98B /* MZComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZComponent.m; sourceTree = "<group>"; };
+		E76C492323C8DE5D00F7F98B /* MZComposite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZComposite.h; sourceTree = "<group>"; };
+		E76C492423C8DE5D00F7F98B /* MZComposite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZComposite.m; sourceTree = "<group>"; };
+		E76C492623C8DF9C00F7F98B /* MZLeaf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLeaf.h; sourceTree = "<group>"; };
+		E76C492723C8DF9C00F7F98B /* MZLeaf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLeaf.m; sourceTree = "<group>"; };
 		E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectProtocol.h; sourceTree = "<group>"; };
 		E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZObserverProtocol.h; sourceTree = "<group>"; };
 		E79F5B0923C77DCC00257841 /* MZSubjectClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClass.h; sourceTree = "<group>"; };
@@ -305,6 +314,19 @@
 			path = "4_策略模式";
 			sourceTree = "<group>";
 		};
+		E76C491F23C8D52D00F7F98B /* 7_组合模式 */ = {
+			isa = PBXGroup;
+			children = (
+				E76C492023C8DDA100F7F98B /* MZComponent.h */,
+				E76C492123C8DDA100F7F98B /* MZComponent.m */,
+				E76C492323C8DE5D00F7F98B /* MZComposite.h */,
+				E76C492423C8DE5D00F7F98B /* MZComposite.m */,
+				E76C492623C8DF9C00F7F98B /* MZLeaf.h */,
+				E76C492723C8DF9C00F7F98B /* MZLeaf.m */,
+			);
+			path = "7_组合模式";
+			sourceTree = "<group>";
+		};
 		E79F5B0623C779D100257841 /* 6_观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +365,7 @@
 				E74D262623C4EF96006E438B /* 4_策略模式 */,
 				4330801D23C73848003DEC4C /* 5_工厂模式 */,
 				E79F5B0623C779D100257841 /* 6_观察者模式 */,
+				E76C491F23C8D52D00F7F98B /* 7_组合模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -521,8 +544,11 @@
 				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,
 				4330800D23C706FF003DEC4C /* NSObject+MZPerformSelector.m in Sources */,
 				E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */,
+				E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */,
 				43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */,
+				E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */,
 				E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */,
+				E76C492823C8DF9C00F7F98B /* MZLeaf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
