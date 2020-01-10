@@ -24,7 +24,7 @@
 
     if (!signature) {
         NSString *info = [NSString stringWithFormat:@"-[%@ %@]:unrecognized selector sent to instance",[aClass class],NSStringFromSelector(aSelector)];
-        @throw [[NSException alloc] initWithName:@"ifelseboyxx remind:" reason:info userInfo:nil];
+        @throw [[NSException alloc] initWithName:@"崩溃错误提示:" reason:info userInfo:nil];
         return nil;
     }
     

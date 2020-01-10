@@ -197,6 +197,13 @@
 			path = Perform;
 			sourceTree = "<group>";
 		};
+		4330801D23C73848003DEC4C /* 5_工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "5_工厂模式";
+			sourceTree = "<group>";
+		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +282,7 @@
 				E7C288FA23C38F3D00ED74CA /* 2_模板方法 */,
 				E7C2890523C392F100ED74CA /* 3_代理 */,
 				E74D262623C4EF96006E438B /* 4_策略模式 */,
+				4330801D23C73848003DEC4C /* 5_工厂模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
