@@ -18,10 +18,10 @@ typedef NS_ENUM(NSInteger,RequestMethodType) {
 @interface NSObject (MZPerformSelector)
 
 //传入统一的对象
-- (id)performClass:(id)class selector:(NSString *)SELStr objects:(NSArray <id> *)objects type:(RequestMethodType)type;
+- (id)performClass:(id)aClass selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type;
 
 //每次调用自动生成一个对象
-- (id)performClassName:(NSString *)className selector:(NSString *)SELStr objects:(NSArray <id> *)objects type:(RequestMethodType)type;
+- (id)performClassName:(NSString *)className selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type;
 
 + (id)objectForClassName:(NSString *)className;
 

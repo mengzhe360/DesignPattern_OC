@@ -10,16 +10,16 @@
 
 @implementation NSObject (MZPerformSelector)
 
-- (id)performClass:(id)class selector:(NSString *)SELStr objects:(NSArray <id> *)objects type:(RequestMethodType)type
+- (id)performClass:(id)aClass selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type
 {
-    return [self performTarget:class selector:SELStr objects:objects type:type singletonType:YES];
+    return [self performTarget:aClass selector:aSEL objects:objects type:type singletonType:YES];
 }
 
-- (id)performClassName:(NSString *)className selector:(NSString *)SELStr objects:(NSArray <id> *)objects type:(RequestMethodType)type
+- (id)performClassName:(NSString *)className selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type
 {
     Class aClass = NSClassFromString(className);
     
-    return [self performTarget:aClass selector:SELStr objects:objects type:type singletonType:NO];
+    return [self performTarget:aClass selector:aSEL objects:objects type:type singletonType:NO];
 }
 
 - (id)performTarget:(Class)aClass selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type singletonType:(BOOL)isYes

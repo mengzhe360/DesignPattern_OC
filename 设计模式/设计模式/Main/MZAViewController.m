@@ -127,8 +127,8 @@ typedef void(^MZBlock)(NSString *mz);
     [MZSubscriptionServiceCenter addCustomer:self withSubscriptionNumber:NEWTON];
     [MZSubscriptionServiceCenter addCustomer:mzcVc withSubscriptionNumber:SCIENCE];
     [MZSubscriptionServiceCenter addCustomer:mzcVc withSubscriptionNumber:NEWTON];
-    [MZSubscriptionServiceCenter removeCustomer:self fromSubscriptionNumber:SCIENCE];
-    [MZSubscriptionServiceCenter removeSubscriptionNumber:NEWTON];
+//    [MZSubscriptionServiceCenter removeCustomer:self fromSubscriptionNumber:SCIENCE];
+//    [MZSubscriptionServiceCenter removeSubscriptionNumber:NEWTON];
     
     // 订阅中心给订阅号 - SCIENCE NEWTON 发送订阅信息
     [MZSubscriptionServiceCenter sendMessage:@"爱因斯坦" toSubscriptionNumber:SCIENCE];
