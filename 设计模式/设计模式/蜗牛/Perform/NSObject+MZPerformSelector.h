@@ -17,6 +17,8 @@ typedef NS_ENUM(NSInteger,RequestMethodType) {
 
 @interface NSObject (MZPerformSelector)
 
+- (id)performClass:(id)class selector:(NSString *)selectorStr withObjects:(NSArray <id> *)objects type:(RequestMethodType)type;
+
 - (id)performClassName:(NSString *)className selector:(NSString *)selectorStr withObjects:(NSArray <id> *)objects type:(RequestMethodType)type;
 
 + (id)objectForClassName:(NSString *)className;

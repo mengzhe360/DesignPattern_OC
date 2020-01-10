@@ -12,6 +12,10 @@
 #import "MZResponderChainA.h"
 #import "MZResponderChainB.h"
 #import "MZResponderChainC.h"
+#import "MZSubjectClassA.h"
+#import "MZSubjectClass.h"
+#import "MZObserverClassA.h"
+#import "MZObserverClassB.h"
 
 typedef void(^MZBlock)(NSString *mz);
 
@@ -30,7 +34,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self responderChain];
+    [self observerMode];
 }
 
 ///1_责任链
@@ -90,14 +94,29 @@ typedef void(^MZBlock)(NSString *mz);
 }
 
 
-
-/// NSObject+MZPerformSelector 调用
+/// 4_NSObject+MZPerformSelector 调用
 + (void)mztest:(NSString *)mz callBlock:(MZBlock)block
 {
     if (mz && block) {
         NSLog(@"%@",mz);
         block(@"perform测试-回调");
     }
+}
+
+/// 6、观察者模式
+- (void)observerMode
+{
+    MZSubjectClassA *subject = [[MZSubjectClassA alloc] init];
+    MZObserverClassA *observerA = [NSObject objectForClassName:@"MZObserverClassA"];
+    MZObserverClassB *observerB = [NSObject objectForClassName:@"MZObserverClassB"];
+    
+//    [subject addObserver:observerA];
+//    [subject addObserver:observerB];
+//    [subject doSomething:@"观察者开始活动了"];
+    
+    [self performClass:subject selector:@"addObserver:" withObjects:@[observerA] type:kInstanceMethod];
+    [self performClass:subject selector:@"addObserver:" withObjects:@[observerB] type:kInstanceMethod];
+    [self performClass:subject selector:@"doSomething:" withObjects:@[@"观察者开始活动了"] type:kInstanceMethod];
 }
 
 @end

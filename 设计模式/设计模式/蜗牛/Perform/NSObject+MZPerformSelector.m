@@ -10,6 +10,48 @@
 
 @implementation NSObject (MZPerformSelector)
 
+- (id)performClass:(id)class selector:(NSString *)selectorStr withObjects:(NSArray <id> *)objects type:(RequestMethodType)type
+{
+
+    SEL aSelector = NSSelectorFromString(selectorStr);
+    
+    NSMethodSignature *signature = nil;
+    if (type == kInstanceMethod) {
+        signature = [[class class] instanceMethodSignatureForSelector:aSelector];
+    }else if (type == kClassMethod){
+        signature = [[class class] methodSignatureForSelector:aSelector];
+    }
+    
+    if (!signature) {
+        NSString *info = [NSString stringWithFormat:@"-[%@ %@]:unrecognized selector sent to instance",[class class],NSStringFromSelector(aSelector)];
+        @throw [[NSException alloc] initWithName:@"ifelseboyxx remind:" reason:info userInfo:nil];
+        return nil;
+    }
+    
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    
+    invocation.target = class;
+    invocation.selector = aSelector;
+    
+    NSInteger arguments = signature.numberOfArguments - 2;
+    
+    NSUInteger objectsCount = objects.count;
+    NSInteger count = MIN(arguments, objectsCount);
+    for (int i = 0; i < count; i++) {
+        id obj = objects[i];
+        if ([obj isKindOfClass:[NSNull class]]) {obj = nil;}
+        [invocation setArgument:&obj atIndex:i+2];
+    }
+    
+    [invocation invoke];
+    
+    id res = nil;
+    if (signature.methodReturnLength != 0) {
+        [invocation getReturnValue:&res];
+    }
+    return res;
+}
+
 - (id)performClassName:(NSString *)className selector:(NSString *)selectorStr withObjects:(NSArray <id> *)objects type:(RequestMethodType)type
 {
     Class aClass = NSClassFromString(className);
@@ -21,7 +63,7 @@
     }else if (type == kClassMethod){
         signature = [[aClass class] methodSignatureForSelector:aSelector];
     }
-
+    
     if (!signature) {
         NSString *info = [NSString stringWithFormat:@"-[%@ %@]:unrecognized selector sent to instance",[aClass class],NSStringFromSelector(aSelector)];
         @throw [[NSException alloc] initWithName:@"崩溃错误提示:" reason:info userInfo:nil];
@@ -38,9 +80,9 @@
     }
     invocation.target = target;
     invocation.selector = aSelector;
-
+    
     NSInteger arguments = signature.numberOfArguments - 2;
-
+    
     NSUInteger objectsCount = objects.count;
     NSInteger count = MIN(arguments, objectsCount);
     for (int i = 0; i < count; i++) {
