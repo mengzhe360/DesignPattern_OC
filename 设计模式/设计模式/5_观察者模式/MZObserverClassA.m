@@ -12,7 +12,7 @@
 
 - (void)update{
     
-    NSLog(@"MZObserverClassA 通知秦始皇做事情");
+    NSLog(@"观察者:MZObserverClassA  通知秦始皇做事情");
     
 }
 

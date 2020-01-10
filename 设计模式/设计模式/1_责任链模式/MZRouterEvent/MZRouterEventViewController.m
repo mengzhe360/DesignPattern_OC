@@ -37,7 +37,7 @@
         NSLog(@"mz:%@",mz);
     };
 
-    [self performClassName:@"MZAViewController" selector:@"mztest:callBlock:" withObjects:@[@"perform测试",MZBlock1] type:kClassMethod];
+    [self performClassName:@"MZAViewController" selector:@"mztest:callBlock:" objects:@[@"perform测试",MZBlock1] type:kInstanceMethod];
     
 }
 

@@ -314,7 +314,7 @@
 			children = (
 				43307FC923C579F5003DEC4C /* Main */,
 				43307FFD23C5B93F003DEC4C /* 蜗牛 */,
-				E7C288F523C37D1E00ED74CA /* 1_责任链 */,
+				E7C288F523C37D1E00ED74CA /* 1_责任链模式 */,
 				E7C288FA23C38F3D00ED74CA /* 2_模板方法 */,
 				E7C2890523C392F100ED74CA /* 3_代理 */,
 				E74D262623C4EF96006E438B /* 4_策略模式 */,
@@ -336,13 +336,13 @@
 			path = "设计模式";
 			sourceTree = "<group>";
 		};
-		E7C288F523C37D1E00ED74CA /* 1_责任链 */ = {
+		E7C288F523C37D1E00ED74CA /* 1_责任链模式 */ = {
 			isa = PBXGroup;
 			children = (
 				4330800723C7066B003DEC4C /* MZRouterEvent */,
 				4330800623C70642003DEC4C /* MZResponderChain */,
 			);
-			path = "1_责任链";
+			path = "1_责任链模式";
 			sourceTree = "<group>";
 		};
 		E7C288FA23C38F3D00ED74CA /* 2_模板方法 */ = {

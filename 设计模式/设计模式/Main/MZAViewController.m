@@ -34,7 +34,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self observerMode];
+    [self responderChain];
 }
 
 ///1_责任链
@@ -95,7 +95,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 
 /// 4_NSObject+MZPerformSelector 调用
-+ (void)mztest:(NSString *)mz callBlock:(MZBlock)block
+- (void)mztest:(NSString *)mz callBlock:(MZBlock)block
 {
     if (mz && block) {
         NSLog(@"%@",mz);
@@ -114,9 +114,9 @@ typedef void(^MZBlock)(NSString *mz);
 //    [subject addObserver:observerB];
 //    [subject doSomething:@"观察者开始活动了"];
     
-    [self performClass:subject selector:@"addObserver:" withObjects:@[observerA] type:kInstanceMethod];
-    [self performClass:subject selector:@"addObserver:" withObjects:@[observerB] type:kInstanceMethod];
-    [self performClass:subject selector:@"doSomething:" withObjects:@[@"观察者开始活动了"] type:kInstanceMethod];
+    [self performClass:subject selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
+    [self performClass:subject selector:@"addObserver:" objects:@[observerB] type:kInstanceMethod];
+    [self performClass:subject selector:@"doSomething:" objects:@[@"被观察者开始活动了"] type:kInstanceMethod];
 }
 
 @end
