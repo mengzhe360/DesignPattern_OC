@@ -12,7 +12,7 @@
 
 - (void)operationSomething
 {
-    NSLog(@"%@ - operationSomething",self.name);
+    NSLog(@"%@ - operation",self.name);
     NSLog(@"%@ - 父节点是:%@",self.name,self.parentComponent.name);
 }
 

@@ -18,6 +18,10 @@
 #import "MZComposite.h"
 #import "MZLeaf.h"
 
+#import "MZUIView.h"
+#import "MZCALayer.h"
+#import "MZTestView.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -38,7 +42,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self componentMode];
+    [self viewLayerTest];
 }
 
 ///1_责任链
@@ -119,7 +123,6 @@ typedef void(^MZBlock)(NSString *mz);
     [self performClass:subject selector:@"addObserver:" objects:@[observerB] type:kInstanceMethod];
     [self performClass:subject selector:@"doSomething:" objects:@[@"被观察者开始活动了"] type:kInstanceMethod];
     
-    
     // 创建订阅号 - SCIENCE NEWTON
     [MZSubscriptionServiceCenter createSubscriptionNumber:SCIENCE];
     [MZSubscriptionServiceCenter createSubscriptionNumber:NEWTON];
@@ -130,8 +133,8 @@ typedef void(^MZBlock)(NSString *mz);
     [MZSubscriptionServiceCenter addCustomer:self withSubscriptionNumber:NEWTON];
     [MZSubscriptionServiceCenter addCustomer:mzcVc withSubscriptionNumber:SCIENCE];
     [MZSubscriptionServiceCenter addCustomer:mzcVc withSubscriptionNumber:NEWTON];
-//    [MZSubscriptionServiceCenter removeCustomer:self fromSubscriptionNumber:SCIENCE];
-//    [MZSubscriptionServiceCenter removeSubscriptionNumber:NEWTON];
+    //    [MZSubscriptionServiceCenter removeCustomer:self fromSubscriptionNumber:SCIENCE];
+    //    [MZSubscriptionServiceCenter removeSubscriptionNumber:NEWTON];
     
     // 订阅中心给订阅号 - SCIENCE NEWTON 发送订阅信息
     [MZSubscriptionServiceCenter sendMessage:@"爱因斯坦" toSubscriptionNumber:SCIENCE];
@@ -155,12 +158,15 @@ typedef void(^MZBlock)(NSString *mz);
 //组合模式
 - (void)componentMode
 {
-  
     MZComposite *root = [[MZComposite alloc] init];
     root.name = @"总经理";
     
     MZComposite *branchA = [[MZComposite alloc] init];
     branchA.name = @"技术部经理";
+    
+    MZComposite *branchAa = [[MZComposite alloc] init];
+    branchAa.name = @"技术部经理Aa";
+    
     MZComposite *branchB = [[MZComposite alloc] init];
     branchB.name = @"产品部经理";
     
@@ -168,12 +174,16 @@ typedef void(^MZBlock)(NSString *mz);
     leafA.name = @"技术部A";
     MZLeaf *leafB = [[MZLeaf alloc] init];
     leafB.name = @"技术部B";
+    MZLeaf *leafAa = [[MZLeaf alloc] init];
+    leafAa.name = @"技术部Aa";
     MZLeaf *leafC = [[MZLeaf alloc] init];
     leafC.name = @"产品部C";
     
     [root add:branchA];
     [root add:branchB];
     
+    [branchA add:branchAa];
+    [branchAa add:leafAa];
     [branchA add:leafA];
     [branchA add:leafB];
     [branchB add:leafC];
@@ -195,6 +205,37 @@ typedef void(^MZBlock)(NSString *mz);
             [self displayComposite:obj];
         }
     }];
+}
+
+//UIView和CALayer
+- (void)viewLayerTest
+{
+    CALayer * layer = [[CALayer alloc] init];
+    CALayer * layer1 = [[CALayer alloc] init];
+    CALayer * layer2 = [[CALayer alloc] init];
+    layer.frame = CGRectMake(0, 0, 100, 100);
+    [layer addSublayer:layer1];
+    [layer addSublayer:layer2];
+    
+    UIView *view = [[UIView alloc] init];
+    UIView *view1 = [[UIView alloc] init];
+    UIView *view2 = [[UIView alloc] init];
+    UIView *view3 = [[UIView alloc] init];
+    
+    view.frame = CGRectMake(10, 100, 100, 100);
+    view.backgroundColor = UIColor.redColor;
+    view.layer.frame = CGRectMake(20, 200, 100, 200);
+    view.layer.delegate = view;
+    
+    [self.view addSubview:view];
+    [view addSubview:view1];
+    [view addSubview:view2];
+    [view addSubview:view3];
+    view.layer.cornerRadius = 5;
+    
+    MZTestView *mView = [[MZTestView alloc] init];
+    [mView mzDrawRect:@"测试一下代理执行情况"];
+    
 }
 
 

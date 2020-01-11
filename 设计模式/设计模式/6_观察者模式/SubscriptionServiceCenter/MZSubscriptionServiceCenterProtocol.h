@@ -12,6 +12,7 @@
 
 @protocol MZSubscriptionServiceCenterProtocol <NSObject>
 
+@required;
 /**
  *  接收到的订阅信息
  *
@@ -20,6 +21,7 @@
  */
 - (void)subscriptionMessage:(id)message subscriptionNumber:(NSString *)subscriptionNumber;
 
+@optional;
 
 @end
 

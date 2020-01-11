@@ -26,15 +26,14 @@
     
 }
 
-
 - (void)subscriptionMessage:(id)message subscriptionNumber:(NSString *)subscriptionNumber
 {
     if ([subscriptionNumber isEqualToString:@"NEWTON"]) {
-        
+
         NSLog(@"MCViewController-来自于牛顿杂志的信息 - %@", message);
-        
+
     } else if ([subscriptionNumber isEqualToString:@"SCIENCE"]) {
-    
+
         NSLog(@"MCViewController-来自于科学美国人杂志的信息 - %@", message);
     }
 }

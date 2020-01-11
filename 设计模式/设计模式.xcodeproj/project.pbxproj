@@ -19,6 +19,9 @@
 		4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330801923C72B7F003DEC4C /* MZRouterEventViewController.m */; };
 		4330801C23C72B7F003DEC4C /* MZRouterEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */; };
 		4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */; };
+		4330803623C9A9E9003DEC4C /* MZUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803523C9A9E9003DEC4C /* MZUIView.m */; };
+		4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803823C9AA1E003DEC4C /* MZCALayer.m */; };
+		4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803B23C9B59D003DEC4C /* MZTestView.m */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -77,6 +80,13 @@
 		4330802223C84AB8003DEC4C /* MZSubscriptionServiceCenterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubscriptionServiceCenterProtocol.h; sourceTree = "<group>"; };
 		4330802323C84AF6003DEC4C /* MZSubscriptionServiceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubscriptionServiceCenter.h; sourceTree = "<group>"; };
 		4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubscriptionServiceCenter.m; sourceTree = "<group>"; };
+		4330803123C96741003DEC4C /* MZComponentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZComponentProtocol.h; sourceTree = "<group>"; };
+		4330803423C9A9E9003DEC4C /* MZUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZUIView.h; sourceTree = "<group>"; };
+		4330803523C9A9E9003DEC4C /* MZUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZUIView.m; sourceTree = "<group>"; };
+		4330803723C9AA1E003DEC4C /* MZCALayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCALayer.h; sourceTree = "<group>"; };
+		4330803823C9AA1E003DEC4C /* MZCALayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCALayer.m; sourceTree = "<group>"; };
+		4330803A23C9B59D003DEC4C /* MZTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestView.h; sourceTree = "<group>"; };
+		4330803B23C9B59D003DEC4C /* MZTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestView.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				4330803323C9A98A003DEC4C /* UIView和CALayer */,
 				4330801723C7285F003DEC4C /* Perform */,
 				43307FFE23C5B981003DEC4C /* HOOK */,
 			);
@@ -263,6 +274,19 @@
 			path = SubjectObserver;
 			sourceTree = "<group>";
 		};
+		4330803323C9A98A003DEC4C /* UIView和CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				4330803423C9A9E9003DEC4C /* MZUIView.h */,
+				4330803523C9A9E9003DEC4C /* MZUIView.m */,
+				4330803723C9AA1E003DEC4C /* MZCALayer.h */,
+				4330803823C9AA1E003DEC4C /* MZCALayer.m */,
+				4330803A23C9B59D003DEC4C /* MZTestView.h */,
+				4330803B23C9B59D003DEC4C /* MZTestView.m */,
+			);
+			path = "UIView和CALayer";
+			sourceTree = "<group>";
+		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +341,7 @@
 		E76C491F23C8D52D00F7F98B /* 7_组合模式 */ = {
 			isa = PBXGroup;
 			children = (
+				4330803123C96741003DEC4C /* MZComponentProtocol.h */,
 				E76C492023C8DDA100F7F98B /* MZComponent.h */,
 				E76C492123C8DDA100F7F98B /* MZComponent.m */,
 				E76C492323C8DE5D00F7F98B /* MZComposite.h */,
@@ -513,10 +538,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
+				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,
 				4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */,
+				4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */,
 				E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */,
 				E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */,
 				E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */,
@@ -529,6 +556,7 @@
 				E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */,
 				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
 				E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */,
+				4330803623C9A9E9003DEC4C /* MZUIView.m in Sources */,
 				E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */,
 				E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */,
 				43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */,
