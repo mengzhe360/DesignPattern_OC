@@ -22,6 +22,10 @@
 #import "MZCALayer.h"
 #import "MZTestView.h"
 
+#import "MZTestDelegate.h"
+#import "MZTestDelegateA.h"
+#import "MZTestDelegateB.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -42,7 +46,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self viewLayerTest];
+    [self facadeMode];
 }
 
 ///1_责任链
@@ -238,5 +242,32 @@ typedef void(^MZBlock)(NSString *mz);
     
 }
 
+
+- (void)mzTestDelegate
+{
+    
+    id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
+    if ([mz respondsToSelector:@selector(mzTestOne)]) {
+        [mz mzTestOne];
+        [mz mzTestTwo];
+    }
+    
+    id<MZTestDelegate> mz1 = (id)[[MZTestDelegateB alloc] init];
+    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
+        [mz1 mzTestOne];
+        [mz1 mzTestTwo];
+    }
+    
+}
+
+//8、门面模式
+- (void)facadeMode
+{
+    MZLog(@"mz")
+    [self performClassName:@"MZFacadeA" selector:@"facadeAMethodA" objects:@[] type:kInstanceMethod];
+    [self performClassName:@"MZFacadeA" selector:@"facadeAmethodB" objects:@[] type:kInstanceMethod];
+    [self performClassName:@"MZFacadeA" selector:@"facadeAmethodC" objects:@[] type:kInstanceMethod];
+    [self performClassName:@"MZFacadeB" selector:@"facadeBmethodD" objects:@[] type:kInstanceMethod];
+}
 
 @end
