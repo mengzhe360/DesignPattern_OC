@@ -15,7 +15,7 @@
 
 - (void)facadeAMethodA
 {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
     MZFacadeSubsystemA *A = [[MZFacadeSubsystemA alloc] init];//被委托对象（子系统）
     [A facadeSubsystemA];
     [(id<MZFacadeSubsystem>)A facadeSubsystemDelegate];
@@ -23,16 +23,31 @@
 
 - (void)facadeAmethodB
 {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
     MZFacadeSubsystemB *B = [[MZFacadeSubsystemB alloc] init];
     [B facadeSubsystemB];
     [(id<MZFacadeSubsystem>)B facadeSubsystemDelegate];
+    [self performClassName:@"MZFacadeSubsystemB" selector:@"facadeSubsystemDelegate" objects:@[] type:kInstanceMethod];
 }
 
 - (void)facadeAmethodC
 {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
     [self performClassName:@"MZContext" selector:@"complexMethod" objects:@[] type:kInstanceMethod];
+}
+
+- (void)facadeImageDownloader
+{
+    NSObject *downloader = [NSObject objectForClassName:@"MZImageDownloader"];
+    [self performClass:downloader selector:@"setDownloadUrl:" objects:@[@"https://www.baidu.com/"] type:kInstanceMethod];
+    id valueA = [self performClass:downloader selector:@"checkDownloader" objects:@[] type:kInstanceMethod];
+    [self performClass:downloader selector:@"startDownload:" objects:@[@"https://www.baidu.com/"] type:kInstanceMethod];
+    id valueB = [self performClass:downloader selector:@"stopDownload" objects:@[] type:kInstanceMethod];
+    [self performClass:downloader selector:@"deleteAllDownloadFile" objects:@[] type:kInstanceMethod];
+    id valueC = [self performClass:downloader selector:@"testReturnFloat:" objects:@[@1101101] type:kInstanceMethod];
+    MZLog(valueA); MZLog(valueB); MZLog(valueC);
+    
+//    [self performClassName:@"MZAbstractDownloader" selector:@"setDownloadUrl:" objects:@[@"测试直接实例化抽象类-就让他直接crash"] type:kInstanceMethod];
 }
 
 @end

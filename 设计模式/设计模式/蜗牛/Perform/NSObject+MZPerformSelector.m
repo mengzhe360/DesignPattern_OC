@@ -67,11 +67,29 @@
     
     [invocation invoke];
     
-    id res = nil;
-    if (signature.methodReturnLength != 0) {
-        [invocation getReturnValue:&res];
+    id returnValue = nil;
+    const char *returnType = signature.methodReturnType;
+    if(!strcmp(returnType, @encode(void))){
+        returnValue = nil;
+    }else if(!strcmp(returnType, @encode(id))){
+        [invocation getReturnValue:&returnValue];//returnValue = 返回值
+    }else{//类型并不全，需要的话需要扩展
+        NSUInteger length = [signature methodReturnLength];
+        void *buffer = (void *)malloc(length);
+        [invocation getReturnValue:buffer];
+        if(!strcmp(returnType,@encode(BOOL))){
+            returnValue = [NSNumber numberWithBool:*((BOOL*)buffer)];
+        }else if(!strcmp(returnType,@encode(NSInteger))){
+            returnValue = [NSNumber numberWithInteger:*((NSInteger*)buffer)];
+        }else if(!strcmp(returnType,@encode(float))){
+            returnValue = [NSNumber numberWithFloat:*((float *)buffer)];
+        } else{
+            NSValue *value = [NSValue value:&buffer withObjCType:returnType];
+            returnValue = value;
+        }
+        free(buffer);
     }
-    return res;
+    return returnValue;
 }
 
 + (id)objectForClassName:(NSString *)className{

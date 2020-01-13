@@ -44,11 +44,11 @@
 }
 
 - (void)mzDisplayLayer:(nonnull NSString *)layer {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZLog(layer);
 }
 
 - (void)mzDrawRect:(NSString *)rect{
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZLog(rect);
 }
 
 - (void)update{

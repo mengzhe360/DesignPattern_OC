@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)facadeAMethodA;
 - (void)facadeAmethodB;
 - (void)facadeAmethodC;
+- (void)facadeImageDownloader;
 
 @end
 

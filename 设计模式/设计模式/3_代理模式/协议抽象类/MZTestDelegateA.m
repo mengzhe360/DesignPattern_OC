@@ -12,12 +12,12 @@
 
 - (void)mzTestOne
 {
-     NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+     MZMLog
 }
 
 - (void)mzTestTwo
 {
-     NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+     MZMLog
 }
 
 

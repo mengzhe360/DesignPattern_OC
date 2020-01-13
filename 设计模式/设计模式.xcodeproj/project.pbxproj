@@ -22,6 +22,9 @@
 		4330803623C9A9E9003DEC4C /* MZUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803523C9A9E9003DEC4C /* MZUIView.m */; };
 		4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803823C9AA1E003DEC4C /* MZCALayer.m */; };
 		4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330803B23C9B59D003DEC4C /* MZTestView.m */; };
+		4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804123CC0A8B003DEC4C /* MZAbstractDownloader.m */; };
+		4330804523CC0BC2003DEC4C /* MZImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804423CC0BC2003DEC4C /* MZImageDownloader.m */; };
+		4330804923CC43A7003DEC4C /* MZEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804823CC43A7003DEC4C /* MZEncode.m */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -95,6 +98,13 @@
 		4330803823C9AA1E003DEC4C /* MZCALayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCALayer.m; sourceTree = "<group>"; };
 		4330803A23C9B59D003DEC4C /* MZTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestView.h; sourceTree = "<group>"; };
 		4330803B23C9B59D003DEC4C /* MZTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestView.m; sourceTree = "<group>"; };
+		4330803E23CC0A31003DEC4C /* MZDownloaderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDownloaderProtocol.h; sourceTree = "<group>"; };
+		4330804023CC0A8B003DEC4C /* MZAbstractDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAbstractDownloader.h; sourceTree = "<group>"; };
+		4330804123CC0A8B003DEC4C /* MZAbstractDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAbstractDownloader.m; sourceTree = "<group>"; };
+		4330804323CC0BC2003DEC4C /* MZImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZImageDownloader.h; sourceTree = "<group>"; };
+		4330804423CC0BC2003DEC4C /* MZImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZImageDownloader.m; sourceTree = "<group>"; };
+		4330804723CC43A7003DEC4C /* MZEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZEncode.h; sourceTree = "<group>"; };
+		4330804823CC43A7003DEC4C /* MZEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZEncode.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +222,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				4330804623CC4374003DEC4C /* Encode */,
 				4330803323C9A98A003DEC4C /* UIView和CALayer */,
 				4330801723C7285F003DEC4C /* Perform */,
 				43307FFE23C5B981003DEC4C /* HOOK */,
@@ -311,6 +322,27 @@
 				4330803B23C9B59D003DEC4C /* MZTestView.m */,
 			);
 			path = "UIView和CALayer";
+			sourceTree = "<group>";
+		};
+		4330803D23CC09CF003DEC4C /* 抽象类 */ = {
+			isa = PBXGroup;
+			children = (
+				4330803E23CC0A31003DEC4C /* MZDownloaderProtocol.h */,
+				4330804023CC0A8B003DEC4C /* MZAbstractDownloader.h */,
+				4330804123CC0A8B003DEC4C /* MZAbstractDownloader.m */,
+				4330804323CC0BC2003DEC4C /* MZImageDownloader.h */,
+				4330804423CC0BC2003DEC4C /* MZImageDownloader.m */,
+			);
+			path = "抽象类";
+			sourceTree = "<group>";
+		};
+		4330804623CC4374003DEC4C /* Encode */ = {
+			isa = PBXGroup;
+			children = (
+				4330804723CC43A7003DEC4C /* MZEncode.h */,
+				4330804823CC43A7003DEC4C /* MZEncode.m */,
+			);
+			path = Encode;
 			sourceTree = "<group>";
 		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
@@ -492,6 +524,7 @@
 		E7C2890523C392F100ED74CA /* 3_代理模式 */ = {
 			isa = PBXGroup;
 			children = (
+				4330803D23CC09CF003DEC4C /* 抽象类 */,
 				E7601D8D23CB6B0100D2225D /* 协议抽象类 */,
 				E74D261823C4E046006E438B /* 动态代理 */,
 			);
@@ -613,6 +646,7 @@
 				E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */,
 				43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */,
 				4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */,
+				4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */,
 				E74D262523C4E588006E438B /* MZAbstarctManager.m in Sources */,
 				E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */,
 				E79F5B1A23C7844200257841 /* MZSubjectClassA.m in Sources */,
@@ -630,7 +664,9 @@
 				E79F5B1723C7820F00257841 /* MZObserverClassB.m in Sources */,
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
 				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
+				4330804923CC43A7003DEC4C /* MZEncode.m in Sources */,
 				E7601D9D23CB764C00D2225D /* MZFacadeSubsystemA.m in Sources */,
+				4330804523CC0BC2003DEC4C /* MZImageDownloader.m in Sources */,
 				E7601DA323CB767000D2225D /* MZFacadeSubsystemC.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
 				E7601DA623CB772A00D2225D /* MZFacadeA.m in Sources */,

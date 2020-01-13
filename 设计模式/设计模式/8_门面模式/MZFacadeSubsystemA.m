@@ -12,12 +12,12 @@
 
 - (void)facadeSubsystemA
 {
-     NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
 }
 
 - (void)facadeSubsystemDelegate
 {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
 }
 
 @end

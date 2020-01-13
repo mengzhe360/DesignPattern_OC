@@ -263,11 +263,14 @@ typedef void(^MZBlock)(NSString *mz);
 //8、门面模式
 - (void)facadeMode
 {
-    MZLog(@"mz")
     [self performClassName:@"MZFacadeA" selector:@"facadeAMethodA" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodB" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodC" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeB" selector:@"facadeBmethodD" objects:@[] type:kInstanceMethod];
+    
+//    [self performClassName:@"MZEncode" selector:@"callTestParam" objects:@[] type:kClassMethod];
+
 }
+
 
 @end

@@ -14,8 +14,7 @@
 
 - (void)complexMethod
 {
-    
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
     
     MZFacadeSubsystemB *B = [[MZFacadeSubsystemB alloc] init];
     [B facadeSubsystemB];
@@ -23,8 +22,7 @@
     
     MZFacadeSubsystemA *A = [[MZFacadeSubsystemA alloc] init];
     [A facadeSubsystemA];
-    [(id<MZFacadeSubsystem>)A facadeSubsystemDelegate];
-    
+    [(id<MZFacadeSubsystem>)A facadeSubsystemDelegate];    
 }
 
 @end

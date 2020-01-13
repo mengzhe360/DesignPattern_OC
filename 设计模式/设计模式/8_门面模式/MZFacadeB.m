@@ -19,9 +19,9 @@
 
 - (void)facadeBmethodD
 {
-    NSLog(@"%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd));
+    MZMLog
     _facadeA = [[MZFacadeA alloc] init];
-    [_facadeA facadeAmethodB];
+    [_facadeA facadeImageDownloader];
 }
 
 @end
