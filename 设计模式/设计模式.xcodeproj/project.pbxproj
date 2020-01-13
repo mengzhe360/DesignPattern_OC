@@ -29,6 +29,9 @@
 		4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */; };
 		4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805223CC6B14003DEC4C /* MZConcreteStateB.m */; };
 		4330805623CC6B46003DEC4C /* MZContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805523CC6B46003DEC4C /* MZContextState.m */; };
+		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
+		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
+		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -120,6 +123,12 @@
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
+		E71A087423CCD3DF0053BF69 /* MZMemento.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZMemento.h; sourceTree = "<group>"; };
+		E71A087523CCD3DF0053BF69 /* MZMemento.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZMemento.m; sourceTree = "<group>"; };
+		E71A087723CCD3F00053BF69 /* MZOriginator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZOriginator.h; sourceTree = "<group>"; };
+		E71A087823CCD3F00053BF69 /* MZOriginator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZOriginator.m; sourceTree = "<group>"; };
+		E71A087A23CCD4010053BF69 /* MZCaretaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCaretaker.h; sourceTree = "<group>"; };
+		E71A087B23CCD4010053BF69 /* MZCaretaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCaretaker.m; sourceTree = "<group>"; };
 		E73B28AD23C633D3006190DC /* MZResponderChainA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainA.h; sourceTree = "<group>"; };
 		E73B28AE23C633D3006190DC /* MZResponderChainA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChainA.m; sourceTree = "<group>"; };
 		E73B28B023C633DE006190DC /* MZResponderChainB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainB.h; sourceTree = "<group>"; };
@@ -389,6 +398,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E71A087023CCD3370053BF69 /* 10_备忘率模式 */ = {
+			isa = PBXGroup;
+			children = (
+				E71A087423CCD3DF0053BF69 /* MZMemento.h */,
+				E71A087523CCD3DF0053BF69 /* MZMemento.m */,
+				E71A087723CCD3F00053BF69 /* MZOriginator.h */,
+				E71A087823CCD3F00053BF69 /* MZOriginator.m */,
+				E71A087A23CCD4010053BF69 /* MZCaretaker.h */,
+				E71A087B23CCD4010053BF69 /* MZCaretaker.m */,
+			);
+			path = "10_备忘率模式";
+			sourceTree = "<group>";
+		};
 		E74D261823C4E046006E438B /* 动态代理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +532,7 @@
 				E76C491F23C8D52D00F7F98B /* 7_组合模式 */,
 				E7601D9723CB756500D2225D /* 8_门面模式 */,
 				4330804A23CC6439003DEC4C /* 9_状态模式 */,
+				E71A087023CCD3370053BF69 /* 10_备忘率模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -658,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */,
 				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E7601DAD23CB7B3A00D2225D /* MZContext.m in Sources */,
@@ -700,8 +724,10 @@
 				4330804523CC0BC2003DEC4C /* MZImageDownloader.m in Sources */,
 				E7601DA323CB767000D2225D /* MZFacadeSubsystemC.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
+				E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */,
 				E7601DA623CB772A00D2225D /* MZFacadeA.m in Sources */,
 				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
+				E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */,
 				4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */,
 				E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */,
 				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,
