@@ -10,7 +10,6 @@
 
 @implementation MZAbstractDownloader
 
-
 - (instancetype)init
 {
     if ([self isMemberOfClass:[MZAbstractDownloader class]]) {

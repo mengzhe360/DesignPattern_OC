@@ -26,6 +26,8 @@
 #import "MZTestDelegateA.h"
 #import "MZTestDelegateB.h"
 
+#import "MZContextState.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -46,7 +48,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self facadeMode];
+    [self stateMode];
 }
 
 ///1_责任链
@@ -158,7 +160,6 @@ typedef void(^MZBlock)(NSString *mz);
     }
 }
 
-
 //组合模式
 - (void)componentMode
 {
@@ -239,13 +240,10 @@ typedef void(^MZBlock)(NSString *mz);
     
     MZTestView *mView = [[MZTestView alloc] init];
     [mView mzDrawRect:@"测试一下代理执行情况"];
-    
 }
-
 
 - (void)mzTestDelegate
 {
-    
     id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
     if ([mz respondsToSelector:@selector(mzTestOne)]) {
         [mz mzTestOne];
@@ -257,7 +255,6 @@ typedef void(^MZBlock)(NSString *mz);
         [mz1 mzTestOne];
         [mz1 mzTestTwo];
     }
-    
 }
 
 //8、门面模式
@@ -270,6 +267,23 @@ typedef void(^MZBlock)(NSString *mz);
     
 //    [self performClassName:@"MZEncode" selector:@"callTestParam" objects:@[] type:kClassMethod];
 
+}
+
+//状态模式
+- (void)stateMode{
+    
+    NSObject *contextState = [NSObject objectForClassName:@"MZContextState"];
+    NSObject *stateA = [NSObject objectForClassName:@"MZConcreteStateA"];
+    NSObject *stateB = [NSObject objectForClassName:@"MZConcreteStateB"];
+    
+    [self performClass:contextState selector:@"setCurrentState:" objects:@[stateA] type:kInstanceMethod];
+    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成一条龙"] type:kInstanceMethod];
+    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"猪八戒变成如来佛主"] type:kInstanceMethod];
+    
+//    [self performClass:contextState selector:@"setCurrentState:" objects:@[stateB] type:kInstanceMethod];//状态改变
+//    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"孙悟空变成小鸟"] type:kInstanceMethod];
+//    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"孙悟空变成老虎"] type:kInstanceMethod];
+    
 }
 
 

@@ -25,6 +25,10 @@
 		4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804123CC0A8B003DEC4C /* MZAbstractDownloader.m */; };
 		4330804523CC0BC2003DEC4C /* MZImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804423CC0BC2003DEC4C /* MZImageDownloader.m */; };
 		4330804923CC43A7003DEC4C /* MZEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804823CC43A7003DEC4C /* MZEncode.m */; };
+		4330804D23CC6ACC003DEC4C /* MZAbstractState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804C23CC6ACC003DEC4C /* MZAbstractState.m */; };
+		4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */; };
+		4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805223CC6B14003DEC4C /* MZConcreteStateB.m */; };
+		4330805623CC6B46003DEC4C /* MZContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805523CC6B46003DEC4C /* MZContextState.m */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -105,6 +109,14 @@
 		4330804423CC0BC2003DEC4C /* MZImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZImageDownloader.m; sourceTree = "<group>"; };
 		4330804723CC43A7003DEC4C /* MZEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZEncode.h; sourceTree = "<group>"; };
 		4330804823CC43A7003DEC4C /* MZEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZEncode.m; sourceTree = "<group>"; };
+		4330804B23CC6ACC003DEC4C /* MZAbstractState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAbstractState.h; sourceTree = "<group>"; };
+		4330804C23CC6ACC003DEC4C /* MZAbstractState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAbstractState.m; sourceTree = "<group>"; };
+		4330804E23CC6B06003DEC4C /* MZConcreteStateA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZConcreteStateA.h; sourceTree = "<group>"; };
+		4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZConcreteStateA.m; sourceTree = "<group>"; };
+		4330805123CC6B14003DEC4C /* MZConcreteStateB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZConcreteStateB.h; sourceTree = "<group>"; };
+		4330805223CC6B14003DEC4C /* MZConcreteStateB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZConcreteStateB.m; sourceTree = "<group>"; };
+		4330805423CC6B46003DEC4C /* MZContextState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContextState.h; sourceTree = "<group>"; };
+		4330805523CC6B46003DEC4C /* MZContextState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContextState.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +357,21 @@
 			path = Encode;
 			sourceTree = "<group>";
 		};
+		4330804A23CC6439003DEC4C /* 9_状态模式 */ = {
+			isa = PBXGroup;
+			children = (
+				4330804B23CC6ACC003DEC4C /* MZAbstractState.h */,
+				4330804C23CC6ACC003DEC4C /* MZAbstractState.m */,
+				4330804E23CC6B06003DEC4C /* MZConcreteStateA.h */,
+				4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */,
+				4330805123CC6B14003DEC4C /* MZConcreteStateB.h */,
+				4330805223CC6B14003DEC4C /* MZConcreteStateB.m */,
+				4330805423CC6B46003DEC4C /* MZContextState.h */,
+				4330805523CC6B46003DEC4C /* MZContextState.m */,
+			);
+			path = "9_状态模式";
+			sourceTree = "<group>";
+		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +509,7 @@
 				E79F5B0623C779D100257841 /* 6_观察者模式 */,
 				E76C491F23C8D52D00F7F98B /* 7_组合模式 */,
 				E7601D9723CB756500D2225D /* 8_门面模式 */,
+				4330804A23CC6439003DEC4C /* 9_状态模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -634,9 +662,11 @@
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E7601DAD23CB7B3A00D2225D /* MZContext.m in Sources */,
 				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
+				4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */,
 				E7601DA023CB766300D2225D /* MZFacadeSubsystemB.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,
+				4330805623CC6B46003DEC4C /* MZContextState.m in Sources */,
 				4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */,
 				4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */,
 				E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */,
@@ -659,6 +689,7 @@
 				E7601D9423CB6B7700D2225D /* MZTestDelegateB.m in Sources */,
 				43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */,
 				E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */,
+				4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */,
 				E7601D9123CB6B6C00D2225D /* MZTestDelegateA.m in Sources */,
 				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
 				E79F5B1723C7820F00257841 /* MZObserverClassB.m in Sources */,
@@ -674,6 +705,7 @@
 				4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */,
 				E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */,
 				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,
+				4330804D23CC6ACC003DEC4C /* MZAbstractState.m in Sources */,
 				4330800D23C706FF003DEC4C /* NSObject+MZPerformSelector.m in Sources */,
 				E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */,
 				E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */,

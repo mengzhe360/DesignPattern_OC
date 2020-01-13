@@ -47,7 +47,7 @@
     id valueC = [self performClass:downloader selector:@"testReturnFloat:" objects:@[@1101101] type:kInstanceMethod];
     MZLog(valueA); MZLog(valueB); MZLog(valueC);
     
-//    [self performClassName:@"MZAbstractDownloader" selector:@"setDownloadUrl:" objects:@[@"测试直接实例化抽象类-就让他直接crash"] type:kInstanceMethod];
+//    [self performClassName:@"MZAbstractDownloader" selector:@"setDownloadUrl:" objects:@[@"测试直接实例化抽象类-就让他crash"] type:kInstanceMethod];
 }
 
 @end

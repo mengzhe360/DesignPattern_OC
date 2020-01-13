@@ -17,9 +17,7 @@
 
 - (id)performClassName:(NSString *)className selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type
 {
-    Class aClass = NSClassFromString(className);
-    
-    return [self performTarget:aClass selector:aSEL objects:objects type:type singletonType:NO];
+    return [self performTarget:NSClassFromString(className) selector:aSEL objects:objects type:type singletonType:NO];
 }
 
 - (id)performTarget:(Class)aClass selector:(NSString *)aSEL objects:(NSArray <id> *)objects type:(RequestMethodType)type singletonType:(BOOL)isYes
@@ -73,7 +71,7 @@
         returnValue = nil;
     }else if(!strcmp(returnType, @encode(id))){
         [invocation getReturnValue:&returnValue];//returnValue = 返回值
-    }else{//类型并不全，需要的话需要扩展
+    }else{//基本数据类型并不全，需要的话需要扩展
         NSUInteger length = [signature methodReturnLength];
         void *buffer = (void *)malloc(length);
         [invocation getReturnValue:buffer];
@@ -84,8 +82,7 @@
         }else if(!strcmp(returnType,@encode(float))){
             returnValue = [NSNumber numberWithFloat:*((float *)buffer)];
         } else{
-            NSValue *value = [NSValue value:&buffer withObjCType:returnType];
-            returnValue = value;
+            returnValue = [NSValue value:&buffer withObjCType:returnType];
         }
         free(buffer);
     }
