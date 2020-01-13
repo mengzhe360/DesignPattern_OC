@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static _concreteStateA;
-static _concreteStateB;
+FOUNDATION_EXPORT id _concreteStateA(void);
+FOUNDATION_EXPORT id _concreteStateB(void);
 
 @interface MZContextState : NSObject
 

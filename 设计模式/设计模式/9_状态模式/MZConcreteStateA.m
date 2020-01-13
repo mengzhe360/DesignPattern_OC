@@ -14,7 +14,7 @@
 - (void)stateHandleA
 {
     MZLog(@"切换状态");
-    self.contextState.currentState = _concreteStateB;
+    self.contextState.currentState = _concreteStateB();
     [self.contextState contextStateHandleC:@"切换状态 B 实现"];
 }
 

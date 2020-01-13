@@ -10,11 +10,11 @@
 #import "MZConcreteStateA.h"
 #import "MZConcreteStateB.h"
 
-NSString *const _concreteStateA(){
+id _concreteStateA(){
     return [[MZConcreteStateA alloc] init];
 }
 
-NSString *const _concreteStateB(){
+id _concreteStateB(){
     return [[MZConcreteStateB alloc] init];
 }
 
@@ -27,8 +27,8 @@ NSString *const _concreteStateB(){
 + (void)initialize
 {
     if (self == [MZContextState class]) {
-        _concreteStateA = [[MZConcreteStateA alloc] init];
-        _concreteStateB = [[MZConcreteStateB alloc] init];
+//        _concreteStateA = [[MZConcreteStateA alloc] init];
+//        _concreteStateB = [[MZConcreteStateB alloc] init];
     }
 }
 
@@ -36,8 +36,8 @@ NSString *const _concreteStateB(){
 {
     self = [super init];
     if (self) {
-        _concreteStateA = [[MZConcreteStateA alloc] init];
-        _concreteStateB = [[MZConcreteStateB alloc] init];
+//        _concreteStateA = [[MZConcreteStateA alloc] init];
+//        _concreteStateB = [[MZConcreteStateB alloc] init];
     }
     return self;
 }
