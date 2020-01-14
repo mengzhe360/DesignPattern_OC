@@ -16,10 +16,15 @@
 
 @implementation MZOriginator
 
-- (MZMemento *)createMemento:(NSString *)state
+- (instancetype)init
 {
-    MZMLog
-    return [[MZMemento alloc] initWithState:state];
+    self = [super init];
+    if (self) {
+        self.name = @"";
+        self.nameA = @"";
+        self.nameB = @"";
+    }
+    return self;
 }
 
 - (MZMemento *)createMemento
@@ -30,9 +35,20 @@
 
 - (void)restoreMemento:(MZMemento *)memento
 {
-    MZMLog
-//   [self setState:memento.state];
+    MZLog(memento.stateMap)
     [MZMementoTool restoreProp:self map:memento.stateMap];
+}
+
+- (void)restoreMemento:(MZMemento *)memento atState:(NSString *)state
+{
+     MZLog(@"初始值")
+    MZLog(memento.stateMap)
+    [MZMementoTool restoreProp:self map:memento.stateMap atState:state];
+}
+
+- (void)setState:(NSString *)state
+{
+    [MZMementoTool backupProp:self atState:state];
 }
 
 @end

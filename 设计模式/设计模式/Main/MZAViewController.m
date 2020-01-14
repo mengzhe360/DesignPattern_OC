@@ -267,7 +267,7 @@ typedef void(^MZBlock)(NSString *mz);
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodB" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodC" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeB" selector:@"facadeBmethodD" objects:@[] type:kInstanceMethod];
-
+    
 }
 
 //9、状态模式
@@ -275,8 +275,8 @@ typedef void(^MZBlock)(NSString *mz);
 {
     
     NSObject *contextState = [NSObject objectForClassName:@"MZContextState"];
-//    NSObject *stateA = [NSObject objectForClassName:@"MZConcreteStateA"];
-//    NSObject *stateB = [NSObject objectForClassName:@"MZConcreteStateB"];
+    //    NSObject *stateA = [NSObject objectForClassName:@"MZConcreteStateA"];
+    //    NSObject *stateB = [NSObject objectForClassName:@"MZConcreteStateB"];
     
     [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateA()] type:kInstanceMethod];
     [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成一条龙"] type:kInstanceMethod];
@@ -291,12 +291,25 @@ typedef void(^MZBlock)(NSString *mz);
 //10、备忘录模式
 - (void)mementoMode
 {
-
+    
+    //    //1、实例化发起人
+    //    MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
+    //    originator.name = @"中国民主繁盛富强-A";
+    //
+    //    //2、实例化备忘录管理
+    //    MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
+    //
+    //    //3、创建备忘录
+    //    caretaker.memento = [originator createMemento];
+    //
+    //    originator.name = @"中国民主繁盛富强-B";
+    //
+    //    //5、恢复备忘录
+    //    [originator restoreMemento:caretaker.memento];
+    
+    
     //1、实例化发起人
     MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
-    originator.state0 = @"中国";
-    originator.state1 = @"繁盛富强";
-    originator.state2 = @"民主复兴";
     
     //2、实例化备忘录管理
     MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
@@ -304,18 +317,24 @@ typedef void(^MZBlock)(NSString *mz);
     //3、创建备忘录
     caretaker.memento = [originator createMemento];
     
-    originator.state0 = @"中国A";
-    originator.state1 = @"繁盛富强A";
-    originator.state2 = @"民主复兴A";
+    originator.name = @"中国民主繁盛富强AAA";
+    originator.nameA = @"中国就是强";
+    [originator setState:@"AAA"];
     
-    //5、恢复备忘录
-    [originator restoreMemento:caretaker.memento];
+    originator.name = @"中国民主繁盛富强BBB";
+    originator.nameB = @"中国第一";
+    [originator setState:@"BBB"];
+    
+    originator.name = @"中国民主繁盛富强CCC";
+    originator.nameA = @"中国打败小日本";
+    originator.nameB = @"中国打败美国佬";
+    [originator setState:@"CCC"];
+    
+    originator.name = @"中国民主繁盛富强DDD";
+    [originator setState:@"DDD"];
 
-//    id memento = [self performClass:originator selector:@"createMemento:" objects:@[@"创建初始备忘录"] type:kInstanceMethod];
-//    //4、
-//    [self performClass:caretaker selector:@"setMemento:" objects:@[memento] type:kInstanceMethod];
-//    //5、恢复备忘录
-//    [self performClass:originator selector:@"restoreMemento:" objects:@[memento] type:kInstanceMethod];
+    //5、恢复备忘录
+    [originator restoreMemento:caretaker.memento atState:@"DDD"];
     
 }
 

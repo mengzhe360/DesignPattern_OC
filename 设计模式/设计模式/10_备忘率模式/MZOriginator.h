@@ -16,15 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZOriginator : NSObject
 
-@property (nonatomic,copy) NSString *state0;
-@property (nonatomic,copy) NSString *state1;
-@property (nonatomic,copy) NSString *state2;
-
-- (MZMemento *)createMemento:(NSString *)state;
+@property (nonatomic,copy) NSString *name;//对象内容
+@property (nonatomic,copy) NSString *nameA;//对象内容
+@property (nonatomic,copy) NSString *nameB;//对象内容
 
 - (MZMemento *)createMemento;
 
+- (void)setState:(NSString *)state;
+
 - (void)restoreMemento:(MZMemento *)memento;
+
+- (void)restoreMemento:(MZMemento *)memento atState:(NSString *)state;
 
 @end
 

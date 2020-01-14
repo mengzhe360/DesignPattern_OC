@@ -15,13 +15,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZMemento : NSObject
 
-- (instancetype)initWithState:(NSString *)state;
-
+/// 单一状态
+/// @param stateMap 对象内容
 - (instancetype)initWithStateMap:(NSDictionary *)stateMap;
 
-@property (nonatomic,copy) NSString *state;
+/// 多个节点备忘状态
+/// @param stateMap 每一个节点的对象存储内容
+/// @param state 节点
+- (instancetype)initWithStateMap:(NSDictionary *)stateMap atState:(NSString *)state;
 
-@property (nonatomic,strong) NSDictionary *stateMap;
+//@property (nonatomic,copy) NSString *state;//备忘录保存节点
+
+@property (nonatomic,strong) NSDictionary *stateMap;//存储的备忘点的对象内容
 
 @end
 
