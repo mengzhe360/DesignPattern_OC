@@ -11,6 +11,16 @@
 
 @implementation MZConcreteStateB
 
++ (instancetype)sharedInstance
+{
+    static id _sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+    return _sharedInstance;
+}
+
 - (void)stateHandleA
 {
     MZLog(@"必须自己B实现的逻辑");
@@ -18,9 +28,9 @@
 
 - (void)stateHandleB
 {
-    MZLog(@"切换状态");
+    MZLog(@"开始切换状态");
     self.contextState.currentState = _concreteStateA();
-    [self.contextState contextStateHandleD:@"切换状态 A 实现"];
+    [self.contextState contextStateHandleD:@"切换到 A 状态去实现"];
 }
 
 @end

@@ -29,6 +29,9 @@
 		4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */; };
 		4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805223CC6B14003DEC4C /* MZConcreteStateB.m */; };
 		4330805623CC6B46003DEC4C /* MZContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330805523CC6B46003DEC4C /* MZContextState.m */; };
+		4331A16C23CDBF7700ABD720 /* MZMementoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A16B23CDBF7700ABD720 /* MZMementoTool.m */; };
+		4331A16F23CDC9FF00ABD720 /* NSObject+MZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A16E23CDC9FF00ABD720 /* NSObject+MZRuntime.m */; };
+		4331A17223CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A17023CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m */; };
 		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
 		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
 		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
@@ -120,6 +123,12 @@
 		4330805223CC6B14003DEC4C /* MZConcreteStateB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZConcreteStateB.m; sourceTree = "<group>"; };
 		4330805423CC6B46003DEC4C /* MZContextState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContextState.h; sourceTree = "<group>"; };
 		4330805523CC6B46003DEC4C /* MZContextState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContextState.m; sourceTree = "<group>"; };
+		4331A16A23CDBF7700ABD720 /* MZMementoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZMementoTool.h; sourceTree = "<group>"; };
+		4331A16B23CDBF7700ABD720 /* MZMementoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZMementoTool.m; sourceTree = "<group>"; };
+		4331A16D23CDC9FF00ABD720 /* NSObject+MZRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MZRuntime.h"; sourceTree = "<group>"; };
+		4331A16E23CDC9FF00ABD720 /* NSObject+MZRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MZRuntime.m"; sourceTree = "<group>"; };
+		4331A17023CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YGUnicodeLog.m"; sourceTree = "<group>"; };
+		4331A17123CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YGUnicodeLog.h"; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,8 +263,12 @@
 		43307FFE23C5B981003DEC4C /* HOOK */ = {
 			isa = PBXGroup;
 			children = (
+				4331A17123CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.h */,
+				4331A17023CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m */,
 				43307FFF23C5B9C7003DEC4C /* UIWebView+MZHook.h */,
 				4330800023C5B9C7003DEC4C /* UIWebView+MZHook.m */,
+				4331A16D23CDC9FF00ABD720 /* NSObject+MZRuntime.h */,
+				4331A16E23CDC9FF00ABD720 /* NSObject+MZRuntime.m */,
 			);
 			path = HOOK;
 			sourceTree = "<group>";
@@ -303,14 +316,14 @@
 			path = "5_工厂模式";
 			sourceTree = "<group>";
 		};
-		4330802123C84A71003DEC4C /* SubscriptionServiceCenter */ = {
+		4330802123C84A71003DEC4C /* SubServiceCenter */ = {
 			isa = PBXGroup;
 			children = (
 				4330802223C84AB8003DEC4C /* MZSubscriptionServiceCenterProtocol.h */,
 				4330802323C84AF6003DEC4C /* MZSubscriptionServiceCenter.h */,
 				4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */,
 			);
-			path = SubscriptionServiceCenter;
+			path = SubServiceCenter;
 			sourceTree = "<group>";
 		};
 		4330802623C84B69003DEC4C /* SubjectObserver */ = {
@@ -401,12 +414,14 @@
 		E71A087023CCD3370053BF69 /* 10_备忘率模式 */ = {
 			isa = PBXGroup;
 			children = (
-				E71A087423CCD3DF0053BF69 /* MZMemento.h */,
-				E71A087523CCD3DF0053BF69 /* MZMemento.m */,
 				E71A087723CCD3F00053BF69 /* MZOriginator.h */,
 				E71A087823CCD3F00053BF69 /* MZOriginator.m */,
+				E71A087423CCD3DF0053BF69 /* MZMemento.h */,
+				E71A087523CCD3DF0053BF69 /* MZMemento.m */,
 				E71A087A23CCD4010053BF69 /* MZCaretaker.h */,
 				E71A087B23CCD4010053BF69 /* MZCaretaker.m */,
+				4331A16A23CDBF7700ABD720 /* MZMementoTool.h */,
+				4331A16B23CDBF7700ABD720 /* MZMementoTool.m */,
 			);
 			path = "10_备忘率模式";
 			sourceTree = "<group>";
@@ -495,7 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				4330802623C84B69003DEC4C /* SubjectObserver */,
-				4330802123C84A71003DEC4C /* SubscriptionServiceCenter */,
+				4330802123C84A71003DEC4C /* SubServiceCenter */,
 			);
 			path = "6_观察者模式";
 			sourceTree = "<group>";
@@ -682,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */,
+				4331A17223CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m in Sources */,
 				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E7601DAD23CB7B3A00D2225D /* MZContext.m in Sources */,
@@ -690,6 +706,7 @@
 				E7601DA023CB766300D2225D /* MZFacadeSubsystemB.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,
+				4331A16F23CDC9FF00ABD720 /* NSObject+MZRuntime.m in Sources */,
 				4330805623CC6B46003DEC4C /* MZContextState.m in Sources */,
 				4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */,
 				4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */,
@@ -728,6 +745,7 @@
 				E7601DA623CB772A00D2225D /* MZFacadeA.m in Sources */,
 				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
 				E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */,
+				4331A16C23CDBF7700ABD720 /* MZMementoTool.m in Sources */,
 				4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */,
 				E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */,
 				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,

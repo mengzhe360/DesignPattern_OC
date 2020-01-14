@@ -7,7 +7,32 @@
 //
 
 #import "MZOriginator.h"
+#import "MZMemento.h"
+#import "MZMementoTool.h"
+
+@interface MZOriginator ()
+
+@end
 
 @implementation MZOriginator
+
+- (MZMemento *)createMemento:(NSString *)state
+{
+    MZMLog
+    return [[MZMemento alloc] initWithState:state];
+}
+
+- (MZMemento *)createMemento
+{
+    MZMLog
+    return [[MZMemento alloc] initWithStateMap:[MZMementoTool backupProp:self]];
+}
+
+- (void)restoreMemento:(MZMemento *)memento
+{
+    MZMLog
+//   [self setState:memento.state];
+    [MZMementoTool restoreProp:self map:memento.stateMap];
+}
 
 @end

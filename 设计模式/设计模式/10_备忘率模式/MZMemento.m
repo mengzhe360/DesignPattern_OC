@@ -10,4 +10,22 @@
 
 @implementation MZMemento
 
+- (instancetype)initWithState:(NSString *)state
+{
+    self = [super init];
+    if (self) {
+        self.state = state;
+    }
+    return self;
+}
+
+- (instancetype)initWithStateMap:(NSDictionary *)stateMap
+{
+    self = [super init];
+    if (self) {
+        self.stateMap = stateMap;
+    }
+    return self;
+}
+
 @end

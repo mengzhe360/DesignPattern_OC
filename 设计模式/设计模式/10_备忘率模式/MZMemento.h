@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+备忘录的角色
+*/
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MZMemento : NSObject
+
+- (instancetype)initWithState:(NSString *)state;
+
+- (instancetype)initWithStateMap:(NSDictionary *)stateMap;
+
+@property (nonatomic,copy) NSString *state;
+
+@property (nonatomic,strong) NSDictionary *stateMap;
 
 @end
 

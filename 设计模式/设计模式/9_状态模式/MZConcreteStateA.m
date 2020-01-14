@@ -11,11 +11,21 @@
 
 @implementation MZConcreteStateA
 
++ (instancetype)sharedInstance
+{
+    static id _sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+    return _sharedInstance;
+}
+
 - (void)stateHandleA
 {
-    MZLog(@"切换状态");
+    MZLog(@"开始切换状态");
     self.contextState.currentState = _concreteStateB();
-    [self.contextState contextStateHandleC:@"切换状态 B 实现"];
+    [self.contextState contextStateHandleC:@"切换到 B 状态实去现"];
 }
 
 - (void)stateHandleB

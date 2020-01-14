@@ -52,7 +52,6 @@
     }
     invocation.target = target;
     invocation.selector = aSelector;
-    
     NSInteger arguments = signature.numberOfArguments - 2;
     
     NSUInteger objectsCount = objects.count;
@@ -65,11 +64,13 @@
     
     [invocation invoke];
     
-    id returnValue = nil;
+    id __unsafe_unretained returnValue = nil;
     const char *returnType = signature.methodReturnType;
     if(!strcmp(returnType, @encode(void))){
         returnValue = nil;
     }else if(!strcmp(returnType, @encode(id))){
+        [invocation getReturnValue:&returnValue];//returnValue = 返回值
+    }else if(!strcmp(returnType, @encode(typeof(Class)))){
         [invocation getReturnValue:&returnValue];//returnValue = 返回值
     }else{//基本数据类型并不全，需要的话需要扩展
         NSUInteger length = [signature methodReturnLength];
@@ -86,6 +87,7 @@
         }
         free(buffer);
     }
+//    NSLog(@"----mz----target:%@-&aSEL:%p-returnValue:%@\n\n",target,&aSEL,returnValue);
     return returnValue;
 }
 

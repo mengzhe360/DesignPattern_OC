@@ -10,6 +10,7 @@
 
 @implementation MZEncode
 
+///https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
 + (NSString *)testParamForcharValue:(char)charValue//c
                   unsignedCharValue:(unsigned char)unsignedCharValue//C
                          shortValue:(short)shortValue//s
@@ -120,7 +121,7 @@
     NSLog(@"NSArray[]        : %s", @encode(typeof(@[@"str"])));
     NSLog(@"id               : %s", @encode(id));
     NSLog(@"NSObject         : %s", @encode(NSObject));
-    NSLog(@"[NSObject class] : %s", @encode(typeof([NSObject class])));
+    NSLog(@"[NSObject class] : %s", @encode(typeof(Class)));
     NSLog(@"NSError **       : %s", @encode(typeof(NSError **)));
     int intArray[5] = {1, 2, 3, 4, 5};
     NSLog(@"int[]            : %s", @encode(typeof(intArray)));

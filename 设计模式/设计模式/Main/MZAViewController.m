@@ -28,6 +28,9 @@
 
 #import "MZContextState.h"
 
+#import "MZOriginator.h"
+#import "MZCaretaker.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -48,7 +51,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self stateMode];
+    [self mementoMode];
 }
 
 ///1_责任链
@@ -160,7 +163,7 @@ typedef void(^MZBlock)(NSString *mz);
     }
 }
 
-//组合模式
+//7、组合模式
 - (void)componentMode
 {
     MZComposite *root = [[MZComposite alloc] init];
@@ -212,7 +215,7 @@ typedef void(^MZBlock)(NSString *mz);
     }];
 }
 
-//UIView和CALayer
+//8、UIView和CALayer
 - (void)viewLayerTest
 {
     CALayer * layer = [[CALayer alloc] init];
@@ -264,25 +267,55 @@ typedef void(^MZBlock)(NSString *mz);
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodB" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeA" selector:@"facadeAmethodC" objects:@[] type:kInstanceMethod];
     [self performClassName:@"MZFacadeB" selector:@"facadeBmethodD" objects:@[] type:kInstanceMethod];
-    
-//    [self performClassName:@"MZEncode" selector:@"callTestParam" objects:@[] type:kClassMethod];
 
 }
 
-//状态模式
-- (void)stateMode{
+//9、状态模式
+- (void)stateMode
+{
     
     NSObject *contextState = [NSObject objectForClassName:@"MZContextState"];
 //    NSObject *stateA = [NSObject objectForClassName:@"MZConcreteStateA"];
-    NSObject *stateB = [NSObject objectForClassName:@"MZConcreteStateB"];
+//    NSObject *stateB = [NSObject objectForClassName:@"MZConcreteStateB"];
     
-//    [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateA()] type:kInstanceMethod];
-//    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成一条龙"] type:kInstanceMethod];
-//    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"猪八戒变成如来佛主"] type:kInstanceMethod];
+    [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateA()] type:kInstanceMethod];
+    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成一条龙"] type:kInstanceMethod];
+    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"猪八戒变成如来佛主"] type:kInstanceMethod];
     
     [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateB()] type:kInstanceMethod];
     [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"孙悟空变成小鸟"] type:kInstanceMethod];
     [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"孙悟空变成老虎"] type:kInstanceMethod];
+    
+}
+
+//10、备忘录模式
+- (void)mementoMode
+{
+
+    //1、实例化发起人
+    MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
+    originator.state0 = @"中国";
+    originator.state1 = @"繁盛富强";
+    originator.state2 = @"民主复兴";
+    
+    //2、实例化备忘录管理
+    MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
+    
+    //3、创建备忘录
+    caretaker.memento = [originator createMemento];
+    
+    originator.state0 = @"中国A";
+    originator.state1 = @"繁盛富强A";
+    originator.state2 = @"民主复兴A";
+    
+    //5、恢复备忘录
+    [originator restoreMemento:caretaker.memento];
+
+//    id memento = [self performClass:originator selector:@"createMemento:" objects:@[@"创建初始备忘录"] type:kInstanceMethod];
+//    //4、
+//    [self performClass:caretaker selector:@"setMemento:" objects:@[memento] type:kInstanceMethod];
+//    //5、恢复备忘录
+//    [self performClass:originator selector:@"restoreMemento:" objects:@[memento] type:kInstanceMethod];
     
 }
 

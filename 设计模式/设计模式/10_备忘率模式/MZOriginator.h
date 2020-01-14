@@ -7,10 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MZMemento.h"
 
+/*
+发起人的角色
+*/
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MZOriginator : NSObject
+
+@property (nonatomic,copy) NSString *state0;
+@property (nonatomic,copy) NSString *state1;
+@property (nonatomic,copy) NSString *state2;
+
+- (MZMemento *)createMemento:(NSString *)state;
+
+- (MZMemento *)createMemento;
+
+- (void)restoreMemento:(MZMemento *)memento;
 
 @end
 

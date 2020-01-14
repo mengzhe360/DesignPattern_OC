@@ -10,4 +10,28 @@
 
 @implementation MZCaretaker
 
+//- (MZMemento *)memento
+//{
+//    MZMLog
+//    return self.memento;
+//}
+//
+//- (void)setMemento:(MZMemento *)memento
+//{
+//    MZMLog
+////    _memento = memento;
+//}
+//
+//- (NSDictionary *)mementoMap
+//{
+//    MZMLog
+//    return self.mementoMap;
+//}
+//
+//- (void)setMementoMap:(NSDictionary *)mementoMap
+//{
+//    MZMLog
+////    _mementoMap = mementoMap;
+//}
+
 @end

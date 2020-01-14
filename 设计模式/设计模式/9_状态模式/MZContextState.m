@@ -11,12 +11,15 @@
 #import "MZConcreteStateB.h"
 
 id _concreteStateA(){
-    return [[MZConcreteStateA alloc] init];
+    return [MZConcreteStateA sharedInstance];
 }
 
 id _concreteStateB(){
-    return [[MZConcreteStateB alloc] init];
+    return [MZConcreteStateB sharedInstance];
 }
+
+static id _concreteStateAa = nil;
+static id _concreteStateBb = nil;
 
 @interface MZContextState ()
 
@@ -27,19 +30,9 @@ id _concreteStateB(){
 + (void)initialize
 {
     if (self == [MZContextState class]) {
-//        _concreteStateA = [[MZConcreteStateA alloc] init];
-//        _concreteStateB = [[MZConcreteStateB alloc] init];
+        _concreteStateAa = [[MZConcreteStateA alloc] init];
+        _concreteStateBb = [[MZConcreteStateB alloc] init];
     }
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-//        _concreteStateA = [[MZConcreteStateA alloc] init];
-//        _concreteStateB = [[MZConcreteStateB alloc] init];
-    }
-    return self;
 }
 
 - (void)setCurrentState:(MZAbstractState *)currentState
