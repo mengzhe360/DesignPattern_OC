@@ -31,6 +31,8 @@
 #import "MZOriginator.h"
 #import "MZCaretaker.h"
 
+#import "MZElementCollection.h"
+
 #define  SCIENCE  @"SCIENCE"
 #define  NEWTON   @"NEWTON"
 
@@ -51,7 +53,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self mementoMode];
+    [self visitorMode];
 }
 
 ///1_责任链
@@ -295,15 +297,15 @@ typedef void(^MZBlock)(NSString *mz);
     //1、实例化发起人
     MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
     originator.name = @"中国民主繁盛富强-A";
-    
+
     //2、实例化备忘录管理
     MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
-    
+
     //3、创建备忘录
     caretaker.memento = [originator createMemento];
-    
+
     originator.name = @"中国民主繁盛富强-B";
-    
+
     //5、恢复备忘录
     [originator restoreMemento:caretaker.memento];
     
@@ -316,7 +318,7 @@ typedef void(^MZBlock)(NSString *mz);
     MZCaretaker *caretakerM = [NSObject objectForClassName:@"MZCaretaker"];
 
     //3、创建备忘录
-    caretaker.memento = [originatorM createMemento];
+    caretakerM.memento = [originatorM createMemento];
 
     originatorM.name = @"中国民主繁盛富强AAA";
     originatorM.nameA = @"中国就是强";
@@ -329,14 +331,39 @@ typedef void(^MZBlock)(NSString *mz);
     originatorM.name = @"中国民主繁盛富强CCC";
     originatorM.nameA = @"中国打败小日本";
     originatorM.nameB = @"中国打败美国佬";
-    [originator setState:@"CCC"];
+    [originatorM setState:@"CCC"];
 
     originatorM.name = @"中国民主繁盛富强DDD";
     [originatorM setState:@"DDD"];
 
     //5、恢复备忘录
-    [originatorM restoreMemento:caretakerM.memento atState:@"aaa"];
+    [originatorM restoreMemento:caretakerM.memento atState:@"BBB"];
 
+}
+
+//11、访问者模式
+- (void)visitorMode
+{
+ 
+    MZMLog;
+    
+    MZElementCollection *collection = [NSObject objectForClassName:@"MZElementCollection"];
+    NSObject *elementA = [NSObject objectForClassName:@"MZElementA"];
+    NSObject *elementB = [NSObject objectForClassName:@"MZElementB"];
+    [self performClass:collection selector:@"addElement:withKey:" objects:@[elementA,@"ElementA"] type:kInstanceMethod];
+    [self performClass:collection selector:@"addElement:withKey:" objects:@[elementB,@"ElementB"] type:kInstanceMethod];
+    
+    [collection.allKeys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        id <MZElementProtocol> element = [collection elementWithKey:obj];
+        NSObject *visitorA = [NSObject objectForClassName:@"MZVisitorA"];
+        NSObject *visitorB = [NSObject objectForClassName:@"MZVisitorB"];
+        
+        [self performClass:element selector:@"accept:" objects:@[visitorA] type:kInstanceMethod];
+        [self performClass:element selector:@"accept:" objects:@[visitorB] type:kInstanceMethod];
+        
+    }];
+    
 }
 
 

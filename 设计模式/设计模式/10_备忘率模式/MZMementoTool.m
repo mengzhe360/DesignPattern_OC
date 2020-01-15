@@ -12,10 +12,9 @@ static  NSMutableDictionary  *_stateMDict = nil;
 
 @implementation MZMementoTool
 
-+ (void)initialize {
-    
++ (void)initialize
+{
     if (self == [MZMementoTool class]) {
-        
         _stateMDict = [NSMutableDictionary dictionary];
     }
 }
@@ -29,7 +28,7 @@ static  NSMutableDictionary  *_stateMDict = nil;
 + (void)restoreProp:(id)object map:(NSDictionary *)map
 {
     NSDictionary *nowMap = [self getAllPropertiesAndVaules:object];//现在的
-
+    
     MZLog(nowMap)
     
     [map enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
@@ -41,18 +40,15 @@ static  NSMutableDictionary  *_stateMDict = nil;
     }];
     
     MZLog([self getAllPropertiesAndVaules:object])
-    
 }
 
 + (NSDictionary *)backupProp:(id)object atState:(NSString *)state
 {
- 
     MZLog(object)
     
     [_stateMDict setObject:[self getAllPropertiesAndVaules:object] forKey:state];
     MZLog(_stateMDict.copy)
     return _stateMDict.copy;
-    
 }
 
 + (void)restoreProp:(id)object map:(NSDictionary *)map atState:(NSString *)state
@@ -69,9 +65,9 @@ static  NSMutableDictionary  *_stateMDict = nil;
     } else if (![_stateMDict.allKeys containsObject:state]) {
         MZLog(@"恢复节点不存在，请查看恢复节点是否正确") return;
     } else {
-         stateDict = [_stateMDict objectForKey:state];//保存state节点的数据
+        stateDict = [_stateMDict objectForKey:state];//保存state节点的数据
     }
-
+    
     NSDictionary *nowMap = [self getAllPropertiesAndVaules:object];//现在的
     
     [stateDict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
@@ -84,11 +80,10 @@ static  NSMutableDictionary  *_stateMDict = nil;
     
     NSString *stateNode = [NSString stringWithFormat:@"恢复到备忘节点%@",state];
     MZLog(stateNode);
-    MZLog([self getAllPropertiesAndVaules:object])
+    MZLog([self getAllPropertiesAndVaules:object]);
     
+    [_stateMDict removeAllObjects];
 }
-
-
 
 
 @end

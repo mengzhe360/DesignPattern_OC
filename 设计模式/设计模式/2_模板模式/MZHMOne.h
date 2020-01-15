@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MZHMOne : MZHMManager
 
 @property (nonatomic, assign) BOOL alarmFlag;
+
 - (void)setAlarm:(BOOL)isAlarm;
 
 @end

@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZCaretaker : NSObject
 
-@property (nonatomic,strong) MZMemento *memento;
+@property (nonatomic,strong) MZMemento *memento;//初始备忘录
 
-@property (nonatomic,strong) NSDictionary *mementoMap;
+//@property (nonatomic,strong) NSDictionary *mementoMap;//备忘录保存的所有节点数据
 
 @end
 
