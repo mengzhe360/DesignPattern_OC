@@ -59,14 +59,16 @@ static  NSMutableDictionary  *_stateMDict = nil;
 {
     MZLog(object)
     NSDictionary *stateDict = nil;
-    if (state == nil || state.length <= 0) {//初始值
+    if (state == nil || state.length == 0) {//初始值
         if (map.count == 0) {
-            MZLog(@"数据没有初始化")
-            return;
+            MZLog(@"数据没有初始化")  return;
         }else{
+            MZLog(@"恢复初始化")
             stateDict = map;
         }
-    }else{
+    } else if (![_stateMDict.allKeys containsObject:state]) {
+        MZLog(@"恢复节点不存在，请查看恢复节点是否正确") return;
+    } else {
          stateDict = [_stateMDict objectForKey:state];//保存state节点的数据
     }
 
@@ -80,6 +82,8 @@ static  NSMutableDictionary  *_stateMDict = nil;
         }
     }];
     
+    NSString *stateNode = [NSString stringWithFormat:@"恢复到备忘节点%@",state];
+    MZLog(stateNode);
     MZLog([self getAllPropertiesAndVaules:object])
     
 }

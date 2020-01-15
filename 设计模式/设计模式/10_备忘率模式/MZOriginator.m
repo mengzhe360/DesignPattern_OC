@@ -39,16 +39,19 @@
     [MZMementoTool restoreProp:self map:memento.stateMap];
 }
 
+- (void)setState:(NSString *)state
+{
+    MZLog(state)
+    [MZMementoTool backupProp:self atState:state];
+}
+
 - (void)restoreMemento:(MZMemento *)memento atState:(NSString *)state
 {
-     MZLog(@"初始值")
+    MZLog(@"初始值")
     MZLog(memento.stateMap)
     [MZMementoTool restoreProp:self map:memento.stateMap atState:state];
 }
 
-- (void)setState:(NSString *)state
-{
-    [MZMementoTool backupProp:self atState:state];
-}
+
 
 @end

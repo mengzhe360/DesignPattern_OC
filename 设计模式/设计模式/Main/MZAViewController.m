@@ -291,25 +291,10 @@ typedef void(^MZBlock)(NSString *mz);
 //10、备忘录模式
 - (void)mementoMode
 {
-    
-    //    //1、实例化发起人
-    //    MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
-    //    originator.name = @"中国民主繁盛富强-A";
-    //
-    //    //2、实例化备忘录管理
-    //    MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
-    //
-    //    //3、创建备忘录
-    //    caretaker.memento = [originator createMemento];
-    //
-    //    originator.name = @"中国民主繁盛富强-B";
-    //
-    //    //5、恢复备忘录
-    //    [originator restoreMemento:caretaker.memento];
-    
-    
+    MZLog(@"---------单个状态情况---------")
     //1、实例化发起人
     MZOriginator *originator = [NSObject objectForClassName:@"MZOriginator"];
+    originator.name = @"中国民主繁盛富强-A";
     
     //2、实例化备忘录管理
     MZCaretaker *caretaker = [NSObject objectForClassName:@"MZCaretaker"];
@@ -317,25 +302,41 @@ typedef void(^MZBlock)(NSString *mz);
     //3、创建备忘录
     caretaker.memento = [originator createMemento];
     
-    originator.name = @"中国民主繁盛富强AAA";
-    originator.nameA = @"中国就是强";
-    [originator setState:@"AAA"];
+    originator.name = @"中国民主繁盛富强-B";
     
-    originator.name = @"中国民主繁盛富强BBB";
-    originator.nameB = @"中国第一";
-    [originator setState:@"BBB"];
+    //5、恢复备忘录
+    [originator restoreMemento:caretaker.memento];
     
-    originator.name = @"中国民主繁盛富强CCC";
-    originator.nameA = @"中国打败小日本";
-    originator.nameB = @"中国打败美国佬";
+    MZLog(@"--------多个个状态情况----------")
+    
+    //1、实例化发起人
+    MZOriginator *originatorM = [NSObject objectForClassName:@"MZOriginator"];
+
+    //2、实例化备忘录管理
+    MZCaretaker *caretakerM = [NSObject objectForClassName:@"MZCaretaker"];
+
+    //3、创建备忘录
+    caretaker.memento = [originatorM createMemento];
+
+    originatorM.name = @"中国民主繁盛富强AAA";
+    originatorM.nameA = @"中国就是强";
+    [originatorM setState:@"AAA"];
+
+    originatorM.name = @"中国民主繁盛富强BBB";
+    originatorM.nameB = @"中国第一";
+    [originatorM setState:@"BBB"];
+
+    originatorM.name = @"中国民主繁盛富强CCC";
+    originatorM.nameA = @"中国打败小日本";
+    originatorM.nameB = @"中国打败美国佬";
     [originator setState:@"CCC"];
-    
-    originator.name = @"中国民主繁盛富强DDD";
-    [originator setState:@"DDD"];
+
+    originatorM.name = @"中国民主繁盛富强DDD";
+    [originatorM setState:@"DDD"];
 
     //5、恢复备忘录
-    [originator restoreMemento:caretaker.memento atState:@"DDD"];
-    
+    [originatorM restoreMemento:caretakerM.memento atState:@"aaa"];
+
 }
 
 

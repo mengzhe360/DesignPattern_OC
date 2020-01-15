@@ -24,9 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param state 节点
 - (instancetype)initWithStateMap:(NSDictionary *)stateMap atState:(NSString *)state;
 
-//@property (nonatomic,copy) NSString *state;//备忘录保存节点
-
-@property (nonatomic,strong) NSDictionary *stateMap;//存储的备忘点的对象内容
+/// 存储的备忘点的对象内容
+@property (nonatomic,strong) NSDictionary *stateMap;
 
 @end
 
