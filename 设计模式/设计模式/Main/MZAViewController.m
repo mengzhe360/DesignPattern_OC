@@ -33,8 +33,8 @@
 
 #import "MZElementCollection.h"
 
-#define  SCIENCE  @"SCIENCE"
-#define  NEWTON   @"NEWTON"
+static NSString *const SCIENCE = @"SCIENCE";
+static NSString *const NEWTON =  @"NEWTON";
 
 typedef void(^MZBlock)(NSString *mz);
 
@@ -359,7 +359,7 @@ typedef void(^MZBlock)(NSString *mz);
         NSObject *visitorA = [NSObject objectForClassName:@"MZVisitorA"];
         NSObject *visitorB = [NSObject objectForClassName:@"MZVisitorB"];
         
-//        [self performClass:element selector:@"accept:" objects:@[visitorA] type:kInstanceMethod];
+        [self performClass:element selector:@"accept:" objects:@[visitorA] type:kInstanceMethod];
         [self performClass:element selector:@"accept:" objects:@[visitorB] type:kInstanceMethod];
         
     }];

@@ -14,7 +14,6 @@
 
 - (void)visitElement:(id <MZElementProtocol>)element
 {
-    
     if ([element isMemberOfClass:[MZElementA class]]) {
         
         [element operation];
@@ -25,7 +24,6 @@
         [element operation];
         [self performClass:element selector:@"elementBSpecialOperationB:" objects:@[@2] type:kInstanceMethod];
     }
-    
 }
 
 @end
