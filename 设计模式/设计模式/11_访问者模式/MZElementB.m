@@ -9,10 +9,17 @@
 #import "MZElementB.h"
 #import "MZVisitorProtocol.h"
 
+@interface MZElementB ()
+
+@property (nonatomic,weak) id<MZVisitorProtocol> visitor;
+
+@end
+
 @implementation MZElementB
 
 - (void)accept:(nonnull id<MZVisitorProtocol>)visitor {
     MZLog(visitor)
+    _visitor = visitor;
     [visitor visitElement:self];
 }
 
@@ -23,9 +30,11 @@
 - (void)elementBSpecialOperationB:(MZElementBType)type{
     
     if (type == kElementBTypeA) {
-        MZLog(@"我要当明星");
+        NSString *A = [NSString stringWithFormat:@"%@我要当明星",_visitor.class];
+        MZLog(A);
     }else{
-        MZLog(@"我要成为科学家");
+        NSString *A = [NSString stringWithFormat:@"%@我要成为科学家",_visitor.class];
+        MZLog(A);
     }
 }
 

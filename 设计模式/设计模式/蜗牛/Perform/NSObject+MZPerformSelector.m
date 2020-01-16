@@ -56,10 +56,17 @@
     
     NSUInteger objectsCount = objects.count;
     NSInteger count = MIN(arguments, objectsCount);
+    
     for (int i = 0; i < count; i++) {
         id obj = objects[i];
         if ([obj isKindOfClass:[NSNull class]]) {obj = nil;}
-        [invocation setArgument:&obj atIndex:i+2];
+        const char *argumentType = [signature getArgumentTypeAtIndex:i+2];
+        if(!strcmp(argumentType,@encode(NSInteger))){//基本数据 ‘q’ 如果是longlong类型要注意
+            NSInteger lobj = [obj integerValue];
+            [invocation setArgument:&lobj atIndex:i+2];
+        }else{
+            [invocation setArgument:&obj atIndex:i+2];
+        }
     }
     
     [invocation invoke];
