@@ -33,6 +33,9 @@
 
 #import "MZElementCollection.h"
 
+#import "MZFlyweightFactory.h"
+#import "MZConcreteFlyweight.h"
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -53,7 +56,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self visitorMode];
+    [self flyweightMode];
 }
 
 ///1_责任链
@@ -344,7 +347,7 @@ typedef void(^MZBlock)(NSString *mz);
 //11、访问者模式
 - (void)visitorMode
 {
- 
+    
     MZMLog;
     
     MZElementCollection *collection = [NSObject objectForClassName:@"MZElementCollection"];
@@ -354,7 +357,7 @@ typedef void(^MZBlock)(NSString *mz);
     [self performClass:collection selector:@"addElement:withKey:" objects:@[elementB,@"ElementB"] type:kInstanceMethod];
     
     [collection.allKeys enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-       
+        
         id <MZElementProtocol> element = [collection elementWithKey:obj];
         NSObject *visitorA = [NSObject objectForClassName:@"MZVisitorA"];
         NSObject *visitorB = [NSObject objectForClassName:@"MZVisitorB"];
@@ -366,5 +369,29 @@ typedef void(^MZBlock)(NSString *mz);
     
 }
 
+//12、享元模式
+- (void)flyweightMode
+{
+    MZFlyweightFactory *factory = [[MZFlyweightFactory alloc] init];
+    MZConcreteFlyweight *faA = [factory getFlyweight:@"外部A"];
+    [faA operate:@"业务逻辑A"];
+    MZConcreteFlyweight *faB = [factory getFlyweight:@"外部B"];
+    [faB operate:@"业务逻辑B"];
+    MZConcreteFlyweight *faC = [factory getFlyweight:@"外部C"];
+    [faC operate:@"业务逻辑C"];
+    MZConcreteFlyweight *faD = [factory getFlyweight:@"外部D"];
+    [faD operate:@"业务逻辑D"];
+    
+    MZConcreteFlyweight *fa1 = [factory getFlyweight:@"外部A"];
+    [fa1 operate:@"业务逻辑A"];
+    MZConcreteFlyweight *fa2 = [factory getFlyweight:@"外部B"];
+    [fa2 operate:@"业务逻辑B"];
+    MZConcreteFlyweight *fa3 = [factory getFlyweight:@"外部C"];
+    [fa3 operate:@"业务逻辑C"];
+    MZConcreteFlyweight *fa4 = [factory getFlyweight:@"外部D"];
+    [fa4 operate:@"业务逻辑D"];
+    
+    [factory getFlyweightCount];    
+}
 
 @end
