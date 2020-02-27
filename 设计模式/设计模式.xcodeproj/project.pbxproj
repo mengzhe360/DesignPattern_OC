@@ -69,6 +69,9 @@
 		E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492123C8DDA100F7F98B /* MZComponent.m */; };
 		E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492423C8DE5D00F7F98B /* MZComposite.m */; };
 		E76C492823C8DF9C00F7F98B /* MZLeaf.m in Sources */ = {isa = PBXBuildFile; fileRef = E76C492723C8DF9C00F7F98B /* MZLeaf.m */; };
+		E783E8072407CFCB008B2EAE /* MZReusePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E8062407CFCB008B2EAE /* MZReusePool.m */; };
+		E783E80A2407D0B0008B2EAE /* MZTableViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E8092407D0B0008B2EAE /* MZTableViewIndex.m */; };
+		E783E80D2407DA2F008B2EAE /* MZReusePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E80C2407DA2F008B2EAE /* MZReusePoolViewController.m */; };
 		E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */; };
 		E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1023C7818500257841 /* MZObserverClass.m */; };
 		E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1323C781FC00257841 /* MZObserverClassA.m */; };
@@ -219,6 +222,12 @@
 		E76C492423C8DE5D00F7F98B /* MZComposite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZComposite.m; sourceTree = "<group>"; };
 		E76C492623C8DF9C00F7F98B /* MZLeaf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLeaf.h; sourceTree = "<group>"; };
 		E76C492723C8DF9C00F7F98B /* MZLeaf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLeaf.m; sourceTree = "<group>"; };
+		E783E8052407CFCB008B2EAE /* MZReusePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZReusePool.h; sourceTree = "<group>"; };
+		E783E8062407CFCB008B2EAE /* MZReusePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZReusePool.m; sourceTree = "<group>"; };
+		E783E8082407D0B0008B2EAE /* MZTableViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTableViewIndex.h; sourceTree = "<group>"; };
+		E783E8092407D0B0008B2EAE /* MZTableViewIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTableViewIndex.m; sourceTree = "<group>"; };
+		E783E80B2407DA2F008B2EAE /* MZReusePoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZReusePoolViewController.h; sourceTree = "<group>"; };
+		E783E80C2407DA2F008B2EAE /* MZReusePoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZReusePoolViewController.m; sourceTree = "<group>"; };
 		E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectProtocol.h; sourceTree = "<group>"; };
 		E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZObserverProtocol.h; sourceTree = "<group>"; };
 		E79F5B0923C77DCC00257841 /* MZSubjectClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClass.h; sourceTree = "<group>"; };
@@ -296,6 +305,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				E783E8042407B031008B2EAE /* TableViewPool */,
 				4330804623CC4374003DEC4C /* Encode */,
 				4330803323C9A98A003DEC4C /* UIView和CALayer */,
 				4330801723C7285F003DEC4C /* Perform */,
@@ -569,6 +579,19 @@
 			path = "7_组合模式";
 			sourceTree = "<group>";
 		};
+		E783E8042407B031008B2EAE /* TableViewPool */ = {
+			isa = PBXGroup;
+			children = (
+				E783E8052407CFCB008B2EAE /* MZReusePool.h */,
+				E783E8062407CFCB008B2EAE /* MZReusePool.m */,
+				E783E8082407D0B0008B2EAE /* MZTableViewIndex.h */,
+				E783E8092407D0B0008B2EAE /* MZTableViewIndex.m */,
+				E783E80B2407DA2F008B2EAE /* MZReusePoolViewController.h */,
+				E783E80C2407DA2F008B2EAE /* MZReusePoolViewController.m */,
+			);
+			path = TableViewPool;
+			sourceTree = "<group>";
+		};
 		E79F5B0623C779D100257841 /* 6_观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +791,7 @@
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E7601DAD23CB7B3A00D2225D /* MZContext.m in Sources */,
 				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
+				E783E80D2407DA2F008B2EAE /* MZReusePoolViewController.m in Sources */,
 				4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */,
 				E7601DA023CB766300D2225D /* MZFacadeSubsystemB.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
@@ -784,6 +808,7 @@
 				E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */,
 				E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */,
 				43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */,
+				E783E8072407CFCB008B2EAE /* MZReusePool.m in Sources */,
 				4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */,
 				4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */,
 				432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */,
@@ -831,6 +856,7 @@
 				E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */,
 				E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */,
 				E76C492823C8DF9C00F7F98B /* MZLeaf.m in Sources */,
+				E783E80A2407D0B0008B2EAE /* MZTableViewIndex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
