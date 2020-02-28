@@ -12,11 +12,11 @@
 @implementation MZNormalObject
 
 - (void)doSomething {
-    NSLog(@"normal object do something");
+    MZLog(@"")
 }
 
 - (void)doOtherThing {
-    NSLog(@"normal object do other thing");
+    MZLog(@"")
 }
 
 @end

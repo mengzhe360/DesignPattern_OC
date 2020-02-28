@@ -8,24 +8,22 @@
 
 #import "MZHMOne.h"
 
-
 @implementation MZHMOne
 
 - (void)start {
-    NSLog(@"MZHMOne-start\n");
+    MZMLog
 }
 
 - (void)engineBoom {
-    NSLog(@"MZHMOne-engineBoom\n");
+    MZMLog
 }
 
 - (void)alarm {
-    NSLog(@"MZHMOne-alarm\n");
+    MZMLog
 }
 
 - (void)stop {
-    NSLog(@"MZHMOne-stop\n\n");
-    NSLog(@"\n");
+    MZMLog
 }
 
 - (BOOL)isAlarm {

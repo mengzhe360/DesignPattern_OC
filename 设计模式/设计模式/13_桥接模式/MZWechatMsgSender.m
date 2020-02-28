@@ -16,7 +16,12 @@
 @implementation MZWechatMsgSender
 
 - (void)sendMessage:(nonnull NSString *)message {
-    MZLog(@"发送微信🇨🇦");
+    
+    [self.wechats enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *msg = [NSString stringWithFormat:@"向：%@ 发送微信🇨🇦",obj];
+        MZLog(msg);
+    }];
+    
 }
 
 @end

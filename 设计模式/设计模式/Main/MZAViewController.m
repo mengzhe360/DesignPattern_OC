@@ -40,6 +40,14 @@
 #import "MZApiStatInfo.h"
 #import "MZAlert.h"
 
+#import "MZDynamicProtocol.h"
+#import "MZDynamicProxy.h"
+#import "MZNormalTest.h"
+#import "MZNormalObject.h"
+
+#import "MZHMOne.h"
+#import "MZHMTwo.h"
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -60,7 +68,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self bridgingMode];
+    [self templateMode];
 }
 
 ///1_责任链
@@ -109,6 +117,47 @@ typedef void(^MZBlock)(NSString *mz);
     UIViewController *VC = [NSObject objectForClassName:@"MZRouterEventViewController"];
     [self.navigationController pushViewController:VC animated:YES];
     
+}
+
+/// 2、模板模式
+- (void)templateMode
+{
+    MZHMOne *one = [MZHMOne new];
+    [one setAlarm:NO];
+    [one run];
+    
+    MZHMTwo *two = [MZHMTwo new];
+    [two run];
+}
+
+/// 3、动态代理
+- (void)dynamicProtocol
+{
+//    id vc = [[MZNormalTest alloc] init];
+//    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
+//    [(MZNormalTest *)vc mzOptionalThing];
+    
+//    id<MZDynamicProtocol> obj = (id)[[MZNormalObject alloc] init];
+    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:(id)[[MZNormalObject alloc] init]];
+
+    [obj doSomething];
+    [obj doOtherThing];
+    [obj optionalThing];
+}
+
+- (void)mzTestDelegate
+{
+    id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
+    if ([mz respondsToSelector:@selector(mzTestOne)]) {
+        [mz mzTestOne];
+        [mz mzTestTwo];
+    }
+    
+    id<MZTestDelegate> mz1 = (id)[[MZTestDelegateB alloc] init];
+    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
+        [mz1 mzTestOne];
+        [mz1 mzTestTwo];
+    }
 }
 
 /// 4_策略模式
@@ -252,21 +301,6 @@ typedef void(^MZBlock)(NSString *mz);
     
     MZTestView *mView = [[MZTestView alloc] init];
     [mView mzDrawRect:@"测试一下代理执行情况"];
-}
-
-- (void)mzTestDelegate
-{
-    id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
-    if ([mz respondsToSelector:@selector(mzTestOne)]) {
-        [mz mzTestOne];
-        [mz mzTestTwo];
-    }
-    
-    id<MZTestDelegate> mz1 = (id)[[MZTestDelegateB alloc] init];
-    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
-        [mz1 mzTestOne];
-        [mz1 mzTestTwo];
-    }
 }
 
 //8、门面模式

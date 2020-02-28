@@ -31,8 +31,10 @@
 - (void)forwardInvocation:(NSInvocation *)invocation {
     
     if ([_target respondsToSelector:invocation.selector]) {
+        
         NSLog(@"proxy invocation obj method : %@", NSStringFromSelector(invocation.selector));
         [invocation invokeWithTarget:self.target];
+        
     }else{
         
          //  获取参数
@@ -47,7 +49,7 @@
         // 获取当前控制器的类(ContentProxy)
         const char *className = class_getName([self class]);
         NSArray *parmater = nil;
-        NSString *str = nil;
+        NSString *str = @"自定义处理找不到的方法";
         
         // 判断代理
         if (_target) {
@@ -60,19 +62,17 @@
         [invocation setArgument:&str atIndex:3];
         // 执行方法,派发消息
         [invocation invoke];
- 
-//        [super forwardInvocation:invocation];
     }
    
 }
 
 - (void)doSomething {
-    NSLog(@"proxy do something");
+    MZLog(@"动态代理")
     [_target doSomething];
 }
 
 - (void)doOtherThing{
-    NSLog(@"proxy do doOtherThing");
+    MZLog(@"动态代理")
     [_target doOtherThing];
 }
 

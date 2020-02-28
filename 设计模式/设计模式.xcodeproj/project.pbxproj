@@ -545,9 +545,9 @@
 		E74D261823C4E046006E438B /* 动态代理 */ = {
 			isa = PBXGroup;
 			children = (
-				E74D261923C4E07D006E438B /* MZDynamicProtocol.h */,
 				E74D262323C4E588006E438B /* MZAbstarctManager.h */,
 				E74D262423C4E588006E438B /* MZAbstarctManager.m */,
+				E74D261923C4E07D006E438B /* MZDynamicProtocol.h */,
 				E74D261A23C4E0B2006E438B /* MZDynamicProxy.h */,
 				E74D261B23C4E0B2006E438B /* MZDynamicProxy.m */,
 				E74D261D23C4E0E0006E438B /* MZNormalObject.h */,

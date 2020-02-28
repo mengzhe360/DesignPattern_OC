@@ -7,35 +7,32 @@
 //
 
 #import "MZHMTwo.h"
-#import "MZHMProtocol.h"
 
 @implementation MZHMTwo
 
 - (void)start {
-    NSLog(@"MZHMTwo-start\n");
+    MZMLog
 }
 
 - (void)engineBoom {
-    NSLog(@"MZHMTwo-engineBoom\n");
+    MZMLog
 }
 
-
 - (void)alarm {
-    NSLog(@"MZHMTwo-alarm\n");
+    MZMLog
 }
 
 - (void)stop {
-    NSLog(@"MZHMTwo-stop\n\n");
-    NSLog(@"\n");
+    MZMLog
 }
 
 - (BOOL)isAlarm {
-    return true;
+    return NO;
 }
 
 - (void)run {
     [super run];
-     NSLog(@"MZHMTwo-run\n\n");
+    MZMLog
 }
 
 

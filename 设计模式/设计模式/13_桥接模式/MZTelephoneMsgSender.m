@@ -15,7 +15,12 @@
 @implementation MZTelephoneMsgSender
 
 - (void)sendMessage:(nonnull NSString *)message {
-    MZLog(@"发送短信🇦🇮");
+    
+    [self.telephones enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *msg = [NSString stringWithFormat:@"向：%@ 发送短信🇦🇮",obj];
+        MZLog(msg);
+    }];
+   
 }
 
 @end

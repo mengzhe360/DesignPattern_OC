@@ -44,13 +44,13 @@
     self.alert = [[MZAlert alloc] init];
     
     MZTelephoneMsgSender *telephone = [[MZTelephoneMsgSender alloc] init];
-    telephone.telephones = @[@"188",@"166"];
+    telephone.telephones = @[@"18518254679",@"13120125789"];
     
     MZEmailMsgSender *email = [[MZEmailMsgSender alloc] init];
-    email.emails = @[@"mz@163",@"mz@qq"];
+    email.emails = @[@"mengzhe@163",@"liuchan@qq"];
     
     MZWechatMsgSender *wechat = [[MZWechatMsgSender alloc] init];
-    wechat.wechats = @[@"微信A",@"微信B",@"微信C"];
+    wechat.wechats = @[@"mengzheA",@"liuchanC"];
     
     MZSevereNotification *severeNotiA = [[MZSevereNotification alloc] initWithMsgSender:telephone];
     MZSevereNotification *severeNotiB = [[MZSevereNotification alloc] initWithMsgSender:email];

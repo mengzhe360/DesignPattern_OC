@@ -12,11 +12,11 @@
 
 - (void)doSomething
 {
-    NSLog(@"MZNormalTest-doSomething");
+    MZLog(@"")
 }
 - (void)doOtherThing
 {
-     NSLog(@"MZNormalTest-doOtherThing");
+     MZLog(@"")
 }
 //- (void)optionalThing
 //{
@@ -24,7 +24,7 @@
 //}
 - (void)mzOptionalThing
 {
-     NSLog(@"MZNormalTest-mzOptionalThing");
+     MZLog(@"")
 }
 
 

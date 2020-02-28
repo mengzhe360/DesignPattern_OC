@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MZDynamicProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZNormalObject : NSObject
+@interface MZNormalObject : NSObject<MZDynamicProtocol>
 
 @end
 
