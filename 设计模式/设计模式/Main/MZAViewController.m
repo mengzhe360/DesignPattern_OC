@@ -36,6 +36,10 @@
 #import "MZFlyweightFactory.h"
 #import "MZConcreteFlyweight.h"
 
+#import "MZBridgeManager.h"
+#import "MZApiStatInfo.h"
+#import "MZAlert.h"
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -56,7 +60,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self flyweightMode];
+    [self bridgingMode];
 }
 
 ///1_责任链
@@ -392,6 +396,19 @@ typedef void(^MZBlock)(NSString *mz);
     [fa4 operate:@"业务逻辑D"];
     
     [factory getFlyweightCount];    
+}
+
+//13、桥接模式
+- (void)bridgingMode
+{
+
+    MZApiStatInfo *info = [[MZApiStatInfo alloc] init];
+    info.api = @"http";
+    info.requestCount = 20;
+    info.errorCount = 8;
+    info.durationSeconds = 10;
+    
+    [[[MZBridgeManager sharedInstance] getAlert] alertCheck:info];
 }
 
 @end
