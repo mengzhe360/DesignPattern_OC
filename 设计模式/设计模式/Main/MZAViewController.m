@@ -68,54 +68,54 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self templateMode];
+    [self stateMode];
 }
 
 ///1_责任链
 - (void)responderChain
 {
     
-    //    NSMutableArray <MZResponderChain*> *responderMArr = [NSMutableArray new];
-    //
-    //    for (int i = 0; i < 10; i++) {
-    //        MZResponderChain *responder = [MZResponderChain new];
-    //        responder.name = [NSString stringWithFormat:@"responder%d",i];
-    //        [responderMArr addObject:responder];
-    //    }
-    //
-    //    [responderMArr enumerateObjectsUsingBlock:^(MZResponderChain * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    //
-    //        if (idx < responderMArr.count-1) {
-    //            obj.nextResponder = responderMArr.copy[idx + 1];
-    //        }
-    //
-    //    }];
-    //
-    //    [responderMArr[0] handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
-    //
-    //        NSLog(@"-5-%@:处理当前业务",handler.name);
-    //
-    //    }];
+//    NSMutableArray <MZResponderChain*> *responderMArr = [NSMutableArray new];
+//    
+//    for (int i = 0; i < 10; i++) {
+//        MZResponderChain *responder = [MZResponderChain new];
+//        responder.name = [NSString stringWithFormat:@"responder%d",i];
+//        [responderMArr addObject:responder];
+//    }
+//    
+//    [responderMArr enumerateObjectsUsingBlock:^(MZResponderChain * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        
+//        if (idx < responderMArr.count-1) {
+//            obj.nextResponder = responderMArr.copy[idx + 1];
+//        }
+//        
+//    }];
+//    
+//    [responderMArr[0] handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
+//        
+//        NSLog(@"-5-%@:处理当前业务",handler.name);
+//        
+//    }];
     
-    //    MZResponderChain *responderA = [MZResponderChainA new];
-    //    responderA.name = @"responderA";
-    //    MZResponderChain *responderB = [MZResponderChainB new];
-    //    responderB.name = @"responderB";
-    //    MZResponderChain *responderC = [MZResponderChainC new];
-    //    responderC.name = @"responderC";
-    //
-    //    responderA.nextResponder = responderB;
-    //    responderB.nextResponder = responderC;
-    //    responderC.nextResponder = responderA;
-    //
-    //    [responderA handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
-    //
-    //         NSLog(@"-5-%@:处理当前业务",handler.name);
-    //
-    //    }];
+    MZResponderChain *responderA = [MZResponderChainA new];
+    responderA.name = @"responderA";
+    MZResponderChain *responderB = [MZResponderChainB new];
+    responderB.name = @"responderB";
+    MZResponderChain *responderC = [MZResponderChainC new];
+    responderC.name = @"responderC";
     
-    UIViewController *VC = [NSObject objectForClassName:@"MZRouterEventViewController"];
-    [self.navigationController pushViewController:VC animated:YES];
+    responderA.nextResponder = responderB;
+    responderB.nextResponder = responderC;
+    responderC.nextResponder = responderA;
+    
+    [responderA handle:^(MZResponderChain * _Nonnull handler, BOOL handled) {
+        
+        NSLog(@"-5-%@:处理当前业务",handler.name);
+        
+    }];
+    
+//    UIViewController *VC = [NSObject objectForClassName:@"MZRouterEventViewController"];
+//    [self.navigationController pushViewController:VC animated:YES];
     
 }
 
@@ -123,6 +123,7 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)templateMode
 {
     MZHMOne *one = [MZHMOne new];
+    
     [one setAlarm:NO];
     [one run];
     
@@ -323,12 +324,13 @@ typedef void(^MZBlock)(NSString *mz);
     
     [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateA()] type:kInstanceMethod];
     [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成一条龙"] type:kInstanceMethod];
-    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"猪八戒变成如来佛主"] type:kInstanceMethod];
-    
     [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateB()] type:kInstanceMethod];
-    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"孙悟空变成小鸟"] type:kInstanceMethod];
-    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"孙悟空变成老虎"] type:kInstanceMethod];
+    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"猪八戒变成如来佛主"] type:kInstanceMethod];
     
+//    [self performClass:contextState selector:@"setCurrentState:" objects:@[_concreteStateB()] type:kInstanceMethod];
+//    [self performClass:contextState selector:@"contextStateHandleC:" objects:@[@"孙悟空变成小鸟"] type:kInstanceMethod];
+//    [self performClass:contextState selector:@"contextStateHandleD:" objects:@[@"孙悟空变成老虎"] type:kInstanceMethod];
+//    
 }
 
 //10、备忘录模式

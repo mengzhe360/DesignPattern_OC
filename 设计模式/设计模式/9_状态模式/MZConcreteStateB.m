@@ -23,14 +23,14 @@
 
 - (void)stateHandleA
 {
-    MZLog(@"必须自己B实现的逻辑");
+//    MZLog(@"必须自己B实现的逻辑");
+    MZMLog;
 }
 
 - (void)stateHandleB
 {
-    MZLog(@"开始切换状态");
-    self.contextState.currentState = _concreteStateA();
-    [self.contextState contextStateHandleD:@"切换到 A 状态去实现"];
+//    [self.contextState contextStateHandleD:@"开始切换到 A 状态去实现"];
+    MZMLog;
 }
 
 @end

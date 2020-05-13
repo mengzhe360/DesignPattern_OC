@@ -31,6 +31,7 @@
 }
 
 - (void)run {
+    MZMLog
     [super run];
     MZMLog
 }

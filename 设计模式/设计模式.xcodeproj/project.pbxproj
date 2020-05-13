@@ -41,6 +41,11 @@
 		4331A18123CF167B00ABD720 /* MZElementCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18023CF167B00ABD720 /* MZElementCollection.m */; };
 		4331A18423CF188600ABD720 /* MZElementA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18323CF188600ABD720 /* MZElementA.m */; };
 		4331A18723CF189400ABD720 /* MZElementB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18623CF189400ABD720 /* MZElementB.m */; };
+		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
+		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
+		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
+		43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */; };
+		43CE07AA246BDD4B00AB3FE0 /* MZChessBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */; };
 		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
 		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
 		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
@@ -175,6 +180,16 @@
 		4331A18323CF188600ABD720 /* MZElementA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZElementA.m; sourceTree = "<group>"; };
 		4331A18523CF189400ABD720 /* MZElementB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZElementB.h; sourceTree = "<group>"; };
 		4331A18623CF189400ABD720 /* MZElementB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZElementB.m; sourceTree = "<group>"; };
+		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
+		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
+		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
+		43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPieceUnit.m; sourceTree = "<group>"; };
+		43CE07A2246BD57800AB3FE0 /* MZChessPieceUnitFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnitFactory.h; sourceTree = "<group>"; };
+		43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPieceUnitFactory.m; sourceTree = "<group>"; };
+		43CE07A5246BDBF500AB3FE0 /* MZChessPiece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPiece.h; sourceTree = "<group>"; };
+		43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPiece.m; sourceTree = "<group>"; };
+		43CE07A8246BDD4B00AB3FE0 /* MZChessBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessBoard.h; sourceTree = "<group>"; };
+		43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessBoard.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,14 +332,8 @@
 		432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */ = {
 			isa = PBXGroup;
 			children = (
-				432EBC6F23D1B86900FAB8CA /* MZAbstractFlyweight.h */,
-				432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */,
-				432EBC7223D1B89A00FAB8CA /* MZConcreteFlyweight.h */,
-				432EBC7323D1B89A00FAB8CA /* MZConcreteFlyweight.m */,
-				432EBC7523D1B8DA00FAB8CA /* MZUnConcreteFlyweight.h */,
-				432EBC7623D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m */,
-				432EBC7823D1B8FB00FAB8CA /* MZFlyweightFactory.h */,
-				432EBC7923D1B8FB00FAB8CA /* MZFlyweightFactory.m */,
+				43CE079E246BD38E00AB3FE0 /* Flyweigh */,
+				43CE079D246BD38100AB3FE0 /* ChessPiece */,
 			);
 			path = "12_享元模式";
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				4357DD40241B37FD00392749 /* CGContextRef */,
 				E783E8042407B031008B2EAE /* TableViewPool */,
 				4330804623CC4374003DEC4C /* Encode */,
 				4330803323C9A98A003DEC4C /* UIView和CALayer */,
@@ -479,14 +489,14 @@
 		4330804A23CC6439003DEC4C /* 9_状态模式 */ = {
 			isa = PBXGroup;
 			children = (
+				4330805423CC6B46003DEC4C /* MZContextState.h */,
+				4330805523CC6B46003DEC4C /* MZContextState.m */,
 				4330804B23CC6ACC003DEC4C /* MZAbstractState.h */,
 				4330804C23CC6ACC003DEC4C /* MZAbstractState.m */,
 				4330804E23CC6B06003DEC4C /* MZConcreteStateA.h */,
 				4330804F23CC6B06003DEC4C /* MZConcreteStateA.m */,
 				4330805123CC6B14003DEC4C /* MZConcreteStateB.h */,
 				4330805223CC6B14003DEC4C /* MZConcreteStateB.m */,
-				4330805423CC6B46003DEC4C /* MZContextState.h */,
-				4330805523CC6B46003DEC4C /* MZContextState.m */,
 			);
 			path = "9_状态模式";
 			sourceTree = "<group>";
@@ -508,6 +518,45 @@
 				4331A18623CF189400ABD720 /* MZElementB.m */,
 			);
 			path = "11_访问者模式";
+			sourceTree = "<group>";
+		};
+		4357DD40241B37FD00392749 /* CGContextRef */ = {
+			isa = PBXGroup;
+			children = (
+				4357DD41241B382200392749 /* MZDrawView.h */,
+				4357DD42241B382200392749 /* MZDrawView.m */,
+			);
+			path = CGContextRef;
+			sourceTree = "<group>";
+		};
+		43CE079D246BD38100AB3FE0 /* ChessPiece */ = {
+			isa = PBXGroup;
+			children = (
+				43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */,
+				43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */,
+				43CE07A2246BD57800AB3FE0 /* MZChessPieceUnitFactory.h */,
+				43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */,
+				43CE07A5246BDBF500AB3FE0 /* MZChessPiece.h */,
+				43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */,
+				43CE07A8246BDD4B00AB3FE0 /* MZChessBoard.h */,
+				43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */,
+			);
+			path = ChessPiece;
+			sourceTree = "<group>";
+		};
+		43CE079E246BD38E00AB3FE0 /* Flyweigh */ = {
+			isa = PBXGroup;
+			children = (
+				432EBC6F23D1B86900FAB8CA /* MZAbstractFlyweight.h */,
+				432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */,
+				432EBC7223D1B89A00FAB8CA /* MZConcreteFlyweight.h */,
+				432EBC7323D1B89A00FAB8CA /* MZConcreteFlyweight.m */,
+				432EBC7523D1B8DA00FAB8CA /* MZUnConcreteFlyweight.h */,
+				432EBC7623D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m */,
+				432EBC7823D1B8FB00FAB8CA /* MZFlyweightFactory.h */,
+				432EBC7923D1B8FB00FAB8CA /* MZFlyweightFactory.m */,
+			);
+			path = Flyweigh;
 			sourceTree = "<group>";
 		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
@@ -870,6 +919,7 @@
 				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
 				E7601DAD23CB7B3A00D2225D /* MZContext.m in Sources */,
+				43CE07AA246BDD4B00AB3FE0 /* MZChessBoard.m in Sources */,
 				E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */,
 				E783E83324082A1B008B2EAE /* MZTrivialNotification.m in Sources */,
 				E783E80D2407DA2F008B2EAE /* MZReusePoolViewController.m in Sources */,
@@ -887,6 +937,7 @@
 				4331A18423CF188600ABD720 /* MZElementA.m in Sources */,
 				E7601DA923CB774500D2225D /* MZFacadeB.m in Sources */,
 				E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */,
+				43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */,
 				E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */,
 				43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */,
 				E783E8072407CFCB008B2EAE /* MZReusePool.m in Sources */,
@@ -911,7 +962,9 @@
 				E7601D9423CB6B7700D2225D /* MZTestDelegateB.m in Sources */,
 				43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */,
 				E783E82A240829F2008B2EAE /* MZSevereNotification.m in Sources */,
+				4357DD43241B382200392749 /* MZDrawView.m in Sources */,
 				E783E82424082535008B2EAE /* MZWechatMsgSender.m in Sources */,
+				43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */,
 				E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */,
 				4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */,
 				E783E83024082A0E008B2EAE /* MZNormalNotification.m in Sources */,
@@ -919,6 +972,7 @@
 				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
 				E79F5B1723C7820F00257841 /* MZObserverClassB.m in Sources */,
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
+				43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */,
 				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
 				4330804923CC43A7003DEC4C /* MZEncode.m in Sources */,
 				E7601D9D23CB764C00D2225D /* MZFacadeSubsystemA.m in Sources */,

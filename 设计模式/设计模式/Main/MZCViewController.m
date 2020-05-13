@@ -8,6 +8,7 @@
 
 #import "MZCViewController.h"
 #import "MZSubscriptionServiceCenterProtocol.h"
+#import "MZDrawView.h"
 
 @interface MZCViewController ()<MZSubscriptionServiceCenterProtocol>
 
@@ -23,6 +24,10 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+   
+    MZDrawView *view = [[MZDrawView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
+    
     
 }
 

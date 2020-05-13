@@ -34,7 +34,7 @@
 //核心父类调用子类方法
 - (void)run
 {
-    [self  start];
+    [self start];
     [self engineBoom];
     
     if ([self isAlarm]) {
