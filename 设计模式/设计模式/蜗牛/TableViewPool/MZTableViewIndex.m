@@ -103,14 +103,14 @@
 {
     NSLog(@"btn:%@",btn.titleLabel);
 
-    UIResponder *nextResponder = btn.nextResponder;
-    NSMutableString *pre = [NSMutableString stringWithString:@"--"];
-    NSLog(@"btn----1");
-    while (nextResponder) {
-        NSLog(@"%@%@", pre, NSStringFromClass([nextResponder class]));
-        [pre appendString:@"--"];
-        nextResponder = nextResponder.nextResponder;
-    }
+//    UIResponder *nextResponder = btn.nextResponder;
+//    NSMutableString *pre = [NSMutableString stringWithString:@"--"];
+//    NSLog(@"btn----1");
+//    while (nextResponder) {
+//        NSLog(@"%@%@", pre, NSStringFromClass([nextResponder class]));
+//        [pre appendString:@"--"];
+//        nextResponder = nextResponder.nextResponder;
+//    }
     
     if ([self.indexedDataSource respondsToSelector:@selector(scrollToRowAtIndexPathOfIndex:)]) {
         

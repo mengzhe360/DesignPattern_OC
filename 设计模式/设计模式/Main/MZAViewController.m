@@ -48,6 +48,12 @@
 #import "MZHMOne.h"
 #import "MZHMTwo.h"
 
+#import "MZInvoker.h"
+#import "MZCommandA.h"
+#import "MZCommandB.h"
+#import "MZReceiverA.h"
+#import "MZReceiverB.h"
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -68,7 +74,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self stateMode];
+    [self commandMode];
 }
 
 ///1_责任链
@@ -445,6 +451,24 @@ typedef void(^MZBlock)(NSString *mz);
     info.durationSeconds = 10;
     
     [[[MZBridgeManager sharedInstance] getAlert] alertCheck:info];
+}
+
+//14、命令模式
+- (void)commandMode
+{
+    id<MZReceiverProtocol> receiver = [[MZReceiverA alloc] init];
+    MZBaseCommand *cmd = [[MZCommandA alloc] initWithReceiver:receiver];
+    [MZInvoker executeCommand:cmd completion:^(MZBaseCommand * _Nonnull cmd) {
+   
+    }];
+    
+    [MZInvoker cancelCommand:cmd];
+    
+    id<MZReceiverProtocol> receiverB = [[MZReceiverB alloc] init];
+    [cmd setReceiver:receiverB];
+    [MZInvoker executeCommand:cmd completion:^(MZBaseCommand * _Nonnull cmd) {
+        
+    }];
 }
 
 @end

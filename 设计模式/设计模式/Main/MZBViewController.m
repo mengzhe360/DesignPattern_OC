@@ -7,6 +7,7 @@
 //
 
 #import "MZBViewController.h"
+#import "MZReusePoolViewController.h"
 
 @interface MZBViewController ()<UIWebViewDelegate>
 
@@ -25,13 +26,16 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    webView.delegate = self;
-    webView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:webView];
-    //    webView.delegate = self;
+//    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    webView.delegate = self;
+//    webView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:webView];
+//    //    webView.delegate = self;
+//
+//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
     
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
+    MZReusePoolViewController *pool = [[MZReusePoolViewController alloc] init];
+    [self.navigationController pushViewController:pool animated:YES];
  
 }
 

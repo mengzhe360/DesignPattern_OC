@@ -41,6 +41,13 @@
 		4331A18123CF167B00ABD720 /* MZElementCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18023CF167B00ABD720 /* MZElementCollection.m */; };
 		4331A18423CF188600ABD720 /* MZElementA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18323CF188600ABD720 /* MZElementA.m */; };
 		4331A18723CF189400ABD720 /* MZElementB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4331A18623CF189400ABD720 /* MZElementB.m */; };
+		4338E8F6246D38DD0064062B /* MZInvoker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E8F5246D38DD0064062B /* MZInvoker.m */; };
+		4338E8FB246D397F0064062B /* MZBaseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E8FA246D397F0064062B /* MZBaseCommand.m */; };
+		4338E8FE246D3A750064062B /* MZBaseReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E8FD246D3A750064062B /* MZBaseReceiver.m */; };
+		4338E901246D3ACA0064062B /* MZReceiverA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E900246D3ACA0064062B /* MZReceiverA.m */; };
+		4338E907246D3AF10064062B /* MZReceiverB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E906246D3AF10064062B /* MZReceiverB.m */; };
+		4338E90A246D3E2B0064062B /* MZCommandA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E909246D3E2B0064062B /* MZCommandA.m */; };
+		4338E90D246D3E350064062B /* MZCommandB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E90C246D3E350064062B /* MZCommandB.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
@@ -180,6 +187,22 @@
 		4331A18323CF188600ABD720 /* MZElementA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZElementA.m; sourceTree = "<group>"; };
 		4331A18523CF189400ABD720 /* MZElementB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZElementB.h; sourceTree = "<group>"; };
 		4331A18623CF189400ABD720 /* MZElementB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZElementB.m; sourceTree = "<group>"; };
+		4338E8F0246D38AD0064062B /* MZReceiverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZReceiverProtocol.h; sourceTree = "<group>"; };
+		4338E8F4246D38DD0064062B /* MZInvoker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZInvoker.h; sourceTree = "<group>"; };
+		4338E8F5246D38DD0064062B /* MZInvoker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZInvoker.m; sourceTree = "<group>"; };
+		4338E8F8246D39650064062B /* MZCommandProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCommandProtocol.h; sourceTree = "<group>"; };
+		4338E8F9246D397F0064062B /* MZBaseCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBaseCommand.h; sourceTree = "<group>"; };
+		4338E8FA246D397F0064062B /* MZBaseCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBaseCommand.m; sourceTree = "<group>"; };
+		4338E8FC246D3A750064062B /* MZBaseReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBaseReceiver.h; sourceTree = "<group>"; };
+		4338E8FD246D3A750064062B /* MZBaseReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBaseReceiver.m; sourceTree = "<group>"; };
+		4338E8FF246D3ACA0064062B /* MZReceiverA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZReceiverA.h; sourceTree = "<group>"; };
+		4338E900246D3ACA0064062B /* MZReceiverA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZReceiverA.m; sourceTree = "<group>"; };
+		4338E905246D3AF10064062B /* MZReceiverB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZReceiverB.h; sourceTree = "<group>"; };
+		4338E906246D3AF10064062B /* MZReceiverB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZReceiverB.m; sourceTree = "<group>"; };
+		4338E908246D3E2B0064062B /* MZCommandA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCommandA.h; sourceTree = "<group>"; };
+		4338E909246D3E2B0064062B /* MZCommandA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCommandA.m; sourceTree = "<group>"; };
+		4338E90B246D3E350064062B /* MZCommandB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCommandB.h; sourceTree = "<group>"; };
+		4338E90C246D3E350064062B /* MZCommandB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCommandB.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
 		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
@@ -559,6 +582,56 @@
 			path = Flyweigh;
 			sourceTree = "<group>";
 		};
+		43CE07AB246BFE9000AB3FE0 /* MZFacadeSubsystem */ = {
+			isa = PBXGroup;
+			children = (
+				E7601DAA23CB794E00D2225D /* MZFacadeSubsystem.h */,
+				E7601D9B23CB764C00D2225D /* MZFacadeSubsystemA.h */,
+				E7601D9C23CB764C00D2225D /* MZFacadeSubsystemA.m */,
+				E7601D9E23CB766300D2225D /* MZFacadeSubsystemB.h */,
+				E7601D9F23CB766300D2225D /* MZFacadeSubsystemB.m */,
+				E7601DA123CB767000D2225D /* MZFacadeSubsystemC.h */,
+				E7601DA223CB767000D2225D /* MZFacadeSubsystemC.m */,
+			);
+			path = MZFacadeSubsystem;
+			sourceTree = "<group>";
+		};
+		43CE07AC246BFEBA00AB3FE0 /* MZFacade */ = {
+			isa = PBXGroup;
+			children = (
+				E7601DA423CB772A00D2225D /* MZFacadeA.h */,
+				E7601DA523CB772A00D2225D /* MZFacadeA.m */,
+				E7601DA723CB774500D2225D /* MZFacadeB.h */,
+				E7601DA823CB774500D2225D /* MZFacadeB.m */,
+				E7601DAB23CB7B3A00D2225D /* MZContext.h */,
+				E7601DAC23CB7B3A00D2225D /* MZContext.m */,
+			);
+			path = MZFacade;
+			sourceTree = "<group>";
+		};
+		43CE07AD246C00A800AB3FE0 /* 14_命令模式 */ = {
+			isa = PBXGroup;
+			children = (
+				4338E8F0246D38AD0064062B /* MZReceiverProtocol.h */,
+				4338E8FC246D3A750064062B /* MZBaseReceiver.h */,
+				4338E8FD246D3A750064062B /* MZBaseReceiver.m */,
+				4338E8FF246D3ACA0064062B /* MZReceiverA.h */,
+				4338E900246D3ACA0064062B /* MZReceiverA.m */,
+				4338E905246D3AF10064062B /* MZReceiverB.h */,
+				4338E906246D3AF10064062B /* MZReceiverB.m */,
+				4338E8F8246D39650064062B /* MZCommandProtocol.h */,
+				4338E8F9246D397F0064062B /* MZBaseCommand.h */,
+				4338E8FA246D397F0064062B /* MZBaseCommand.m */,
+				4338E908246D3E2B0064062B /* MZCommandA.h */,
+				4338E909246D3E2B0064062B /* MZCommandA.m */,
+				4338E90B246D3E350064062B /* MZCommandB.h */,
+				4338E90C246D3E350064062B /* MZCommandB.m */,
+				4338E8F4246D38DD0064062B /* MZInvoker.h */,
+				4338E8F5246D38DD0064062B /* MZInvoker.m */,
+			);
+			path = "14_命令模式";
+			sourceTree = "<group>";
+		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,19 +713,8 @@
 		E7601D9723CB756500D2225D /* 8_门面模式 */ = {
 			isa = PBXGroup;
 			children = (
-				E7601DAA23CB794E00D2225D /* MZFacadeSubsystem.h */,
-				E7601D9B23CB764C00D2225D /* MZFacadeSubsystemA.h */,
-				E7601D9C23CB764C00D2225D /* MZFacadeSubsystemA.m */,
-				E7601D9E23CB766300D2225D /* MZFacadeSubsystemB.h */,
-				E7601D9F23CB766300D2225D /* MZFacadeSubsystemB.m */,
-				E7601DA123CB767000D2225D /* MZFacadeSubsystemC.h */,
-				E7601DA223CB767000D2225D /* MZFacadeSubsystemC.m */,
-				E7601DA423CB772A00D2225D /* MZFacadeA.h */,
-				E7601DA523CB772A00D2225D /* MZFacadeA.m */,
-				E7601DA723CB774500D2225D /* MZFacadeB.h */,
-				E7601DA823CB774500D2225D /* MZFacadeB.m */,
-				E7601DAB23CB7B3A00D2225D /* MZContext.h */,
-				E7601DAC23CB7B3A00D2225D /* MZContext.m */,
+				43CE07AC246BFEBA00AB3FE0 /* MZFacade */,
+				43CE07AB246BFE9000AB3FE0 /* MZFacadeSubsystem */,
 			);
 			path = "8_门面模式";
 			sourceTree = "<group>";
@@ -765,6 +827,7 @@
 				4331A17323CEC5B000ABD720 /* 11_访问者模式 */,
 				432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */,
 				E783E81024081EE6008B2EAE /* 13_桥接模式 */,
+				43CE07AD246C00A800AB3FE0 /* 14_命令模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -941,14 +1004,17 @@
 				E74D261C23C4E0B2006E438B /* MZDynamicProxy.m in Sources */,
 				43307FD223C57A93003DEC4C /* MZBViewController.m in Sources */,
 				E783E8072407CFCB008B2EAE /* MZReusePool.m in Sources */,
+				4338E90A246D3E2B0064062B /* MZCommandA.m in Sources */,
 				4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */,
 				4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */,
 				432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */,
 				4331A18723CF189400ABD720 /* MZElementB.m in Sources */,
 				E74D262523C4E588006E438B /* MZAbstarctManager.m in Sources */,
 				E7C2890423C38FD100ED74CA /* MZHMTwo.m in Sources */,
+				4338E8FE246D3A750064062B /* MZBaseReceiver.m in Sources */,
 				432EBC7A23D1B8FB00FAB8CA /* MZFlyweightFactory.m in Sources */,
 				E783E81E240824C7008B2EAE /* MZTelephoneMsgSender.m in Sources */,
+				4338E901246D3ACA0064062B /* MZReceiverA.m in Sources */,
 				E79F5B1A23C7844200257841 /* MZSubjectClassA.m in Sources */,
 				E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */,
 				E783E82D24082A03008B2EAE /* MZUrgencyNotification.m in Sources */,
@@ -974,12 +1040,15 @@
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
 				43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */,
 				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
+				4338E907246D3AF10064062B /* MZReceiverB.m in Sources */,
 				4330804923CC43A7003DEC4C /* MZEncode.m in Sources */,
 				E7601D9D23CB764C00D2225D /* MZFacadeSubsystemA.m in Sources */,
+				4338E90D246D3E350064062B /* MZCommandB.m in Sources */,
 				E783E83F24083310008B2EAE /* MZAlert.m in Sources */,
 				4330804523CC0BC2003DEC4C /* MZImageDownloader.m in Sources */,
 				E7601DA323CB767000D2225D /* MZFacadeSubsystemC.m in Sources */,
 				4331A18123CF167B00ABD720 /* MZElementCollection.m in Sources */,
+				4338E8F6246D38DD0064062B /* MZInvoker.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
 				E783E81624082168008B2EAE /* MZAlertHandlerAbstract.m in Sources */,
 				E783E821240824DB008B2EAE /* MZEmailMsgSender.m in Sources */,
@@ -1000,6 +1069,7 @@
 				E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */,
 				E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */,
 				43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */,
+				4338E8FB246D397F0064062B /* MZBaseCommand.m in Sources */,
 				E783E83924082FB1008B2EAE /* MZErrorAlertHandler.m in Sources */,
 				E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */,
 				E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */,
