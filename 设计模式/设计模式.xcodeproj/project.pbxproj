@@ -52,6 +52,7 @@
 		4338E914246E354F0064062B /* MZBaseColleague.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E913246E354F0064062B /* MZBaseColleague.m */; };
 		4338E918246E36810064062B /* MZColleagueA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E917246E36810064062B /* MZColleagueA.m */; };
 		4338E91B246E36980064062B /* MZColleagueB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91A246E36980064062B /* MZColleagueB.m */; };
+		4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91D246E66B30064062B /* MZSubjectClassB.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
@@ -216,6 +217,8 @@
 		4338E917246E36810064062B /* MZColleagueA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueA.m; sourceTree = "<group>"; };
 		4338E919246E36980064062B /* MZColleagueB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZColleagueB.h; sourceTree = "<group>"; };
 		4338E91A246E36980064062B /* MZColleagueB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueB.m; sourceTree = "<group>"; };
+		4338E91C246E66B30064062B /* MZSubjectClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClassB.h; sourceTree = "<group>"; };
+		4338E91D246E66B30064062B /* MZSubjectClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubjectClassB.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
 		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 				E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */,
 				E79F5B1823C7844200257841 /* MZSubjectClassA.h */,
 				E79F5B1923C7844200257841 /* MZSubjectClassA.m */,
+				4338E91C246E66B30064062B /* MZSubjectClassB.h */,
+				4338E91D246E66B30064062B /* MZSubjectClassB.m */,
 				E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */,
 				E79F5B0F23C7818500257841 /* MZObserverClass.h */,
 				E79F5B1023C7818500257841 /* MZObserverClass.m */,
@@ -1049,6 +1054,7 @@
 				E79F5B1A23C7844200257841 /* MZSubjectClassA.m in Sources */,
 				E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */,
 				E783E82D24082A03008B2EAE /* MZUrgencyNotification.m in Sources */,
+				4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */,
 				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
 				E783E81324082086008B2EAE /* MZApiStatInfo.m in Sources */,
 				E783E827240827C2008B2EAE /* MZNotificationAbstract.m in Sources */,

@@ -12,7 +12,7 @@
 
 - (void)update{
     
-    NSLog(@"观察者:MZObserverClassB 通知马云做事情");
+    MZLog(@"通知马云做事情");
     
 }
 

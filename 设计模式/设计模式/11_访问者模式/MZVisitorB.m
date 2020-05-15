@@ -14,14 +14,11 @@
 
 - (void)visitElement:(id <MZElementProtocol>)element
 {
-    if ([element isMemberOfClass:[MZElementA class]]) {
-        
-        [element operation];
-        [self performClass:element selector:@"elementASpecialOperationA:" objects:@[@1] type:kInstanceMethod];
-        
-    } else if ([element isMemberOfClass:[MZElementB class]]) {
+    [element operation];
     
-        [element operation];
+    if ([element isMemberOfClass:[MZElementA class]]) {
+        [self performClass:element selector:@"elementASpecialOperationA:" objects:@[@1] type:kInstanceMethod];
+    } else if ([element isMemberOfClass:[MZElementB class]]) {
         [self performClass:element selector:@"elementBSpecialOperationB:" objects:@[@1] type:kInstanceMethod];
     }
 }

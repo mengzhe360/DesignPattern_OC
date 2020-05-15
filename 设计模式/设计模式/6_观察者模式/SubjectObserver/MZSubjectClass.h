@@ -7,18 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MZSubjectProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MZObserverClass;
-
-@interface MZSubjectClass : NSObject
-
-- (void)addObserver:(MZObserverClass *)observer;
-
-- (void)deleteObserver:(MZObserverClass *)observer;
-
-- (void)postNotifyObervers;
+@interface MZSubjectClass : NSObject<MZSubjectProtocol>
 
 @end
 

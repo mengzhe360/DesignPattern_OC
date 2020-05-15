@@ -17,14 +17,10 @@
 @implementation MZElementCollection
 
 - (instancetype)init {
-    
     self = [super init];
-    
     if (self) {
-    
         self.elementsDictionary = [NSMutableDictionary dictionary];
     }
-    
     return self;
 }
 

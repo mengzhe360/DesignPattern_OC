@@ -10,7 +10,7 @@
 #import "MZSubjectProtocol.h"
 #import "MZObserverClass.h"
 
-@interface MZSubjectClass ()<MZSubjectProtocol>
+@interface MZSubjectClass ()
 
 @property (nonatomic,strong) NSMutableArray <MZObserverClass *> *observers;
 

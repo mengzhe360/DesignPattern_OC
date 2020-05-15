@@ -58,6 +58,13 @@
 #import "MZColleagueA.h"
 #import "MZColleagueB.h"
 
+/*
+ 创建型设计模式主要解决“对象的创建”问题，
+ 结构型设计模式主要解决“类或对象的组合或组装”问题，
+ 行为型设计模式主要解决的就是“类或对象之间的交互”问题。
+ 创建型模式是将创建和使用代码解耦，结构型模式是将不同功能代码解耦，行为型模式是将不同的行为代码解耦
+ */
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -78,7 +85,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self mediatorMode];
+    [self visitorMode];
 }
 
 ///1_责任链
@@ -191,15 +198,16 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)observerMode
 {
     NSObject *subject = [NSObject objectForClassName:@"MZSubjectClassA"];
+    NSObject *subjectB = [NSObject objectForClassName:@"MZSubjectClassB"];
     NSObject *observerA = [NSObject objectForClassName:@"MZObserverClassA"];
     NSObject *observerB = [NSObject objectForClassName:@"MZObserverClassB"];
     
     [self performClass:subject selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
+//    [self performClass:subject selector:@"deleteObserver:" objects:@[observerA] type:kInstanceMethod];
     [self performClass:subject selector:@"addObserver:" objects:@[observerB] type:kInstanceMethod];
-    [self performClass:subject selector:@"deleteObserver:" objects:@[observerA] type:kInstanceMethod];
-    [self performClass:subject selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
-    [self performClass:subject selector:@"addObserver:" objects:@[observerB] type:kInstanceMethod];
+    [self performClass:subjectB selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
     [self performClass:subject selector:@"doSomething:" objects:@[@"被观察者开始活动了"] type:kInstanceMethod];
+    [self performClass:subjectB selector:@"doSomething:" objects:@[@"被观察者开始活动了"] type:kInstanceMethod];
     
     // 创建订阅号 - SCIENCE NEWTON
     [MZSubscriptionServiceCenter createSubscriptionNumber:SCIENCE];
@@ -397,9 +405,7 @@ typedef void(^MZBlock)(NSString *mz);
 //11、访问者模式
 - (void)visitorMode
 {
-    
-    MZMLog;
-    
+
     MZElementCollection *collection = [NSObject objectForClassName:@"MZElementCollection"];
     NSObject *elementA = [NSObject objectForClassName:@"MZElementA"];
     NSObject *elementB = [NSObject objectForClassName:@"MZElementB"];
@@ -475,6 +481,7 @@ typedef void(^MZBlock)(NSString *mz);
     }];
 }
 
+/// 中介者模式
 - (void)mediatorMode
 {
     MZMediator *med = [[MZMediator alloc] init];

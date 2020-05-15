@@ -1,14 +1,14 @@
 //
-//  MZSubjectClassA.m
+//  MZSubjectClassB.m
 //  设计模式
 //
-//  Created by 孟哲 on 2020/1/9.
+//  Created by A5 on 2020/5/15.
 //  Copyright © 2020 孟哲. All rights reserved.
 //
 
-#import "MZSubjectClassA.h"
+#import "MZSubjectClassB.h"
 
-@implementation MZSubjectClassA
+@implementation MZSubjectClassB
 
 - (void)doSomething:(NSString *)str;
 {

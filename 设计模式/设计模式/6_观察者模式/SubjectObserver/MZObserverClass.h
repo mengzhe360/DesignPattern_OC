@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MZObserverProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZObserverClass : NSObject
-
-- (void)update;
+@interface MZObserverClass : NSObject<MZObserverProtocol>
 
 @end
 
