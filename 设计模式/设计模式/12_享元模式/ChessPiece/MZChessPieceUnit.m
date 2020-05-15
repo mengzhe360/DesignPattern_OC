@@ -21,9 +21,12 @@
 
 - (instancetype)initWithID:(NSString *)ID name:(NSString *)name color:(Color)color
 {
-    self.ID = ID;
-    self.name = name;
-    self.color = color;
+    self = [super init];
+    if (self) {
+        self.ID = ID;
+        self.name = name;
+        self.color = color;
+    }
     return self;
 }
 

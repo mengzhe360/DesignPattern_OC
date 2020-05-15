@@ -54,6 +54,10 @@
 #import "MZReceiverA.h"
 #import "MZReceiverB.h"
 
+#import "MZMediator.h"
+#import "MZColleagueA.h"
+#import "MZColleagueB.h"
+
 static NSString *const SCIENCE = @"SCIENCE";
 static NSString *const NEWTON =  @"NEWTON";
 
@@ -74,7 +78,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self commandMode];
+    [self mediatorMode];
 }
 
 ///1_责任链
@@ -459,16 +463,26 @@ typedef void(^MZBlock)(NSString *mz);
     id<MZReceiverProtocol> receiver = [[MZReceiverA alloc] init];
     MZBaseCommand *cmd = [[MZCommandA alloc] initWithReceiver:receiver];
     [MZInvoker executeCommand:cmd completion:^(MZBaseCommand * _Nonnull cmd) {
-   
+        [MZInvoker cancelCommand:cmd];
     }];
     
     [MZInvoker cancelCommand:cmd];
     
     id<MZReceiverProtocol> receiverB = [[MZReceiverB alloc] init];
-    [cmd setReceiver:receiverB];
+    [cmd setReceiver:receiverB];//变换命令执行人
     [MZInvoker executeCommand:cmd completion:^(MZBaseCommand * _Nonnull cmd) {
         
     }];
+}
+
+- (void)mediatorMode
+{
+    MZMediator *med = [[MZMediator alloc] init];
+    MZBaseColleague *colA = [[MZColleagueA alloc] initWithMediator:med];
+    MZBaseColleague *colB = [[MZColleagueB alloc] initWithMediator:med];
+    
+    [colA notify:@"通知去买香蕉"];
+    [colB notify:@"通知去买西瓜"];
 }
 
 @end

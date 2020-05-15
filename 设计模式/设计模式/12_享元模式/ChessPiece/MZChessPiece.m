@@ -20,10 +20,12 @@
 
 - (instancetype)initWithUnit:(MZChessPieceUnit *)unit positionX:(NSInteger)x positionY:(NSInteger)y
 {
-    self.Unit = unit;
-    self.positionX = x;
-    self.positionY = y;
-    
+    self = [super init];
+    if (self) {
+        self.Unit = unit;
+        self.positionX = x;
+        self.positionY = y;
+    }
     return self;
 }
 

@@ -48,6 +48,10 @@
 		4338E907246D3AF10064062B /* MZReceiverB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E906246D3AF10064062B /* MZReceiverB.m */; };
 		4338E90A246D3E2B0064062B /* MZCommandA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E909246D3E2B0064062B /* MZCommandA.m */; };
 		4338E90D246D3E350064062B /* MZCommandB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E90C246D3E350064062B /* MZCommandB.m */; };
+		4338E911246E35120064062B /* MZMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E910246E35120064062B /* MZMediator.m */; };
+		4338E914246E354F0064062B /* MZBaseColleague.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E913246E354F0064062B /* MZBaseColleague.m */; };
+		4338E918246E36810064062B /* MZColleagueA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E917246E36810064062B /* MZColleagueA.m */; };
+		4338E91B246E36980064062B /* MZColleagueB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91A246E36980064062B /* MZColleagueB.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
@@ -203,6 +207,15 @@
 		4338E909246D3E2B0064062B /* MZCommandA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCommandA.m; sourceTree = "<group>"; };
 		4338E90B246D3E350064062B /* MZCommandB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCommandB.h; sourceTree = "<group>"; };
 		4338E90C246D3E350064062B /* MZCommandB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCommandB.m; sourceTree = "<group>"; };
+		4338E90F246E35120064062B /* MZMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZMediator.h; sourceTree = "<group>"; };
+		4338E910246E35120064062B /* MZMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZMediator.m; sourceTree = "<group>"; };
+		4338E912246E354F0064062B /* MZBaseColleague.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBaseColleague.h; sourceTree = "<group>"; };
+		4338E913246E354F0064062B /* MZBaseColleague.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBaseColleague.m; sourceTree = "<group>"; };
+		4338E915246E35630064062B /* MZColleagueProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZColleagueProtocol.h; sourceTree = "<group>"; };
+		4338E916246E36800064062B /* MZColleagueA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZColleagueA.h; sourceTree = "<group>"; };
+		4338E917246E36810064062B /* MZColleagueA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueA.m; sourceTree = "<group>"; };
+		4338E919246E36980064062B /* MZColleagueB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZColleagueB.h; sourceTree = "<group>"; };
+		4338E91A246E36980064062B /* MZColleagueB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueB.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
 		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
@@ -543,6 +556,22 @@
 			path = "11_访问者模式";
 			sourceTree = "<group>";
 		};
+		4338E90E246E34DA0064062B /* 15_中介者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				4338E90F246E35120064062B /* MZMediator.h */,
+				4338E910246E35120064062B /* MZMediator.m */,
+				4338E915246E35630064062B /* MZColleagueProtocol.h */,
+				4338E912246E354F0064062B /* MZBaseColleague.h */,
+				4338E913246E354F0064062B /* MZBaseColleague.m */,
+				4338E916246E36800064062B /* MZColleagueA.h */,
+				4338E917246E36810064062B /* MZColleagueA.m */,
+				4338E919246E36980064062B /* MZColleagueB.h */,
+				4338E91A246E36980064062B /* MZColleagueB.m */,
+			);
+			path = "15_中介者模式";
+			sourceTree = "<group>";
+		};
 		4357DD40241B37FD00392749 /* CGContextRef */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +857,7 @@
 				432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */,
 				E783E81024081EE6008B2EAE /* 13_桥接模式 */,
 				43CE07AD246C00A800AB3FE0 /* 14_命令模式 */,
+				4338E90E246E34DA0064062B /* 15_中介者模式 */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
@@ -1006,6 +1036,7 @@
 				E783E8072407CFCB008B2EAE /* MZReusePool.m in Sources */,
 				4338E90A246D3E2B0064062B /* MZCommandA.m in Sources */,
 				4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */,
+				4338E918246E36810064062B /* MZColleagueA.m in Sources */,
 				4330804223CC0A8B003DEC4C /* MZAbstractDownloader.m in Sources */,
 				432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */,
 				4331A18723CF189400ABD720 /* MZElementB.m in Sources */,
@@ -1056,6 +1087,7 @@
 				E7601DA623CB772A00D2225D /* MZFacadeA.m in Sources */,
 				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
 				432EBC7423D1B89A00FAB8CA /* MZConcreteFlyweight.m in Sources */,
+				4338E914246E354F0064062B /* MZBaseColleague.m in Sources */,
 				4331A17D23CF136700ABD720 /* MZVisitorB.m in Sources */,
 				E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */,
 				E783E83C24083286008B2EAE /* MZBridgeManager.m in Sources */,
@@ -1071,8 +1103,10 @@
 				43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */,
 				4338E8FB246D397F0064062B /* MZBaseCommand.m in Sources */,
 				E783E83924082FB1008B2EAE /* MZErrorAlertHandler.m in Sources */,
+				4338E911246E35120064062B /* MZMediator.m in Sources */,
 				E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */,
 				E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */,
+				4338E91B246E36980064062B /* MZColleagueB.m in Sources */,
 				E76C492823C8DF9C00F7F98B /* MZLeaf.m in Sources */,
 				E783E80A2407D0B0008B2EAE /* MZTableViewIndex.m in Sources */,
 			);

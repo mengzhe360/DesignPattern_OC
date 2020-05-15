@@ -1,0 +1,27 @@
+//
+//  MZColleagueB.m
+//  设计模式
+//
+//  Created by A5 on 2020/5/15.
+//  Copyright © 2020 孟哲. All rights reserved.
+//
+
+#import "MZColleagueB.h"
+
+@implementation MZColleagueB
+
+- (void)notify:(nonnull NSString *)message {
+    MZLog(message)
+    [self.mediator send:message colleague:self];
+}
+
+- (void)send:(nonnull NSString *)message {
+    NSString *action = [NSString stringWithFormat:@"执行：%@",message];
+    MZLog(action)
+}
+
+- (void)actionColleagueB:(NSString *)action{
+    MZLog(@"执行自己的逻辑")
+}
+
+@end

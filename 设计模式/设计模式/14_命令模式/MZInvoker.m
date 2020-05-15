@@ -45,10 +45,12 @@
         if (![self isExecutingCommand:cmd]) {
             
             [MZInvoker.sharedInstance.arrayCommands addObject:cmd];
-            // 设置命令执行完成的回调
-            cmd.completion = completion;
+           
             //执行命令
             [cmd execute];
+            
+            // 设置命令执行完成的回调
+            cmd.completion = completion;
         }
     }
 }

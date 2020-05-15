@@ -29,21 +29,20 @@
 - (void)cancel{
     
     self.completion = nil;
+    [[MZInvoker sharedInstance].arrayCommands removeObject:self];
 }
 
 - (void)done
 {
+    //注意异步模拟耗时操作
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         if (self.completion) {
             self.completion(self);
         }
-        
-        //释放
         self.completion = nil;
-        
         [[MZInvoker sharedInstance].arrayCommands removeObject:self];
     });
+    
 }
 
 - (void)setReceiver:(MZBaseReceiver *)receiver
