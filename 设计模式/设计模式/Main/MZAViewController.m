@@ -58,6 +58,8 @@
 #import "MZColleagueA.h"
 #import "MZColleagueB.h"
 
+#import "MZBlockViewController.h"
+
 /*
  创建型设计模式主要解决“对象的创建”问题，
  结构型设计模式主要解决“类或对象的组合或组装”问题，
@@ -85,7 +87,11 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self visitorMode];
+//    [self dynamicProtocol];
+    
+    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
+    [self.navigationController pushViewController:blockVc animated:YES];
+   
 }
 
 ///1_责任链
@@ -151,12 +157,12 @@ typedef void(^MZBlock)(NSString *mz);
 /// 3、动态代理
 - (void)dynamicProtocol
 {
-//    id vc = [[MZNormalTest alloc] init];
-//    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
+    id vc = [[MZNormalTest alloc] init];
+    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
 //    [(MZNormalTest *)vc mzOptionalThing];
     
 //    id<MZDynamicProtocol> obj = (id)[[MZNormalObject alloc] init];
-    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:(id)[[MZNormalObject alloc] init]];
+//    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:(id)[[MZNormalObject alloc] init]];
 
     [obj doSomething];
     [obj doOtherThing];

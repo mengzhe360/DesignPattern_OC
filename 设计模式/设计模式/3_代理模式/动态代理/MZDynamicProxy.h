@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZDynamicProxy : NSProxy
 
-@property (nonatomic,strong) id<MZDynamicProtocol> target;
-
 - (id)initWithObject:(id<MZDynamicProtocol>)obj;
 
 @end

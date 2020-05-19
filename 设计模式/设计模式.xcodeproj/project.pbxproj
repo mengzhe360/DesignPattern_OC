@@ -53,6 +53,7 @@
 		4338E918246E36810064062B /* MZColleagueA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E917246E36810064062B /* MZColleagueA.m */; };
 		4338E91B246E36980064062B /* MZColleagueB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91A246E36980064062B /* MZColleagueB.m */; };
 		4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91D246E66B30064062B /* MZSubjectClassB.m */; };
+		4346DA672473925300538082 /* MZBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4346DA662473925300538082 /* MZBlockViewController.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
@@ -219,6 +220,8 @@
 		4338E91A246E36980064062B /* MZColleagueB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueB.m; sourceTree = "<group>"; };
 		4338E91C246E66B30064062B /* MZSubjectClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClassB.h; sourceTree = "<group>"; };
 		4338E91D246E66B30064062B /* MZSubjectClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubjectClassB.m; sourceTree = "<group>"; };
+		4346DA652473925300538082 /* MZBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBlockViewController.h; sourceTree = "<group>"; };
+		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
 		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
@@ -396,6 +399,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				4346DA6424738CEE00538082 /* Block */,
 				4357DD40241B37FD00392749 /* CGContextRef */,
 				E783E8042407B031008B2EAE /* TableViewPool */,
 				4330804623CC4374003DEC4C /* Encode */,
@@ -575,6 +579,15 @@
 				4338E91A246E36980064062B /* MZColleagueB.m */,
 			);
 			path = "15_中介者模式";
+			sourceTree = "<group>";
+		};
+		4346DA6424738CEE00538082 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				4346DA652473925300538082 /* MZBlockViewController.h */,
+				4346DA662473925300538082 /* MZBlockViewController.m */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 		4357DD40241B37FD00392749 /* CGContextRef */ = {
@@ -1026,6 +1039,7 @@
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,
 				432EBC7723D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m in Sources */,
+				4346DA672473925300538082 /* MZBlockViewController.m in Sources */,
 				4331A16F23CDC9FF00ABD720 /* NSObject+MZRuntime.m in Sources */,
 				4330805623CC6B46003DEC4C /* MZContextState.m in Sources */,
 				4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */,

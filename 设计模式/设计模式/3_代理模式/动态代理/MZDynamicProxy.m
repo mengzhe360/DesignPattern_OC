@@ -10,6 +10,12 @@
 #import "MZAbstarctManager.h"
 #import <objc/message.h>
 
+@interface MZDynamicProxy()
+
+@property (nonatomic,strong) id<MZDynamicProtocol> target;
+
+@end
+
 @implementation MZDynamicProxy
 
 - (id)initWithObject:(id)obj {

@@ -23,4 +23,8 @@
     }
 }
 
+- (void)dealloc{
+    MZLog(@"dealloc");
+}
+
 @end
