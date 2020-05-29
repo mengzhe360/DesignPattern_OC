@@ -25,6 +25,7 @@
 #import "MZTestDelegate.h"
 #import "MZTestDelegateA.h"
 #import "MZTestDelegateB.h"
+#import "MZContectTest.h"
 
 #import "MZContextState.h"
 
@@ -87,10 +88,10 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self dynamicProtocol];
+    [self mzTestDelegate];
     
-    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
-    [self.navigationController pushViewController:blockVc animated:YES];
+//    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
+//    [self.navigationController pushViewController:blockVc animated:YES];
    
 }
 
@@ -172,16 +173,21 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)mzTestDelegate
 {
     id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
-    if ([mz respondsToSelector:@selector(mzTestOne)]) {
-        [mz mzTestOne];
-        [mz mzTestTwo];
-    }
+//    if ([mz respondsToSelector:@selector(mzTestOne)]) {
+//        [mz mzTestOne];
+//        [mz mzTestTwo];
+//    }
     
-    id<MZTestDelegate> mz1 = (id)[[MZTestDelegateB alloc] init];
-    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
-        [mz1 mzTestOne];
-        [mz1 mzTestTwo];
-    }
+    id<MZTestDelegate> mz1 = (id)[[MZTestBaseDelegate alloc] init];
+//    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
+//        [mz1 mzTestOne];
+//        [mz1 mzTestTwo];
+//    }
+    
+    MZContectTest *test = [[MZContectTest alloc] init];
+    test.delegate = mz1;
+    [test action];
+    
 }
 
 /// 4_策略模式

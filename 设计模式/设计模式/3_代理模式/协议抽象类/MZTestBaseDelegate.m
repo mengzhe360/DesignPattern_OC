@@ -1,5 +1,5 @@
 //
-//  MZTestDelegateA.h
+//  MZTestBaseDelegate.m
 //  设计模式
 //
 //  Created by A5 on 2020/5/28.
@@ -8,10 +8,16 @@
 
 #import "MZTestBaseDelegate.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@implementation MZTestBaseDelegate
 
-@interface MZTestDelegateA : MZTestBaseDelegate
+- (void)mzTestOne
+{
+     MZMLog
+}
+
+- (void)mzTestTwo
+{
+     MZMLog
+}
 
 @end
-
-NS_ASSUME_NONNULL_END

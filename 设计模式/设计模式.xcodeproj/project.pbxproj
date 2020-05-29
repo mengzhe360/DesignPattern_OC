@@ -55,6 +55,10 @@
 		4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91D246E66B30064062B /* MZSubjectClassB.m */; };
 		4346DA672473925300538082 /* MZBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4346DA662473925300538082 /* MZBlockViewController.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
+		43ABB008247F6ADD0083127E /* MZContectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB007247F6ADD0083127E /* MZContectTest.m */; };
+		43ABB00B247F6BCD0083127E /* MZTestBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00A247F6BCD0083127E /* MZTestBaseDelegate.m */; };
+		43ABB00E247F6C390083127E /* MZTestDelegateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00D247F6C390083127E /* MZTestDelegateA.m */; };
+		43ABB011247F6F2E0083127E /* MZContectTestA.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB010247F6F2E0083127E /* MZContectTestA.m */; };
 		43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */; };
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
 		43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */; };
@@ -76,7 +80,6 @@
 		E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262D23C4EFFA006E438B /* MZAlphaInputValidator.m */; };
 		E74D263623C4EFFB006E438B /* MZStrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D262F23C4EFFA006E438B /* MZStrategyViewController.m */; };
 		E74D263723C4EFFB006E438B /* MZCustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74D263023C4EFFA006E438B /* MZCustomTextField.m */; };
-		E7601D9123CB6B6C00D2225D /* MZTestDelegateA.m in Sources */ = {isa = PBXBuildFile; fileRef = E7601D9023CB6B6C00D2225D /* MZTestDelegateA.m */; };
 		E7601D9423CB6B7700D2225D /* MZTestDelegateB.m in Sources */ = {isa = PBXBuildFile; fileRef = E7601D9323CB6B7700D2225D /* MZTestDelegateB.m */; };
 		E7601D9D23CB764C00D2225D /* MZFacadeSubsystemA.m in Sources */ = {isa = PBXBuildFile; fileRef = E7601D9C23CB764C00D2225D /* MZFacadeSubsystemA.m */; };
 		E7601DA023CB766300D2225D /* MZFacadeSubsystemB.m in Sources */ = {isa = PBXBuildFile; fileRef = E7601D9F23CB766300D2225D /* MZFacadeSubsystemB.m */; };
@@ -224,6 +227,14 @@
 		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
+		43ABB006247F6ADD0083127E /* MZContectTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContectTest.h; sourceTree = "<group>"; };
+		43ABB007247F6ADD0083127E /* MZContectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContectTest.m; sourceTree = "<group>"; };
+		43ABB009247F6BCD0083127E /* MZTestBaseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestBaseDelegate.h; sourceTree = "<group>"; };
+		43ABB00A247F6BCD0083127E /* MZTestBaseDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestBaseDelegate.m; sourceTree = "<group>"; };
+		43ABB00C247F6C390083127E /* MZTestDelegateA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestDelegateA.h; sourceTree = "<group>"; };
+		43ABB00D247F6C390083127E /* MZTestDelegateA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestDelegateA.m; sourceTree = "<group>"; };
+		43ABB00F247F6F2E0083127E /* MZContectTestA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContectTestA.h; sourceTree = "<group>"; };
+		43ABB010247F6F2E0083127E /* MZContectTestA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContectTestA.m; sourceTree = "<group>"; };
 		43CE079F246BD3DB00AB3FE0 /* MZChessPieceUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnit.h; sourceTree = "<group>"; };
 		43CE07A0246BD3DB00AB3FE0 /* MZChessPieceUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPieceUnit.m; sourceTree = "<group>"; };
 		43CE07A2246BD57800AB3FE0 /* MZChessPieceUnitFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessPieceUnitFactory.h; sourceTree = "<group>"; };
@@ -270,8 +281,6 @@
 		E74D263023C4EFFA006E438B /* MZCustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCustomTextField.m; sourceTree = "<group>"; };
 		E74D263123C4EFFA006E438B /* MZInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZInputValidator.h; sourceTree = "<group>"; };
 		E7601D8E23CB6B4400D2225D /* MZTestDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestDelegate.h; sourceTree = "<group>"; };
-		E7601D8F23CB6B6C00D2225D /* MZTestDelegateA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestDelegateA.h; sourceTree = "<group>"; };
-		E7601D9023CB6B6C00D2225D /* MZTestDelegateA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestDelegateA.m; sourceTree = "<group>"; };
 		E7601D9223CB6B7700D2225D /* MZTestDelegateB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestDelegateB.h; sourceTree = "<group>"; };
 		E7601D9323CB6B7700D2225D /* MZTestDelegateB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTestDelegateB.m; sourceTree = "<group>"; };
 		E7601D9B23CB764C00D2225D /* MZFacadeSubsystemA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZFacadeSubsystemA.h; sourceTree = "<group>"; };
@@ -749,10 +758,16 @@
 			isa = PBXGroup;
 			children = (
 				E7601D8E23CB6B4400D2225D /* MZTestDelegate.h */,
-				E7601D8F23CB6B6C00D2225D /* MZTestDelegateA.h */,
-				E7601D9023CB6B6C00D2225D /* MZTestDelegateA.m */,
+				43ABB009247F6BCD0083127E /* MZTestBaseDelegate.h */,
+				43ABB00A247F6BCD0083127E /* MZTestBaseDelegate.m */,
+				43ABB00C247F6C390083127E /* MZTestDelegateA.h */,
+				43ABB00D247F6C390083127E /* MZTestDelegateA.m */,
 				E7601D9223CB6B7700D2225D /* MZTestDelegateB.h */,
 				E7601D9323CB6B7700D2225D /* MZTestDelegateB.m */,
+				43ABB006247F6ADD0083127E /* MZContectTest.h */,
+				43ABB007247F6ADD0083127E /* MZContectTest.m */,
+				43ABB00F247F6F2E0083127E /* MZContectTestA.h */,
+				43ABB010247F6F2E0083127E /* MZContectTestA.m */,
 			);
 			path = "协议抽象类";
 			sourceTree = "<group>";
@@ -1026,6 +1041,7 @@
 			files = (
 				E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */,
 				4331A17A23CF133B00ABD720 /* MZVisitorA.m in Sources */,
+				43ABB00E247F6C390083127E /* MZTestDelegateA.m in Sources */,
 				4331A17223CDD29A00ABD720 /* NSDictionary+YGUnicodeLog.m in Sources */,
 				4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */,
 				4330803C23C9B59D003DEC4C /* MZTestView.m in Sources */,
@@ -1085,7 +1101,6 @@
 				E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */,
 				4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */,
 				E783E83024082A0E008B2EAE /* MZNormalNotification.m in Sources */,
-				E7601D9123CB6B6C00D2225D /* MZTestDelegateA.m in Sources */,
 				E7C288FE23C38FA300ED74CA /* MZHMManager.m in Sources */,
 				E79F5B1723C7820F00257841 /* MZObserverClassB.m in Sources */,
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
@@ -1101,11 +1116,13 @@
 				4331A18123CF167B00ABD720 /* MZElementCollection.m in Sources */,
 				4338E8F6246D38DD0064062B /* MZInvoker.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
+				43ABB008247F6ADD0083127E /* MZContectTest.m in Sources */,
 				E783E81624082168008B2EAE /* MZAlertHandlerAbstract.m in Sources */,
 				E783E821240824DB008B2EAE /* MZEmailMsgSender.m in Sources */,
 				E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */,
 				E7601DA623CB772A00D2225D /* MZFacadeA.m in Sources */,
 				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
+				43ABB011247F6F2E0083127E /* MZContectTestA.m in Sources */,
 				432EBC7423D1B89A00FAB8CA /* MZConcreteFlyweight.m in Sources */,
 				4338E914246E354F0064062B /* MZBaseColleague.m in Sources */,
 				4331A17D23CF136700ABD720 /* MZVisitorB.m in Sources */,
@@ -1122,6 +1139,7 @@
 				E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */,
 				43307FCC23C57A4A003DEC4C /* MZTabBarController.m in Sources */,
 				4338E8FB246D397F0064062B /* MZBaseCommand.m in Sources */,
+				43ABB00B247F6BCD0083127E /* MZTestBaseDelegate.m in Sources */,
 				E783E83924082FB1008B2EAE /* MZErrorAlertHandler.m in Sources */,
 				4338E911246E35120064062B /* MZMediator.m in Sources */,
 				E76C492523C8DE5D00F7F98B /* MZComposite.m in Sources */,

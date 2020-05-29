@@ -6,12 +6,11 @@
 //  Copyright © 2020 孟哲. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "MZTestDelegate.h"
+#import "MZTestBaseDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZTestDelegateB : NSObject<MZTestDelegate>
+@interface MZTestDelegateB : MZTestBaseDelegate
 
 @end
 
