@@ -63,6 +63,7 @@
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
 		43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */; };
 		43CE07AA246BDD4B00AB3FE0 /* MZChessBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */; };
+		43F2CCF524FA3B8F006CAAA2 /* MZPermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */; };
 		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
 		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
 		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
@@ -243,6 +244,8 @@
 		43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPiece.m; sourceTree = "<group>"; };
 		43CE07A8246BDD4B00AB3FE0 /* MZChessBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessBoard.h; sourceTree = "<group>"; };
 		43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessBoard.m; sourceTree = "<group>"; };
+		43F2CCF324FA3B8F006CAAA2 /* MZPermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPermanentThread.h; sourceTree = "<group>"; };
+		43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPermanentThread.m; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -408,6 +411,7 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				43F2CCF224FA3B50006CAAA2 /* Thread */,
 				4346DA6424738CEE00538082 /* Block */,
 				4357DD40241B37FD00392749 /* CGContextRef */,
 				E783E8042407B031008B2EAE /* TableViewPool */,
@@ -577,9 +581,9 @@
 		4338E90E246E34DA0064062B /* 15_中介者模式 */ = {
 			isa = PBXGroup;
 			children = (
+				4338E915246E35630064062B /* MZColleagueProtocol.h */,
 				4338E90F246E35120064062B /* MZMediator.h */,
 				4338E910246E35120064062B /* MZMediator.m */,
-				4338E915246E35630064062B /* MZColleagueProtocol.h */,
 				4338E912246E354F0064062B /* MZBaseColleague.h */,
 				4338E913246E354F0064062B /* MZBaseColleague.m */,
 				4338E916246E36800064062B /* MZColleagueA.h */,
@@ -686,6 +690,15 @@
 				4338E8F5246D38DD0064062B /* MZInvoker.m */,
 			);
 			path = "14_命令模式";
+			sourceTree = "<group>";
+		};
+		43F2CCF224FA3B50006CAAA2 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				43F2CCF324FA3B8F006CAAA2 /* MZPermanentThread.h */,
+				43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
@@ -1115,6 +1128,7 @@
 				E7601DA323CB767000D2225D /* MZFacadeSubsystemC.m in Sources */,
 				4331A18123CF167B00ABD720 /* MZElementCollection.m in Sources */,
 				4338E8F6246D38DD0064062B /* MZInvoker.m in Sources */,
+				43F2CCF524FA3B8F006CAAA2 /* MZPermanentThread.m in Sources */,
 				E7C2890123C38FC400ED74CA /* MZHMOne.m in Sources */,
 				43ABB008247F6ADD0083127E /* MZContectTest.m in Sources */,
 				E783E81624082168008B2EAE /* MZAlertHandlerAbstract.m in Sources */,

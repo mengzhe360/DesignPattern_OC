@@ -15,7 +15,13 @@
 
 - (void)action
 {
-   
+    
+    MZMLog
+    
+    if ([self.delegate respondsToSelector:@selector(mzTestTwo)]) {
+        [self.delegate mzTestTwo];
+    }
+
 }
 
 @end

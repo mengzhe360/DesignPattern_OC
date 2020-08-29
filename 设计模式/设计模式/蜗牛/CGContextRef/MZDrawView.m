@@ -39,7 +39,7 @@
 
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, UIColor.systemBlueColor.CGColor);
+    CGContextSetStrokeColorWithColor(context, UIColor.redColor.CGColor);
     CGContextSetLineWidth(context,20);
 //    CGContextBeginPath(context);
 //    for (int k = 0; k < 2; k ++) {
@@ -75,8 +75,17 @@
     CGContextAddLineToPoint(context, 150,500 );
     CGContextAddLineToPoint(context, 180, 103);
     CGContextAddLineToPoint(context, 220,300 );
-    CGContextDrawPath(context, kCGPathFill);
+    CGContextDrawPath(context, kCGPathFillStroke);
     
+    
+    //矩形，并填弃颜色
+    CGContextSetLineWidth(context, 5.0);//线的宽度
+    CGContextSetFillColorWithColor(context, [UIColor greenColor].CGColor);//填充颜色
+    CGContextSetStrokeColorWithColor(context, [UIColor yellowColor].CGColor);//线框颜色
+    CGContextAddRect(context,CGRectMake(40, 120, 260, 30));//画方框
+    CGContextDrawPath(context, kCGPathStroke);//绘画路径
+//    CGContextFillRect(context,CGRectMake(40, 120, 260, 30));//填充框
+  
     
 }
 

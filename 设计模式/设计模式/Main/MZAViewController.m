@@ -173,19 +173,19 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)mzTestDelegate
 {
     id<MZTestDelegate> mz = (id)[[MZTestDelegateA alloc] init];
-//    if ([mz respondsToSelector:@selector(mzTestOne)]) {
+    if ([mz respondsToSelector:@selector(mzTestOne)]) {
 //        [mz mzTestOne];
 //        [mz mzTestTwo];
-//    }
+    }
     
-    id<MZTestDelegate> mz1 = (id)[[MZTestBaseDelegate alloc] init];
+//    id<MZTestDelegate> mz1 = (id)[[MZTestBaseDelegate alloc] init];
 //    if ([mz1 respondsToSelector:@selector(mzTestTwo)]) {
 //        [mz1 mzTestOne];
 //        [mz1 mzTestTwo];
 //    }
     
     MZContectTest *test = [[MZContectTest alloc] init];
-    test.delegate = mz1;
+    test.delegate = mz;
     [test action];
     
 }
