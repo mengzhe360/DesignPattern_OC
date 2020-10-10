@@ -7,6 +7,9 @@
 //
 
 #import "MZAViewController.h"
+
+#import <objc/runtime.h>
+
 #import "MZStrategyViewController.h"
 #import "MZResponderChain.h"
 #import "MZResponderChainA.h"
@@ -61,6 +64,10 @@
 
 #import "MZBlockViewController.h"
 
+#import "MZPerson.h"
+
+//#import "MJClassInfo.pod updateh"
+
 /*
  创建型设计模式主要解决“对象的创建”问题，
  结构型设计模式主要解决“类或对象的组合或组装”问题，
@@ -74,6 +81,9 @@ static NSString *const NEWTON =  @"NEWTON";
 typedef void(^MZBlock)(NSString *mz);
 
 @interface MZAViewController ()<MZSubscriptionServiceCenterProtocol>
+@property (nonatomic,copy) NSString *mark;
+@property (nonatomic,strong) dispatch_semaphore_t semaphore;
+@property (nonatomic,strong) MZPerson *Person;
 
 @end
 
@@ -84,15 +94,42 @@ typedef void(^MZBlock)(NSString *mz);
     
     self.view.backgroundColor = UIColor.greenColor;
     self.navigationItem.title = @"MZA";
+    
+    self.mark = @"mark";
+    
+    self.semaphore = dispatch_semaphore_create(1);
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self mzTestDelegate];
+    [self viewLayerTest];
     
 //    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
 //    [self.navigationController pushViewController:blockVc animated:YES];
+
+    
+//    MZPerson *p = [[MZPerson alloc] init];
+//    _Person = p;
    
+    
+   
+}
+
+- (void)text
+{
+    
+    for (int i = 0; i < 25; i ++) {
+        [[[NSThread alloc] initWithTarget:self selector:@selector(text) object:nil] start];
+    }
+    
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    
+    sleep(2);
+    
+    MZLog([NSThread currentThread]);
+    
+    dispatch_semaphore_signal(self.semaphore);
 }
 
 ///1_责任链
@@ -308,26 +345,16 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)viewLayerTest
 {
     CALayer * layer = [[CALayer alloc] init];
-    CALayer * layer1 = [[CALayer alloc] init];
-    CALayer * layer2 = [[CALayer alloc] init];
     layer.frame = CGRectMake(0, 0, 100, 100);
-    [layer addSublayer:layer1];
-    [layer addSublayer:layer2];
+ 
     
     UIView *view = [[UIView alloc] init];
-    UIView *view1 = [[UIView alloc] init];
-    UIView *view2 = [[UIView alloc] init];
-    UIView *view3 = [[UIView alloc] init];
-    
     view.frame = CGRectMake(10, 100, 100, 100);
     view.backgroundColor = UIColor.redColor;
     view.layer.frame = CGRectMake(20, 200, 100, 200);
     view.layer.delegate = view;
     
     [self.view addSubview:view];
-    [view addSubview:view1];
-    [view addSubview:view2];
-    [view addSubview:view3];
     view.layer.cornerRadius = 5;
     
     MZTestView *mView = [[MZTestView alloc] init];

@@ -55,6 +55,8 @@
 		4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91D246E66B30064062B /* MZSubjectClassB.m */; };
 		4346DA672473925300538082 /* MZBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4346DA662473925300538082 /* MZBlockViewController.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
+		4395C8D7250878CE0097F8C3 /* MZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D6250878CE0097F8C3 /* MZPerson.m */; };
+		4395C8DA250878F80097F8C3 /* MZStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D9250878F80097F8C3 /* MZStudent.m */; };
 		43ABB008247F6ADD0083127E /* MZContectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB007247F6ADD0083127E /* MZContectTest.m */; };
 		43ABB00B247F6BCD0083127E /* MZTestBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00A247F6BCD0083127E /* MZTestBaseDelegate.m */; };
 		43ABB00E247F6C390083127E /* MZTestDelegateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00D247F6C390083127E /* MZTestDelegateA.m */; };
@@ -64,6 +66,7 @@
 		43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */; };
 		43CE07AA246BDD4B00AB3FE0 /* MZChessBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */; };
 		43F2CCF524FA3B8F006CAAA2 /* MZPermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */; };
+		43F2CD0824FDFCE9006CAAA2 /* MOFTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */; };
 		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
 		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
 		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
@@ -228,6 +231,10 @@
 		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
+		4395C8D5250878CE0097F8C3 /* MZPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPerson.h; sourceTree = "<group>"; };
+		4395C8D6250878CE0097F8C3 /* MZPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPerson.m; sourceTree = "<group>"; };
+		4395C8D8250878F80097F8C3 /* MZStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZStudent.h; sourceTree = "<group>"; };
+		4395C8D9250878F80097F8C3 /* MZStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZStudent.m; sourceTree = "<group>"; };
 		43ABB006247F6ADD0083127E /* MZContectTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContectTest.h; sourceTree = "<group>"; };
 		43ABB007247F6ADD0083127E /* MZContectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContectTest.m; sourceTree = "<group>"; };
 		43ABB009247F6BCD0083127E /* MZTestBaseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestBaseDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +253,8 @@
 		43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessBoard.m; sourceTree = "<group>"; };
 		43F2CCF324FA3B8F006CAAA2 /* MZPermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPermanentThread.h; sourceTree = "<group>"; };
 		43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPermanentThread.m; sourceTree = "<group>"; };
+		43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFTimerTool.m; sourceTree = "<group>"; };
+		43F2CD0724FDFCE9006CAAA2 /* MOFTimerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOFTimerTool.h; sourceTree = "<group>"; };
 		6DA7A2C8AAF0812D0517275F /* Pods-设计模式.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.debug.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.debug.xcconfig"; sourceTree = "<group>"; };
 		962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-设计模式.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7074FD973289FB9D9CE6E4 /* Pods-设计模式.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-设计模式.release.xcconfig"; path = "Target Support Files/Pods-设计模式/Pods-设计模式.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,7 +412,6 @@
 				43307FD123C57A93003DEC4C /* MZBViewController.m */,
 				43307FD323C57A9A003DEC4C /* MZCViewController.h */,
 				43307FD423C57A9A003DEC4C /* MZCViewController.m */,
-				4330800223C5D279003DEC4C /* MJClassInfo.h */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -411,6 +419,9 @@
 		43307FFD23C5B93F003DEC4C /* 蜗牛 */ = {
 			isa = PBXGroup;
 			children = (
+				4330800223C5D279003DEC4C /* MJClassInfo.h */,
+				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
+				43F2CD0424FDFC78006CAAA2 /* Lock */,
 				43F2CCF224FA3B50006CAAA2 /* Thread */,
 				4346DA6424738CEE00538082 /* Block */,
 				4357DD40241B37FD00392749 /* CGContextRef */,
@@ -612,6 +623,17 @@
 			path = CGContextRef;
 			sourceTree = "<group>";
 		};
+		4395C8D4250878A80097F8C3 /* weak测试 */ = {
+			isa = PBXGroup;
+			children = (
+				4395C8D5250878CE0097F8C3 /* MZPerson.h */,
+				4395C8D6250878CE0097F8C3 /* MZPerson.m */,
+				4395C8D8250878F80097F8C3 /* MZStudent.h */,
+				4395C8D9250878F80097F8C3 /* MZStudent.m */,
+			);
+			path = "weak测试";
+			sourceTree = "<group>";
+		};
 		43CE079D246BD38100AB3FE0 /* ChessPiece */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +721,22 @@
 				43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */,
 			);
 			path = Thread;
+			sourceTree = "<group>";
+		};
+		43F2CD0424FDFC78006CAAA2 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		43F2CD0524FDFC87006CAAA2 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				43F2CD0724FDFCE9006CAAA2 /* MOFTimerTool.h */,
+				43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */,
+			);
+			path = NSTimer;
 			sourceTree = "<group>";
 		};
 		B90B251B254467CC871626A7 /* Frameworks */ = {
@@ -946,6 +984,7 @@
 		E7C2890523C392F100ED74CA /* 3_代理模式 */ = {
 			isa = PBXGroup;
 			children = (
+				4395C8D4250878A80097F8C3 /* weak测试 */,
 				4330803D23CC09CF003DEC4C /* 抽象类 */,
 				E7601D8D23CB6B0100D2225D /* 协议抽象类 */,
 				E74D261823C4E046006E438B /* 动态代理 */,
@@ -1072,6 +1111,7 @@
 				4331A16F23CDC9FF00ABD720 /* NSObject+MZRuntime.m in Sources */,
 				4330805623CC6B46003DEC4C /* MZContextState.m in Sources */,
 				4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */,
+				4395C8DA250878F80097F8C3 /* MZStudent.m in Sources */,
 				4330803923C9AA1E003DEC4C /* MZCALayer.m in Sources */,
 				E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */,
 				E74D261723C4DC52006E438B /* MZResponderChain.m in Sources */,
@@ -1100,6 +1140,7 @@
 				4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */,
 				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
 				E783E81324082086008B2EAE /* MZApiStatInfo.m in Sources */,
+				43F2CD0824FDFCE9006CAAA2 /* MOFTimerTool.m in Sources */,
 				E783E827240827C2008B2EAE /* MZNotificationAbstract.m in Sources */,
 				E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */,
 				4330803623C9A9E9003DEC4C /* MZUIView.m in Sources */,
@@ -1143,6 +1184,7 @@
 				E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */,
 				E783E83C24083286008B2EAE /* MZBridgeManager.m in Sources */,
 				4331A16C23CDBF7700ABD720 /* MZMementoTool.m in Sources */,
+				4395C8D7250878CE0097F8C3 /* MZPerson.m in Sources */,
 				4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */,
 				E74D263523C4EFFB006E438B /* MZAlphaInputValidator.m in Sources */,
 				E74D261F23C4E0E0006E438B /* MZNormalObject.m in Sources */,

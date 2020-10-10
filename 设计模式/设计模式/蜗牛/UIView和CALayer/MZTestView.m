@@ -22,7 +22,7 @@
 {
     NSLog(@"%@重写父类%@-%@",NSStringFromClass(self.class),NSStringFromSelector(_cmd),rect);
     
-    [self.layer.delegate mzDisplayLayer:rect];
+    [super mzDrawRect:rect];
 }
 
 @end

@@ -54,7 +54,7 @@ typedef void(^MZBlock)(NSString *mz);
  */
 - (void)blockTest2
 {
-    __block int a = 101;//
+    __block int a = 101;//Variable is not assignable (missing __block type specifier)
     static int b = 201;
     int c = 301;
     MZResponderChainA *responderA = [[MZResponderChainA alloc] init];
@@ -67,7 +67,7 @@ typedef void(^MZBlock)(NSString *mz);
         a = 102;
         b = 202;
         responderA.name = @"responderB";
-//        responderA = [[MZResponderChainA alloc] init];（解说4）
+//        responderA = [[MZResponderChainA alloc] init];//（解说4）
         self.arr = @[@"q",@"w"];
         NSLog(@"block内a的地址:%p",&a);
         NSLog(@"block内b的地址:%p",&b);
@@ -91,6 +91,8 @@ typedef void(^MZBlock)(NSString *mz);
     NSLog(@"进去之后b的地址:%p",&b);
     NSLog(@"进去之后c的地址:%p",&c);
     mzBlock();
+    
+    NSLog(@"进去之后responderA:%@",responderA.name);
     
     self.mzBlock = ^(NSString *m, NSString *n) {
 
