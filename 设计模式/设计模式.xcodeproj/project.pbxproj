@@ -70,6 +70,7 @@
 		E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087523CCD3DF0053BF69 /* MZMemento.m */; };
 		E71A087923CCD3F00053BF69 /* MZOriginator.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087823CCD3F00053BF69 /* MZOriginator.m */; };
 		E71A087C23CCD4010053BF69 /* MZCaretaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E71A087B23CCD4010053BF69 /* MZCaretaker.m */; };
+		E725BBF62503894000AF1122 /* Locks in Resources */ = {isa = PBXBuildFile; fileRef = E725BBF52503894000AF1122 /* Locks */; };
 		E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28AE23C633D3006190DC /* MZResponderChainA.m */; };
 		E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B123C633DE006190DC /* MZResponderChainB.m */; };
 		E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */ = {isa = PBXBuildFile; fileRef = E73B28B423C633EB006190DC /* MZResponderChainC.m */; };
@@ -264,6 +265,7 @@
 		E71A087823CCD3F00053BF69 /* MZOriginator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZOriginator.m; sourceTree = "<group>"; };
 		E71A087A23CCD4010053BF69 /* MZCaretaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCaretaker.h; sourceTree = "<group>"; };
 		E71A087B23CCD4010053BF69 /* MZCaretaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCaretaker.m; sourceTree = "<group>"; };
+		E725BBF52503894000AF1122 /* Locks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Locks; sourceTree = "<group>"; };
 		E73B28AD23C633D3006190DC /* MZResponderChainA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainA.h; sourceTree = "<group>"; };
 		E73B28AE23C633D3006190DC /* MZResponderChainA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZResponderChainA.m; sourceTree = "<group>"; };
 		E73B28B023C633DE006190DC /* MZResponderChainB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZResponderChainB.h; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
 				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
 				43F2CD0424FDFC78006CAAA2 /* Lock */,
+				E725BBF52503894000AF1122 /* Locks */,
 				43F2CCF224FA3B50006CAAA2 /* Thread */,
 				4346DA6424738CEE00538082 /* Block */,
 				4357DD40241B37FD00392749 /* CGContextRef */,
@@ -1054,6 +1057,7 @@
 				E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */,
 				4330801C23C72B7F003DEC4C /* MZRouterEventViewController.xib in Resources */,
 				E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */,
+				E725BBF62503894000AF1122 /* Locks in Resources */,
 				E74D263323C4EFFA006E438B /* MZStrategyViewController.xib in Resources */,
 				E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */,
 			);
