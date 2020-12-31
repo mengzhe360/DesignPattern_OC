@@ -423,7 +423,6 @@
 			children = (
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
 				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
-				43F2CD0424FDFC78006CAAA2 /* Lock */,
 				E725BBF52503894000AF1122 /* Locks */,
 				43F2CCF224FA3B50006CAAA2 /* Thread */,
 				4346DA6424738CEE00538082 /* Block */,
@@ -724,13 +723,6 @@
 				43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */,
 			);
 			path = Thread;
-			sourceTree = "<group>";
-		};
-		43F2CD0424FDFC78006CAAA2 /* Lock */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lock;
 			sourceTree = "<group>";
 		};
 		43F2CD0524FDFC87006CAAA2 /* NSTimer */ = {

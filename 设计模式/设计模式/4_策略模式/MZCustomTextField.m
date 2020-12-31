@@ -8,8 +8,12 @@
 
 #import "MZCustomTextField.h"
 
-
 @implementation MZCustomTextField
+
+- (void)setInputValidateManager:(MZInputValidator *)inputValidateManager
+{
+     _inputValidateManager = inputValidateManager;
+}
 
 - (BOOL)validate {
     
@@ -24,10 +28,6 @@
     return result;
 }
 
-- (void)setInputValidateManager:(MZInputValidator *)inputValidateManager
-{
-     _inputValidateManager = inputValidateManager;
-}
 
 
 @end

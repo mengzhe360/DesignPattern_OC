@@ -66,6 +66,8 @@
 
 #import "MZPerson.h"
 
+#import "MZReusePoolViewController.h"
+
 //#import "MJClassInfo.pod updateh"
 
 /*
@@ -103,7 +105,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self viewLayerTest];
+    [self dynamicProtocol];
     
 //    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
 //    [self.navigationController pushViewController:blockVc animated:YES];
@@ -111,8 +113,7 @@ typedef void(^MZBlock)(NSString *mz);
     
 //    MZPerson *p = [[MZPerson alloc] init];
 //    _Person = p;
-   
-    
+
    
 }
 
@@ -196,11 +197,11 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)dynamicProtocol
 {
     id vc = [[MZNormalTest alloc] init];
-    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
+//    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
 //    [(MZNormalTest *)vc mzOptionalThing];
     
 //    id<MZDynamicProtocol> obj = (id)[[MZNormalObject alloc] init];
-//    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:(id)[[MZNormalObject alloc] init]];
+    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:(id)[[MZNormalObject alloc] init]];
 
     [obj doSomething];
     [obj doOtherThing];

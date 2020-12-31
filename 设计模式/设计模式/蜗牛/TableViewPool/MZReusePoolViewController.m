@@ -24,6 +24,10 @@
     
     [super viewDidLoad];
     
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"reloadTable" style:UIBarButtonItemStylePlain
+                    target:self action:@selector(doAction:)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    
     //创建一个Tableview
     tableView = [[MZTableViewIndex alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height - 60) style:UITableViewStylePlain];
     tableView.delegate = self;
@@ -33,17 +37,10 @@
     tableView.indexedDataSource = self;
     
     [self.view addSubview:tableView];
-    
-    //创建一个按钮
-    button = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 40)];
-    button.backgroundColor = [UIColor redColor];
-    [button setTitle:@"reloadTable" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:button];
-    
+
     // 数据源
     dataSource = [NSMutableArray array];
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 1000; i++) {
         [dataSource addObject:@(i+1)];
     }
     
@@ -83,18 +80,14 @@
     return [dataSource count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *identifier = @"reuseId";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    //如果重用池当中没有可重用的cell，那么创建一个cell
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    // 文案设置
     cell.textLabel.text = [[dataSource objectAtIndex:indexPath.row] stringValue];
-    
-    //返回一个cell
     return cell;
 }
 
