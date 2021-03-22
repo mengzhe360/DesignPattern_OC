@@ -75,6 +75,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 @interface MZAViewController ()<MZSubscriptionServiceCenterProtocol>
 
+
 @end
 
 @implementation MZAViewController
