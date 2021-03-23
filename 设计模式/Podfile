@@ -10,5 +10,6 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'CTMediator'
 pod 'KVOController'
+pod 'ZFPlayer', '~> 4.0'
 
 end

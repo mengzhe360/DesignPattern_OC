@@ -105,7 +105,10 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self dynamicProtocol];
+    [self bridgingMode];
+//    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
+//
+//    [self.navigationController pushViewController:blockVc animated:YES];
     
 //    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
 //    [self.navigationController pushViewController:blockVc animated:YES];
