@@ -53,6 +53,7 @@
 		4338E918246E36810064062B /* MZColleagueA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E917246E36810064062B /* MZColleagueA.m */; };
 		4338E91B246E36980064062B /* MZColleagueB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91A246E36980064062B /* MZColleagueB.m */; };
 		4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338E91D246E66B30064062B /* MZSubjectClassB.m */; };
+		433ACE63260B335D00A265D2 /* MZThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 433ACE62260B335D00A265D2 /* MZThreadTest.m */; };
 		4346DA672473925300538082 /* MZBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4346DA662473925300538082 /* MZBlockViewController.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		4395C8D7250878CE0097F8C3 /* MZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D6250878CE0097F8C3 /* MZPerson.m */; };
@@ -228,6 +229,8 @@
 		4338E91A246E36980064062B /* MZColleagueB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZColleagueB.m; sourceTree = "<group>"; };
 		4338E91C246E66B30064062B /* MZSubjectClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClassB.h; sourceTree = "<group>"; };
 		4338E91D246E66B30064062B /* MZSubjectClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubjectClassB.m; sourceTree = "<group>"; };
+		433ACE61260B335D00A265D2 /* MZThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZThreadTest.h; sourceTree = "<group>"; };
+		433ACE62260B335D00A265D2 /* MZThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZThreadTest.m; sourceTree = "<group>"; };
 		4346DA652473925300538082 /* MZBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZBlockViewController.h; sourceTree = "<group>"; };
 		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
@@ -721,6 +724,8 @@
 			children = (
 				43F2CCF324FA3B8F006CAAA2 /* MZPermanentThread.h */,
 				43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */,
+				433ACE61260B335D00A265D2 /* MZThreadTest.h */,
+				433ACE62260B335D00A265D2 /* MZThreadTest.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -1147,6 +1152,7 @@
 				E783E82A240829F2008B2EAE /* MZSevereNotification.m in Sources */,
 				4357DD43241B382200392749 /* MZDrawView.m in Sources */,
 				E783E82424082535008B2EAE /* MZWechatMsgSender.m in Sources */,
+				433ACE63260B335D00A265D2 /* MZThreadTest.m in Sources */,
 				43CE07A1246BD3DB00AB3FE0 /* MZChessPieceUnit.m in Sources */,
 				E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */,
 				4330805023CC6B06003DEC4C /* MZConcreteStateA.m in Sources */,
