@@ -47,7 +47,7 @@
      
     if ([responder.name isEqualToString:@"responder8"]) {
         if (completion) {
-//            NSLog(@"-3-%@:能处理业务逻辑",responder.name);
+            NSLog(@"-3-%@:能处理业务逻辑",responder.name);
             completion(YES);
         }
     }else{

@@ -30,9 +30,8 @@
         
         //避免索引条随着table滚动
         [self.superview insertSubview:containerView aboveSubview:self];
-        
         self.superview.backgroundColor = [UIColor redColor];
-        NSLog(@"self.superview:%@",self.superview);
+        
     }
     
     if (reusePool == nil) {

@@ -12,7 +12,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,MZNotificationEmergencyLevel) {
-    SEVERE, URGENCY, NORMAL, TRIVIAL
+    SEVERE,//（严重）
+    URGENCY,//（紧急）
+    NORMAL,//（普通）
+    TRIVIAL//（无关紧要）
 };
 
 @interface MZNotificationAbstract : NSObject

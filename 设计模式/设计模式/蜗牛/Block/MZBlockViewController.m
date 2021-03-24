@@ -11,7 +11,9 @@
 
 typedef void(^MZBlock)(NSString *mz);
 
-@interface MZBlockViewController ()
+@interface MZBlockViewController (){
+    BOOL _isBlock;
+}
 
 @property(nonatomic,strong)NSArray *arr;
 @property (nonatomic,copy) void(^mzBlock)(NSString *m,NSString *n);
@@ -51,10 +53,11 @@ typedef void(^MZBlock)(NSString *mz);
  2、static修饰的基本数据b，是指针传递，生命周期内用的都是同一个b
  3、auto修饰的基本数据c，是值传递，当被block内部捕获时，没有回调block时，c的地址一样，当回调block时内外地址不一样，但要注意在block内部可以直接通过地址改变c的值
  4、当对象没有被__block修饰时，可以改变对象固有的属性，但不可以重新赋值
+ 5、当block为属性时，内部成员变量要用__strong修饰，防止立即释放和循环引用造成内存泄漏
  */
 - (void)blockTest2
 {
-    __block int a = 101;//
+    __block int a = 101;//Variable is not assignable (missing __block type specifier)
     static int b = 201;
     int c = 301;
     MZResponderChainA *responderA = [[MZResponderChainA alloc] init];
@@ -67,7 +70,7 @@ typedef void(^MZBlock)(NSString *mz);
         a = 102;
         b = 202;
         responderA.name = @"responderB";
-//        responderA = [[MZResponderChainA alloc] init];（解说4）
+//        responderA = [[MZResponderChainA alloc] init];//（解说4）
         self.arr = @[@"q",@"w"];
         NSLog(@"block内a的地址:%p",&a);
         NSLog(@"block内b的地址:%p",&b);
@@ -92,8 +95,13 @@ typedef void(^MZBlock)(NSString *mz);
     NSLog(@"进去之后c的地址:%p",&c);
     mzBlock();
     
+    NSLog(@"进去之后responderA:%@",responderA.name);
+    __weak typeof(self) weakself = self;
     self.mzBlock = ^(NSString *m, NSString *n) {
-
+        MZBlockViewController __strong *strongself = weakself;
+        strongself->_isBlock = YES;
+//        weakself->_isBlock = NO;//会被立即释放
+//        self->_isBlock = NO;//会造成循环引用
     };
 
 }
