@@ -89,6 +89,7 @@ typedef void(^MZBlock)(NSString *mz);
 @property (nonatomic,strong) dispatch_semaphore_t semaphore;
 @property (nonatomic,strong) MZPerson *Person;
 
+
 @end
 
 @implementation MZAViewController

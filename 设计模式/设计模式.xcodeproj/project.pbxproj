@@ -113,6 +113,7 @@
 		E783E83924082FB1008B2EAE /* MZErrorAlertHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E83824082FB1008B2EAE /* MZErrorAlertHandler.m */; };
 		E783E83C24083286008B2EAE /* MZBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E83B24083286008B2EAE /* MZBridgeManager.m */; };
 		E783E83F24083310008B2EAE /* MZAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E783E83E24083310008B2EAE /* MZAlert.m */; };
+		E789833325342F98000F86CE /* MZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E789833225342F98000F86CE /* MZPerson.m */; };
 		E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B0A23C77DCC00257841 /* MZSubjectClass.m */; };
 		E79F5B1123C7818500257841 /* MZObserverClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1023C7818500257841 /* MZObserverClass.m */; };
 		E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1323C781FC00257841 /* MZObserverClassA.m */; };
@@ -354,6 +355,8 @@
 		E783E83B24083286008B2EAE /* MZBridgeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBridgeManager.m; sourceTree = "<group>"; };
 		E783E83D24083310008B2EAE /* MZAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAlert.h; sourceTree = "<group>"; };
 		E783E83E24083310008B2EAE /* MZAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAlert.m; sourceTree = "<group>"; };
+		E789833125342F98000F86CE /* MZPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPerson.h; sourceTree = "<group>"; };
+		E789833225342F98000F86CE /* MZPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPerson.m; sourceTree = "<group>"; };
 		E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectProtocol.h; sourceTree = "<group>"; };
 		E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZObserverProtocol.h; sourceTree = "<group>"; };
 		E79F5B0923C77DCC00257841 /* MZSubjectClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClass.h; sourceTree = "<group>"; };
@@ -615,6 +618,7 @@
 			children = (
 				4346DA652473925300538082 /* MZBlockViewController.h */,
 				4346DA662473925300538082 /* MZBlockViewController.m */,
+				E789833025342F85000F86CE /* New Group */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -895,6 +899,15 @@
 			path = "13_桥接模式";
 			sourceTree = "<group>";
 		};
+		E789833025342F85000F86CE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E789833125342F98000F86CE /* MZPerson.h */,
+				E789833225342F98000F86CE /* MZPerson.m */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E79F5B0623C779D100257841 /* 6_观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1145,6 +1158,7 @@
 				E783E827240827C2008B2EAE /* MZNotificationAbstract.m in Sources */,
 				E73B28AF23C633D3006190DC /* MZResponderChainA.m in Sources */,
 				4330803623C9A9E9003DEC4C /* MZUIView.m in Sources */,
+				E789833325342F98000F86CE /* MZPerson.m in Sources */,
 				E73B28B223C633DE006190DC /* MZResponderChainB.m in Sources */,
 				E73B28B523C633EB006190DC /* MZResponderChainC.m in Sources */,
 				E7601D9423CB6B7700D2225D /* MZTestDelegateB.m in Sources */,
