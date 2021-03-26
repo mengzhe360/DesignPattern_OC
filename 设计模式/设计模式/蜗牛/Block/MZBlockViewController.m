@@ -53,7 +53,20 @@ typedef void(^MZBlock)(NSString *mz);
  2、static修饰的基本数据b，是指针传递，生命周期内用的都是同一个b
  3、auto修饰的基本数据c，是值传递，当被block内部捕获时，没有回调block时，c的地址一样，当回调block时内外地址不一样，但要注意在block内部可以直接通过地址改变c的值
  4、当对象没有被__block修饰时，可以改变对象固有的属性，但不可以重新赋值
- 5、当block为属性时，内部成员变量要用__strong修饰，防止立即释放和循环引用造成内存泄漏
+ 5、如果在block内部存在多线程环境访问self，当block为属性时，内部成员变量要用__strong修饰，防止立即释放和循环引用造成内存泄漏
+ 6、block不会造成循环引用的情况
+    （1）block作为参数也不会造成循环引用
+    （2）block并不是属性值，而是临时变量时，不会造成循环引用，因为 self 没有持有 block
+    （3）block在栈区也不会造成循环引用
+ 7、GCD
+    （1）在使用block时，如果block内部需要访问self的方法、属性、或者实例变量应当使用weakSelf
+    （2）如果在block内需要多次访问self，则需要使用strongSelf
+    （3）如果在block内部存在多线程环境访问self，则需要使用strongSelf
+    （4）block本身不存在多线程之分，block执行是否是多线程，取决于当前的持有者是否是以多线程的方式来调用它。
+ 8、block代码块的生命周期
+    （1）当block是作为参数传过来的，在这个方法没有执行完，block是一直存在的
+    （2）当block作为该类的属性或者成员变量，这样block的生命周期就和实例的生命周期一样了，当然这中情况下就要考虑block会不会持有对象了，可能会造成循环引用或者对象的延迟释放
+     疑问，为什么block所在的类都释放了，当前的block代码块还能存在
  */
 - (void)blockTest2
 {
@@ -98,7 +111,10 @@ typedef void(^MZBlock)(NSString *mz);
     NSLog(@"进去之后responderA:%@",responderA.name);
     __weak typeof(self) weakself = self;
     self.mzBlock = ^(NSString *m, NSString *n) {
+        //使用__weak，也会有一个隐患，在block内部如果调用了延时函数还使用弱指针会娶不到该指针，因为已经被销毁了，为了保证在block内不会被释放，我们添加__strong
         MZBlockViewController __strong *strongself = weakself;
+//        iOS的GCD中如何关闭或者杀死一个还没执行完的后台线程?
+        if(!strongself) return;//防止释放后崩溃
         strongself->_isBlock = YES;
 //        weakself->_isBlock = NO;//会被立即释放
 //        self->_isBlock = NO;//会造成循环引用

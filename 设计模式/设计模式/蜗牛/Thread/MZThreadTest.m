@@ -42,12 +42,14 @@
     return longTermThread;
 }
 
-
+/*
+ PerformSelecter
+ 当调用 NSObject 的 performSelecter:afterDelay: 后，实际上其内部会创建一个 Timer 并添加到当前线程的 RunLoop 中。所以如果当前线程没有 RunLoop，则这个方法会失效。
+ 当调用 performSelector:onThread: 时，实际上其会创建一个 Timer 加到对应的线程去，同样的，如果对应线程没有 RunLoop 该方法也会失效。
+ */
 - (void)allThead{
     
     dispatch_queue_t serialQueue = dispatch_queue_create("com.lai.www", DISPATCH_QUEUE_SERIAL);
-    
-    dispatch_queue_t CONCURRENT = dispatch_queue_create("mz",DISPATCH_QUEUE_CONCURRENT);
     
     //获取这个常驻内存的线程
     NSThread *thread =  [self longTermThread];
@@ -58,9 +60,14 @@
         
         NSLog(@"1");
         
-        [self performSelector:@selector(perform) withObject:nil afterDelay:0];
+        [self performSelector:@selector(perform) withObject:nil afterDelay:0];//在子线程需要开启runloop
         [self performSelector:@selector(perform) withObject:@"在子线程不需要添加到 runloop"];
-        [self performSelector:@selector(performThread) onThread:thread withObject:nil waitUntilDone:NO];
+        [self performSelector:@selector(performThread) onThread:thread withObject:nil waitUntilDone:NO];//线程要注意保活
+        // 定义一个定时器，约定两秒之后调用self的run方法
+        NSTimer *timer = [NSTimer timerWithTimeInterval:2.0 target:self selector:@selector(run) userInfo:nil repeats:YES];
+        // 将定时器添加到当前RunLoop的NSDefaultRunLoopMode下
+        [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+        //注意scheduledTimerWithTimeInterval方法默认加入RunLoop上
         
         NSLog(@"3");
     });
