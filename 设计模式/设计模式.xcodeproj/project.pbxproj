@@ -119,6 +119,7 @@
 		E79F5B1723C7820F00257841 /* MZObserverClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1623C7820F00257841 /* MZObserverClassB.m */; };
 		E79F5B1A23C7844200257841 /* MZSubjectClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = E79F5B1923C7844200257841 /* MZSubjectClassA.m */; };
 		E7BB57E4260F672900DF1A55 /* MZTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB57E3260F672900DF1A55 /* MZTimerProxy.m */; };
+		E7BB57EA260F7A1B00DF1A55 /* MZGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BB57E9260F7A1B00DF1A55 /* MZGCDTimer.m */; };
 		E7C288DE23C37D0B00ED74CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288DD23C37D0B00ED74CA /* AppDelegate.m */; };
 		E7C288E423C37D0B00ED74CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C288E323C37D0B00ED74CA /* ViewController.m */; };
 		E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C288E523C37D0B00ED74CA /* Main.storyboard */; };
@@ -369,6 +370,8 @@
 		E79F5B1923C7844200257841 /* MZSubjectClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSubjectClassA.m; sourceTree = "<group>"; };
 		E7BB57E2260F672900DF1A55 /* MZTimerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTimerProxy.h; sourceTree = "<group>"; };
 		E7BB57E3260F672900DF1A55 /* MZTimerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZTimerProxy.m; sourceTree = "<group>"; };
+		E7BB57E8260F7A1B00DF1A55 /* MZGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZGCDTimer.h; sourceTree = "<group>"; };
+		E7BB57E9260F7A1B00DF1A55 /* MZGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZGCDTimer.m; sourceTree = "<group>"; };
 		E7C288D923C37D0B00ED74CA /* 设计模式.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "设计模式.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C288DC23C37D0B00ED74CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7C288DD23C37D0B00ED74CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 				43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */,
 				E7BB57E2260F672900DF1A55 /* MZTimerProxy.h */,
 				E7BB57E3260F672900DF1A55 /* MZTimerProxy.m */,
+				E7BB57E8260F7A1B00DF1A55 /* MZGCDTimer.h */,
+				E7BB57E9260F7A1B00DF1A55 /* MZGCDTimer.m */,
 			);
 			path = NSTimer;
 			sourceTree = "<group>";
@@ -1141,6 +1146,7 @@
 				E783E81E240824C7008B2EAE /* MZTelephoneMsgSender.m in Sources */,
 				4338E901246D3ACA0064062B /* MZReceiverA.m in Sources */,
 				E79F5B1A23C7844200257841 /* MZSubjectClassA.m in Sources */,
+				E7BB57EA260F7A1B00DF1A55 /* MZGCDTimer.m in Sources */,
 				E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */,
 				E783E82D24082A03008B2EAE /* MZUrgencyNotification.m in Sources */,
 				4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */,
