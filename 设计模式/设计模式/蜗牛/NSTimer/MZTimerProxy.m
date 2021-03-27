@@ -13,7 +13,7 @@
 + (instancetype)proxyWithTarget:(id)target
 {
     // NSProxy对象不需要调用init，因为它本来就没有init方法
-    MJProxy *proxy = [MJProxy alloc];
+    MZTimerProxy *proxy = [MZTimerProxy alloc];
     proxy.target = target;
     return proxy;
 }

@@ -69,7 +69,6 @@
 
 #import "MZReusePoolViewController.h"
 
-//#import "MJClassInfo.pod updateh"
 
 /*
  创建型设计模式主要解决“对象的创建”问题，

@@ -151,6 +151,32 @@ typedef void(^MZBlock)(NSString *mz);
 }
 
 /**
+ 局部 block 会释放造成回调失败
+ */
+- (void)blockTest:(BOOL)isgo
+{
+    
+    void (^blockName)(void);
+    
+    if (isgo) {
+        
+        blockName = [^{
+            NSLog(@"blockName-A");
+        } copy];
+        
+    }else{
+        
+        blockName = ^{
+            NSLog(@"blockName-B");
+        };
+    }
+    
+    blockName();
+    
+}
+
+
+/**
  isEqual与hash
  对于基本类型, ==运算符比较的是值; 对于对象类型, ==运算符比较的是对象的地址(即是否为同一对象)
  hash方法只在对象被添加至NSSet和设置为NSDictionary的key时会调用；对象相等hash值一定一样，hash值相同对象不一定是同一个

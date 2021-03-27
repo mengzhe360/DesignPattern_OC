@@ -9,6 +9,7 @@
 #import "MZCViewController.h"
 #import "MZSubscriptionServiceCenterProtocol.h"
 #import "MZDrawView.h"
+#import "MZThreadTestController.h"
 
 @interface MZCViewController ()<MZSubscriptionServiceCenterProtocol>
 
@@ -25,8 +26,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
    
-    MZDrawView *view = [[MZDrawView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:view];
+//    MZDrawView *view = [[MZDrawView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:view];
+    
+    MZThreadTestController *pool = [[MZThreadTestController alloc] init];
+    [self.navigationController pushViewController:pool animated:YES];
     
     
 }
