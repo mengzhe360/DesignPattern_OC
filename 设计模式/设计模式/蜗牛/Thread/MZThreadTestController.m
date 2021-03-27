@@ -23,6 +23,7 @@
  1、产生死锁的情况：使用sync函数往当前串行队列中放入任务，会卡主当前串行队列
  2、dispatch_get_main_queue()：主队列是一个串行队列
  3、dispatch_get_global_queue(0, 0)：全局并发队列
+ 4、异步栅栏调用，必须是自己创建的并发队列
 */
 
 - (void)viewDidLoad {
