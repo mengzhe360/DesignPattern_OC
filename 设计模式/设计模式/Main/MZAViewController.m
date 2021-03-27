@@ -9,6 +9,7 @@
 #import "MZAViewController.h"
 
 #import <objc/runtime.h>
+#import <malloc/malloc.h>
 
 #import "MZStrategyViewController.h"
 #import "MZResponderChain.h"
@@ -109,7 +110,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self bridgingMode];
+//    [self responderChain];
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
 //    [self.navigationController pushViewController:blockVc animated:YES];
@@ -118,8 +119,11 @@ typedef void(^MZBlock)(NSString *mz);
 //    [self.navigationController pushViewController:blockVc animated:YES];
 
     
-//    MZPerson *p = [[MZPerson alloc] init];
-//    _Person = p;
+    MZPerson *p = [[MZPerson alloc] init];
+    
+    NSLog(@"%zd",class_getInstanceSize([MZPerson class]));
+    NSLog(@"%zd",malloc_size((__bridge const void *)p));
+    
     
    
     
@@ -135,25 +139,7 @@ typedef void(^MZBlock)(NSString *mz);
       
        
 //    });
-    __block BOOL gcdFlag = NO;
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        for (long i=0; i<100000; i++) {
-            NSLog(@"i:%ld",i);
-            sleep(1);
-            if (gcdFlag==YES) {
-                NSLog(@"收到gcd停止信号");
-                return ;
-                
-            }
-            
-        };
 
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"gcd停止信号发出！");
-        gcdFlag = YES;
-    });
-    
 
 
    

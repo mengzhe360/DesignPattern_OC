@@ -2,7 +2,7 @@
 //  MZPerson.h
 //  设计模式
 //
-//  Created by 孟哲 on 2020/10/12.
+//  Created by A5 on 2020/9/9.
 //  Copyright © 2020 孟哲. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MZPerson : NSObject
+
 
 @end
 

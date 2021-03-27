@@ -7,9 +7,23 @@
 //
 
 #import "MZThreadTest.h"
+#import "MZTimerProxy.h"
+
+@interface MZThreadTest ()
+
+@property (nonatomic,strong) NSTimer *timer;
+
+@end
 
 @implementation MZThreadTest
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[MZTimerProxy proxyWithTarget:self] selector:@selector(timerTest) userInfo:nil repeats:YES];
+    }
+    return self;
+}
 
 - (void)entryPoint
 {
@@ -81,6 +95,17 @@
 - (void)performThread
 {
     NSLog(@"4");
+}
+
+- (void)timerTest
+{
+    NSLog(@"%s", __func__);
+}
+
+- (void)dealloc
+{
+    NSLog(@"%s", __func__);
+    [self.timer invalidate];
 }
 
 
