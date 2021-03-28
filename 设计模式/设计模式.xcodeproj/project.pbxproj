@@ -474,7 +474,6 @@
 			isa = PBXGroup;
 			children = (
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
-				E7BB57FC260F85A800DF1A55 /* Locks */,
 				4395C8D4250878A80097F8C3 /* weak测试 */,
 				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
 				43F2CCF224FA3B50006CAAA2 /* Thread */,
@@ -778,6 +777,7 @@
 				43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */,
 				433ACE61260B335D00A265D2 /* MZThreadTest.h */,
 				433ACE62260B335D00A265D2 /* MZThreadTest.m */,
+				E7BB57FC260F85A800DF1A55 /* Locks */,
 			);
 			path = Thread;
 			sourceTree = "<group>";

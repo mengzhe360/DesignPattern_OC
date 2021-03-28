@@ -12,6 +12,7 @@
 @interface MZThreadTest ()
 
 @property (nonatomic,strong) NSTimer *timer;
+@property (strong, nonatomic) CADisplayLink *link;
 
 @end
 
@@ -20,7 +21,12 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[MZTimerProxy proxyWithTarget:self] selector:@selector(timerTest) userInfo:nil repeats:YES];
+        
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[MZTimerProxy proxyWithTarget:self] selector:@selector(timerTest) userInfo:nil repeats:YES];//默认加入到 runloop 上
+        
+        // 保证调用频率和屏幕的刷帧频率一致，60FPS
+        self.link = [CADisplayLink displayLinkWithTarget:[MZTimerProxy proxyWithTarget:self] selector:@selector(linkTest)];
+        [self.link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
@@ -102,9 +108,15 @@
     NSLog(@"%s", __func__);
 }
 
+- (void)linkTest
+{
+    NSLog(@"%s", __func__);
+}
+
 - (void)dealloc
 {
     NSLog(@"%s", __func__);
+    [self.link invalidate];
     [self.timer invalidate];
 }
 

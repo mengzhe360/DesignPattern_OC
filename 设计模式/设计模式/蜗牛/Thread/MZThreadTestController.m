@@ -7,13 +7,16 @@
 //
 
 #import "MZThreadTestController.h"
+#import <pthread.h>
 
 @interface MZThreadTestController ()
 {
-    dispatch_queue_t concurrent_queue;
-    NSMutableArray <NSURL *> *arrayURLs;
+    dispatch_queue_t _concurrent_queue;
+    NSMutableArray <NSURL *> *_arrayURLs;
     NSMutableDictionary *_userCenterDic;
 }
+
+@property (assign, nonatomic) pthread_rwlock_t lock;
 
 @end
 
@@ -22,7 +25,7 @@
 /*
  1、产生死锁的情况：使用sync函数往当前串行队列中放入任务，会卡主当前串行队列
  2、dispatch_get_main_queue()：主队列是一个串行队列
- 3、dispatch_get_global_queue(0, 0)：全局并发队列
+ 3、dispatch_get_global_queue(0, 0)：全局并发队列,整个生命周期只有一个，指针地址一样
  4、异步栅栏调用，必须是自己创建的并发队列
 */
 
@@ -33,8 +36,8 @@
     self.view.backgroundColor = [UIColor redColor];
     
     // 创建并发队列
-    concurrent_queue = dispatch_queue_create("concurrent_queue", DISPATCH_QUEUE_CONCURRENT);
-    arrayURLs = [NSMutableArray array];
+    _concurrent_queue = dispatch_queue_create("concurrent_queue", DISPATCH_QUEUE_CONCURRENT);
+    _arrayURLs = [NSMutableArray array];
     // 创建数据容器
     _userCenterDic = [NSMutableDictionary dictionary];
    
@@ -72,10 +75,10 @@
     dispatch_group_t group = dispatch_group_create();
     
     // for循环遍历各个元素执行操作
-    for (NSURL *url in arrayURLs) {
+    for (NSURL *url in _arrayURLs) {
         
         // 异步组分派到并发队列当中
-        dispatch_group_async(group, concurrent_queue, ^{
+        dispatch_group_async(group, _concurrent_queue, ^{
             
             //根据url去下载图片
             
@@ -100,7 +103,7 @@
 {
     __block id obj;
     // 同步读取指定数据
-    dispatch_async(concurrent_queue, ^{
+    dispatch_async(_concurrent_queue, ^{
         obj = [self->_userCenterDic objectForKey:key];
     });
     
@@ -110,9 +113,51 @@
 - (void)setObject:(id)obj forKey:(NSString *)key
 {
     // 异步栅栏调用设置数据
-    dispatch_barrier_async(concurrent_queue, ^{
+    dispatch_barrier_async(_concurrent_queue, ^{
         [self->_userCenterDic setObject:obj forKey:key];
     });
+}
+
+//4、读写锁，多读单写
+- (void)rwlockTest
+{
+    // 初始化锁
+    pthread_rwlock_init(&_lock, NULL);
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(queue, ^{
+            [self read];
+        });
+        dispatch_async(queue, ^{
+            [self write];
+        });
+    }
+}
+
+- (void)read {
+    pthread_rwlock_rdlock(&_lock);
+    
+    sleep(1);
+    NSLog(@"%s", __func__);
+    
+    pthread_rwlock_unlock(&_lock);
+}
+
+- (void)write
+{
+    pthread_rwlock_wrlock(&_lock);
+    
+    sleep(1);
+    NSLog(@"%s", __func__);
+    
+    pthread_rwlock_unlock(&_lock);
+}
+
+- (void)dealloc
+{
+    pthread_rwlock_destroy(&_lock);
 }
 
 

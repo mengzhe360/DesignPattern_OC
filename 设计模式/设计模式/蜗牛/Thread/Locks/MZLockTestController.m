@@ -20,7 +20,10 @@
 
 @implementation MZLockTestController
 
-//目的：为了线程同步
+/*
+ 目的：为了线程同步
+ 1、natomic：只是在内部给属性的 set 和 get 方法加锁，在外部取用不起作用
+ */
 - (instancetype)init
 {
     self = [super init];
