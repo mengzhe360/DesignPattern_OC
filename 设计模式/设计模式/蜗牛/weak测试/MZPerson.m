@@ -11,9 +11,9 @@
 
 @interface MZPerson ()<MZStudentDelegate>{
     
-    int _a;
+//    int _a;
 //    int _b;
-    NSString *_c;
+//    NSString *_c;
 }
 
 //@property (nonatomic,strong) MZStudent *student;//(1)
@@ -37,9 +37,9 @@
 {
     if (self = [super init]) {
         
-        _a = 1;
+//        _a = 1;
 //        _b = 2;
-        _c = @"c";
+//        _c = @"c";
 //        MZStudent *student = [[MZStudent alloc] init];//(2)
 //        student.delegate = self;
 //        

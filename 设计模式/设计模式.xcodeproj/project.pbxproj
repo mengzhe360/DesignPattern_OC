@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		166C5724A49140C5959A8069 /* libPods-设计模式.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */; };
+		431E4ECB2611E52700861D2E /* NSObject+MZ_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */; };
 		432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */; };
 		432EBC7423D1B89A00FAB8CA /* MZConcreteFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7323D1B89A00FAB8CA /* MZConcreteFlyweight.m */; };
 		432EBC7723D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7623D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m */; };
@@ -146,6 +147,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431E4EC92611E52700861D2E /* NSObject+MZ_KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MZ_KVO.h"; sourceTree = "<group>"; };
+		431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MZ_KVO.m"; sourceTree = "<group>"; };
 		432EBC6F23D1B86900FAB8CA /* MZAbstractFlyweight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAbstractFlyweight.h; sourceTree = "<group>"; };
 		432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAbstractFlyweight.m; sourceTree = "<group>"; };
 		432EBC7223D1B89A00FAB8CA /* MZConcreteFlyweight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZConcreteFlyweight.h; sourceTree = "<group>"; };
@@ -446,6 +449,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431E4EC82611E50100861D2E /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				431E4EC92611E52700861D2E /* NSObject+MZ_KVO.h */,
+				431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
 		432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
+				431E4EC82611E50100861D2E /* KVO */,
 				4395C8D4250878A80097F8C3 /* weak测试 */,
 				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
 				43F2CCF224FA3B50006CAAA2 /* Thread */,
@@ -1283,6 +1296,7 @@
 				E74D263423C4EFFB006E438B /* MZInputValidator.m in Sources */,
 				43ABB011247F6F2E0083127E /* MZContectTestA.m in Sources */,
 				432EBC7423D1B89A00FAB8CA /* MZConcreteFlyweight.m in Sources */,
+				431E4ECB2611E52700861D2E /* NSObject+MZ_KVO.m in Sources */,
 				4338E914246E354F0064062B /* MZBaseColleague.m in Sources */,
 				4331A17D23CF136700ABD720 /* MZVisitorB.m in Sources */,
 				E71A087623CCD3DF0053BF69 /* MZMemento.m in Sources */,
@@ -1453,6 +1467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66W524W7K3;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/设计模式/PrefixHeader.pch";
 				INFOPLIST_FILE = "设计模式/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1473,6 +1488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66W524W7K3;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/设计模式/PrefixHeader.pch";
 				INFOPLIST_FILE = "设计模式/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

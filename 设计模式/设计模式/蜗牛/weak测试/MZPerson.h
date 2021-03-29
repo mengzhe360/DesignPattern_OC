@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZPerson : NSObject
 
+@property (nonatomic,assign) int age;
+@property (nonatomic,assign) int a;
+@property (nonatomic,copy) NSString *s;
+@property (nonatomic,assign) int b;
 
 @end
 

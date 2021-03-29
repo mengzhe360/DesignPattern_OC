@@ -66,6 +66,7 @@
 #import "MZBlockViewController.h"
 
 #import "MZPerson.h"
+#import "NSObject+MZ_KVO.h"
 
 #import "MZReusePoolViewController.h"
 
@@ -87,7 +88,7 @@ typedef void(^MZBlock)(NSString *mz);
 @interface MZAViewController ()<MZSubscriptionServiceCenterProtocol>
 @property (nonatomic,copy) NSString *mark;
 @property (nonatomic,strong) dispatch_semaphore_t semaphore;
-@property (nonatomic,strong) MZPerson *Person;
+@property (nonatomic,strong) MZPerson *person;
 
 
 @end
@@ -103,7 +104,7 @@ typedef void(^MZBlock)(NSString *mz);
 //    self.mark = @"mark";
 //
 //    self.semaphore = dispatch_semaphore_create(1);
-   
+    [self kvoTest];
     
 }
 
@@ -117,15 +118,6 @@ typedef void(^MZBlock)(NSString *mz);
 //    MZBlockViewController *blockVc = [[MZBlockViewController alloc] init];
 //    [self.navigationController pushViewController:blockVc animated:YES];
 
-    
-    MZPerson *p = [[MZPerson alloc] init];
-    
-    NSLog(@"%zd",class_getInstanceSize([MZPerson class]));
-    NSLog(@"%zd",malloc_size((__bridge const void *)p));
-    
-    
-   
-    
 //    dispatch_async(dispatch_get_global_queue(-2,0), ^{
 //        @autoreleasepool{
 //            for (int i = 0; i < 100; i++) {
@@ -139,25 +131,26 @@ typedef void(^MZBlock)(NSString *mz);
        
 //    });
 
-
-
-   
+    _person.age += 1;
+ 
 }
 
-- (void)text
+
+- (void)kvoTest
 {
+    _person = [[MZPerson alloc] init];
+    _person.a = 1;
+    _person.b = 2;
+    _person.s = @"ascf";
     
-    for (int i = 0; i < 25; i ++) {
-        [[[NSThread alloc] initWithTarget:self selector:@selector(text) object:nil] start];
-    }
-    
-    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-    
-    sleep(2);
-    
-    MZLog([NSThread currentThread]);
-    
-    dispatch_semaphore_signal(self.semaphore);
+    [_person mz_addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+  
+    NSLog(@"%zd",class_getInstanceSize([MZPerson class]));
+    NSLog(@"%zd",malloc_size((__bridge const void *)_person));
+}
+
+- (void)mz_observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    NSLog(@"change == %@",change);
 }
 
 ///1_责任链
