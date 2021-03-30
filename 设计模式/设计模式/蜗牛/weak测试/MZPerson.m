@@ -98,6 +98,12 @@
     
     NSLog(@"equal1 = %d  equal2 = %d equal3 = %d", equal1,equal2,equal3);
     
+    //特别注意：
+    BOOL m = [MZPerson isKindOfClass:[NSObject class]];//yes
+    BOOL n = [MZPerson isMemberOfClass:[NSObject class]];//NO
+    
+    NSLog(@"m = %d  n = %d", m,n);
+    
 }
 
 /*

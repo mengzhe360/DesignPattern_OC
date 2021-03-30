@@ -110,7 +110,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self isEqualObject];
+    
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
 //    [self.navigationController pushViewController:blockVc animated:YES];
