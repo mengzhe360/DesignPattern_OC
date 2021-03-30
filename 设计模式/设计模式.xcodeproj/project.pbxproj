@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		166C5724A49140C5959A8069 /* libPods-设计模式.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */; };
 		431E4ECB2611E52700861D2E /* NSObject+MZ_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */; };
+		431E4ED7261336AC00861D2E /* MZNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E4ED6261336AC00861D2E /* MZNSObject.m */; };
 		432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */; };
 		432EBC7423D1B89A00FAB8CA /* MZConcreteFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7323D1B89A00FAB8CA /* MZConcreteFlyweight.m */; };
 		432EBC7723D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7623D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m */; };
@@ -149,6 +150,8 @@
 /* Begin PBXFileReference section */
 		431E4EC92611E52700861D2E /* NSObject+MZ_KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MZ_KVO.h"; sourceTree = "<group>"; };
 		431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MZ_KVO.m"; sourceTree = "<group>"; };
+		431E4ED5261336AC00861D2E /* MZNSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZNSObject.h; sourceTree = "<group>"; };
+		431E4ED6261336AC00861D2E /* MZNSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZNSObject.m; sourceTree = "<group>"; };
 		432EBC6F23D1B86900FAB8CA /* MZAbstractFlyweight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAbstractFlyweight.h; sourceTree = "<group>"; };
 		432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAbstractFlyweight.m; sourceTree = "<group>"; };
 		432EBC7223D1B89A00FAB8CA /* MZConcreteFlyweight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZConcreteFlyweight.h; sourceTree = "<group>"; };
@@ -458,6 +461,15 @@
 			path = KVO;
 			sourceTree = "<group>";
 		};
+		431E4ED9261336D600861D2E /* MZNSObject */ = {
+			isa = PBXGroup;
+			children = (
+				431E4ED5261336AC00861D2E /* MZNSObject.h */,
+				431E4ED6261336AC00861D2E /* MZNSObject.m */,
+			);
+			path = MZNSObject;
+			sourceTree = "<group>";
+		};
 		432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
+				431E4ED9261336D600861D2E /* MZNSObject */,
 				431E4EC82611E50100861D2E /* KVO */,
 				4395C8D4250878A80097F8C3 /* weak测试 */,
 				43F2CD0524FDFC87006CAAA2 /* NSTimer */,
@@ -1208,6 +1221,7 @@
 				4330805323CC6B14003DEC4C /* MZConcreteStateB.m in Sources */,
 				E7601DA023CB766300D2225D /* MZFacadeSubsystemB.m in Sources */,
 				43307FC423C5717D003DEC4C /* SceneDelegate.m in Sources */,
+				431E4ED7261336AC00861D2E /* MZNSObject.m in Sources */,
 				E79F5B1423C781FC00257841 /* MZObserverClassA.m in Sources */,
 				E7BB581E260F85A800DF1A55 /* NSLockDemo.m in Sources */,
 				432EBC7723D1B8DA00FAB8CA /* MZUnConcreteFlyweight.m in Sources */,

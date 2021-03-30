@@ -18,6 +18,15 @@
     return proxy;
 }
 
+//注意指派其他对象的方法来完成 NSProxy没有下面这个方法
+//- (id)forwardingTargetForSelector:(SEL)aSelector
+//{
+//    if (aSelector == @selector(test)) {
+//        return nil;
+//    }
+//    return [super forwardingTargetForSelector:aSelector];
+//}
+
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
     return [self.target methodSignatureForSelector:sel];

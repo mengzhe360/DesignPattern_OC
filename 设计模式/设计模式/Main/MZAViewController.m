@@ -110,7 +110,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self responderChain];
+    [self isEqualObject];
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
 //    [self.navigationController pushViewController:blockVc animated:YES];
@@ -131,10 +131,9 @@ typedef void(^MZBlock)(NSString *mz);
        
 //    });
 
-    _person.age += 1;
+//    _person.age += 1;
  
 }
-
 
 - (void)kvoTest
 {

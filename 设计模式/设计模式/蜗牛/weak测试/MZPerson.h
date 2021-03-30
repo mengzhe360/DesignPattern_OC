@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) int a;
 @property (nonatomic,copy) NSString *s;
 @property (nonatomic,assign) int b;
+@property (nonatomic,copy) NSString *firstName;
+@property (nonatomic,copy) NSDate *lastName;
 
 @end
 
