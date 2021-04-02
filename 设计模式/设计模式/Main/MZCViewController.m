@@ -26,11 +26,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
    
-//    MZDrawView *view = [[MZDrawView alloc] initWithFrame:self.view.frame];
-//    [self.view addSubview:view];
+    MZDrawView *view = [[MZDrawView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:view];
     
-    MZThreadTestController *pool = [[MZThreadTestController alloc] init];
-    [self.navigationController pushViewController:pool animated:YES];
+//    MZThreadTestController *pool = [[MZThreadTestController alloc] init];
+//    [self.navigationController pushViewController:pool animated:YES];
     
     
 }

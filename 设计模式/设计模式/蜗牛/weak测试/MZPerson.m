@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/message.h>
 #import "MZPerson.h"
 #import "MZStudent.h"
 #import "MZResponderChainA.h"
@@ -59,7 +60,7 @@
 /**
  isEqual与hash
  1、对于基本类型, ==运算符比较的是值; 对于对象类型, ==运算符比较的是对象的地址(即是否为同一对象)
- 2、isEqual是对比对象的值
+ 2、isEqual是对比对象的值是否都一样
  3、hash方法只在对象被添加至NSSet和设置为NSDictionary的key时会调用；对象相等hash值一定一样，hash值相同对象不一定是同一个
  */
 - (void)isEqualObject
@@ -98,11 +99,15 @@
     
     NSLog(@"equal1 = %d  equal2 = %d equal3 = %d", equal1,equal2,equal3);
     
-    //特别注意：
+    /*
+     特别注意：yes 一直沿着supeclass指针找到[NSObject class]
+            object_getClass是获取isa指向的对象
+     */
     BOOL m = [MZPerson isKindOfClass:[NSObject class]];//yes
     BOOL n = [MZPerson isMemberOfClass:[NSObject class]];//NO
+    BOOL x = [MZPerson isMemberOfClass:object_getClass([MZPerson class])];//yes
     
-    NSLog(@"m = %d  n = %d", m,n);
+    NSLog(@"m = %d  n = %d z = %d", m,n,x);
     
 }
 
