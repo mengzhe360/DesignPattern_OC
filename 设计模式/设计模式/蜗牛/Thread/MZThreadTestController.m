@@ -47,7 +47,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
    
-    [self lockTestA];
+    [self rwlockTest];
 }
 
 //1、同步主队列 - 死锁
@@ -149,7 +149,7 @@
 {
     pthread_rwlock_wrlock(&_lock);
     
-    sleep(1);
+    sleep(2);
     NSLog(@"%s", __func__);
     
     pthread_rwlock_unlock(&_lock);
