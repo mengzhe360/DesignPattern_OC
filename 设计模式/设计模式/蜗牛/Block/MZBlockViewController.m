@@ -31,7 +31,7 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    [self blockTest2];
+    [self isEqualObject];
     
 }
 

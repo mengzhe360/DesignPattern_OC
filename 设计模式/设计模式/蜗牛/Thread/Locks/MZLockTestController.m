@@ -23,6 +23,11 @@
 /*
  目的：为了线程同步
  1、natomic：只是在内部给属性的 set 和 get 方法加锁，在外部取用不起作用
+ 2、@synchronized
+   sychronized 的每个对象，会为其分配一个递归锁并存储在哈希表中。
+   在 sychronized 内部对象被释放或被设为 nil 看起来都 OK
+   sychronized block 传入 nil！这将会从代码中移走线程安全。
+   当block对象置为nil或者对象被释放重新分配其他新对象时，新对象所在的线程会被阻塞
  */
 - (instancetype)init
 {
