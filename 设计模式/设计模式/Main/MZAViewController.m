@@ -110,6 +110,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    [self dynamicProtocol];
     
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
@@ -215,7 +216,7 @@ typedef void(^MZBlock)(NSString *mz);
 /// 3、动态代理
 - (void)dynamicProtocol
 {
-    id vc = [[MZNormalTest alloc] init];
+//    id vc = [[MZNormalTest alloc] init];
 //    id<MZDynamicProtocol> obj = (id)[[MZDynamicProxy alloc] initWithObject:vc];
 //    [(MZNormalTest *)vc mzOptionalThing];
     
