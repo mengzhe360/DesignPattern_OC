@@ -18,10 +18,10 @@
 {
      MZLog(@"")
 }
-//- (void)optionalThing
-//{
-//     NSLog(@"MZNormalTest-optionalThing");
-//}
+- (void)optionalThing
+{
+     NSLog(@"MZNormalTest-optionalThing");
+}
 - (void)mzOptionalThing
 {
      MZLog(@"")

@@ -20,7 +20,8 @@
 
 - (id)initWithObject:(id)obj {
     _target = (id<MZDynamicProtocol>)obj;
-    return self;
+    MZDynamicProxy *proxy = [MZDynamicProxy alloc];
+    return proxy;
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
