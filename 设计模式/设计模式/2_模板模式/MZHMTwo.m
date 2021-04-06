@@ -32,7 +32,7 @@
 
 - (void)run {
     MZMLog
-    [super run];
+    [super run];//子类调用父类模板方法
     MZMLog
 }
 

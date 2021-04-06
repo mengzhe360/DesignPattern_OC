@@ -60,6 +60,9 @@
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
 		4395C8D7250878CE0097F8C3 /* MZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D6250878CE0097F8C3 /* MZPerson.m */; };
 		4395C8DA250878F80097F8C3 /* MZStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D9250878F80097F8C3 /* MZStudent.m */; };
+		43AB2675261BFC46007615B4 /* 极客-重构和规范.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43AB2672261BFC46007615B4 /* 极客-重构和规范.jpg */; };
+		43AB2676261BFC46007615B4 /* 极客-面向对象.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43AB2673261BFC46007615B4 /* 极客-面向对象.jpg */; };
+		43AB2677261BFC46007615B4 /* 极客-设计原则.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43AB2674261BFC46007615B4 /* 极客-设计原则.jpg */; };
 		43ABB008247F6ADD0083127E /* MZContectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB007247F6ADD0083127E /* MZContectTest.m */; };
 		43ABB00B247F6BCD0083127E /* MZTestBaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00A247F6BCD0083127E /* MZTestBaseDelegate.m */; };
 		43ABB00E247F6C390083127E /* MZTestDelegateA.m in Sources */ = {isa = PBXBuildFile; fileRef = 43ABB00D247F6C390083127E /* MZTestDelegateA.m */; };
@@ -261,6 +264,9 @@
 		4395C8D6250878CE0097F8C3 /* MZPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPerson.m; sourceTree = "<group>"; };
 		4395C8D8250878F80097F8C3 /* MZStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZStudent.h; sourceTree = "<group>"; };
 		4395C8D9250878F80097F8C3 /* MZStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZStudent.m; sourceTree = "<group>"; };
+		43AB2672261BFC46007615B4 /* 极客-重构和规范.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "极客-重构和规范.jpg"; sourceTree = "<group>"; };
+		43AB2673261BFC46007615B4 /* 极客-面向对象.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "极客-面向对象.jpg"; sourceTree = "<group>"; };
+		43AB2674261BFC46007615B4 /* 极客-设计原则.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "极客-设计原则.jpg"; sourceTree = "<group>"; };
 		43ABB006247F6ADD0083127E /* MZContectTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZContectTest.h; sourceTree = "<group>"; };
 		43ABB007247F6ADD0083127E /* MZContectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZContectTest.m; sourceTree = "<group>"; };
 		43ABB009247F6BCD0083127E /* MZTestBaseDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZTestBaseDelegate.h; sourceTree = "<group>"; };
@@ -498,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				4330800223C5D279003DEC4C /* MJClassInfo.h */,
+				43AB2671261BFC46007615B4 /* 极客时间图 */,
 				431E4ED9261336D600861D2E /* MZNSObject */,
 				431E4EC82611E50100861D2E /* KVO */,
 				4395C8D4250878A80097F8C3 /* weak测试 */,
@@ -712,6 +719,16 @@
 				4395C8D9250878F80097F8C3 /* MZStudent.m */,
 			);
 			path = "weak测试";
+			sourceTree = "<group>";
+		};
+		43AB2671261BFC46007615B4 /* 极客时间图 */ = {
+			isa = PBXGroup;
+			children = (
+				43AB2672261BFC46007615B4 /* 极客-重构和规范.jpg */,
+				43AB2673261BFC46007615B4 /* 极客-面向对象.jpg */,
+				43AB2674261BFC46007615B4 /* 极客-设计原则.jpg */,
+			);
+			path = "极客时间图";
 			sourceTree = "<group>";
 		};
 		43CE079D246BD38100AB3FE0 /* ChessPiece */ = {
@@ -1168,10 +1185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C288EC23C37D0C00ED74CA /* LaunchScreen.storyboard in Resources */,
+				43AB2677261BFC46007615B4 /* 极客-设计原则.jpg in Resources */,
 				4330801C23C72B7F003DEC4C /* MZRouterEventViewController.xib in Resources */,
 				E7C288E923C37D0C00ED74CA /* Assets.xcassets in Resources */,
 				E74D263323C4EFFA006E438B /* MZStrategyViewController.xib in Resources */,
 				E7C288E723C37D0B00ED74CA /* Main.storyboard in Resources */,
+				43AB2675261BFC46007615B4 /* 极客-重构和规范.jpg in Resources */,
+				43AB2676261BFC46007615B4 /* 极客-面向对象.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

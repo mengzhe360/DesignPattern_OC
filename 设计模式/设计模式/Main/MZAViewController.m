@@ -110,7 +110,7 @@ typedef void(^MZBlock)(NSString *mz);
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self dynamicProtocol];
+    [self viewLayerTest];
     
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
@@ -273,7 +273,7 @@ typedef void(^MZBlock)(NSString *mz);
     NSObject *observerB = [NSObject objectForClassName:@"MZObserverClassB"];
     
     [self performClass:subject selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
-//    [self performClass:subject selector:@"deleteObserver:" objects:@[observerA] type:kInstanceMethod];
+    [self performClass:subject selector:@"deleteObserver:" objects:@[observerA] type:kInstanceMethod];
     [self performClass:subject selector:@"addObserver:" objects:@[observerB] type:kInstanceMethod];
     [self performClass:subjectB selector:@"addObserver:" objects:@[observerA] type:kInstanceMethod];
     [self performClass:subject selector:@"doSomething:" objects:@[@"被观察者开始活动了"] type:kInstanceMethod];
