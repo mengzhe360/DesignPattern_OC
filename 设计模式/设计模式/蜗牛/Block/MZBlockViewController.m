@@ -16,6 +16,7 @@ typedef void(^MZBlock)(NSString *mz);
 }
 
 @property(nonatomic,strong)NSArray *arr;
+@property(nonatomic,strong)NSMutableArray *mutArray;
 @property (nonatomic,copy) void(^mzBlock)(NSString *m,NSString *n);
 
 @end
@@ -31,7 +32,7 @@ typedef void(^MZBlock)(NSString *mz);
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    [self isEqualObject];
+//    [self isEqualObject];
     
 }
 
@@ -175,28 +176,9 @@ typedef void(^MZBlock)(NSString *mz);
     
 }
 
-
-/**
- isEqual与hash
- 对于基本类型, ==运算符比较的是值; 对于对象类型, ==运算符比较的是对象的地址(即是否为同一对象)
- hash方法只在对象被添加至NSSet和设置为NSDictionary的key时会调用；对象相等hash值一定一样，hash值相同对象不一定是同一个
- */
-- (void)isEqualObject
-{
-    UIColor *color1 = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
-    UIColor *color2 = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
-    //    UIColor *color3 = [UIColor colorWithWhite:0.1 alpha:0.5];
-    MZResponderChainA *responderA = [[MZResponderChainA alloc] init];
-    responderA.name = @"responderA";
-    
-    MZResponderChainA *responderB = [[MZResponderChainA alloc] init];
-    responderB.name = @"responderA";
-    responderB = responderA;
-    
-    NSLog(@"color1 == color2 = %@", color1 == color2 ? @"YES" : @"NO");
-    NSLog(@"[color1 isEqual:color2] = %@", [color1 isEqual:color2] ? @"YES" : @"NO");
-    NSLog(@"color1.hash == color2.hash = %@", color1.hash == color2.hash ? @"YES" : @"NO");
-    NSLog(@"[responderA isEqual:responderB] = %@", [responderA isEqual:responderB] ? @"YES" : @"NO");
+- (void)dealloc{
+    NSLog(@"%s",__func__);
 }
+
 
 @end

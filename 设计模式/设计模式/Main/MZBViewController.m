@@ -8,8 +8,15 @@
 
 #import "MZBViewController.h"
 #import "MZReusePoolViewController.h"
+#import "MZPerson.h"
+#import "MZBlockViewController.h"
+#import "MZPersonViewController.h"
 
 @interface MZBViewController ()<UIWebViewDelegate>
+
+@property(nonatomic,strong)NSArray *arr;
+@property(nonatomic,strong)NSMutableArray *mutArray;
+@property (nonatomic,strong) NSHashTable *hashTable;
 
 @end
 
@@ -30,21 +37,42 @@
 //    webView.delegate = self;
 //    webView.backgroundColor = [UIColor redColor];
 //    [self.view addSubview:webView];
-//    //    webView.delegate = self;
 //
 //    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com/"]]];
     
-    MZReusePoolViewController *pool = [[MZReusePoolViewController alloc] init];
+    MZPersonViewController *pool = [[MZPersonViewController alloc] init];
     [self.navigationController pushViewController:pool animated:YES];
- 
+
+    
 }
 
+- (void)blockTest
+{
+    MZBlockViewController *bVC = [MZBlockViewController new];
+    bVC.gesturesVcSetBlock = ^(BOOL isSuccess, UIViewController * count) {
+
+        self.arr = @[@"q",@"w"];//bVC的实例并不是当前类的成员属性，不会造成循环引用，block内部强引用了 self， 但 self 没有强引用BViewController的实例对象
+//        bVC.bStr = @"在内部加上这句会造成循环引用";//这一句造成 BVC 和 block 造成循环引用
+        if (isSuccess) {
+
+            NSLog(@"回调过来的B控制器:%@",count);
+
+        }
+
+    };
+  
+    [self.hashTable addObject:bVC];//加上这句会造成循环引用 ，因为 self强引用了 bVC
+    
+    [self.navigationController pushViewController:bVC animated:YES];
+}
+
+
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    NSLog(@"-1-webViewDidStartLoad:");
+    NSLog(@"%s",__func__);
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"-2-webViewDidFinishLoad:");
+    NSLog(@"%s",__func__);
 }
 
 /**
@@ -117,6 +145,27 @@
         
     }
     
+}
+
+- (NSMutableArray *)mutArray{
+    
+    if (_mutArray == nil) {
+        _mutArray = [[NSMutableArray array] init];
+    }
+    return _mutArray;
+}
+
+-(NSHashTable *)hashTable
+{
+    if (!_hashTable) {
+        _hashTable = [NSHashTable hashTableWithOptions:NSHashTableStrongMemory];
+//        _hashTable = [NSHashTable hashTableWithOptions:NSHashTableWeakMemory];
+    }
+    return _hashTable;
+}
+
+- (void)dealloc{
+    NSLog(@"%s",__func__);
 }
 
 

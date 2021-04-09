@@ -62,7 +62,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 
 - (void)owner_webViewDidStartLoad:(UIWebView *)webView {
     
-    NSLog(@"--- owner_webViewDidStartLoad:");
+    NSLog(@"%s",__func__);
     
     [self owner_webViewDidStartLoad:webView];
     
@@ -70,13 +70,13 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 
 - (void)none_webViewDidStartLoad:(UIWebView *)webView {
     
-    NSLog(@"--- none_webViewDidStartLoad:");
+    NSLog(@"%s",__func__);
     
 }
 
 - (void)owner_webViewDidFinishLoad:(UIWebView *)webView {
     
-    NSLog(@"--- owner_webViewDidFinishLoad:");
+    NSLog(@"%s",__func__);
     
     [self owner_webViewDidFinishLoad:webView];
     
@@ -84,7 +84,7 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
 
 - (void)none_webViewDidFinishLoad:(UIWebView *)webView {
     
-    NSLog(@"--- none_webViewDidFinishLoad:");
+    NSLog(@"%s",__func__);
     
 }
 

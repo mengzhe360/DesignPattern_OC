@@ -29,6 +29,14 @@
 /*
  实现isEqual
  先进行指针的判断：如果两个指针相等，那么就是指向一个对象，所以必定相等。然后在进行各个数据的判断
+ 
+ 苹果为我们提供了相对于NSSet和NSDictionary更通用的两个类NSHashTable和NSMapTable。
+ NSHashTable是比NSSet更通用的一个相似物。NSHashTable相对于NSSet/NSMutableSet有如下特征：
+ NSSet/NSMutableSet对其对象是强引用，使用isEqual方法去检查对象是否相等，使用方法hash去获取hash值。
+ NSHashTable是可变的，没有一个不变的和其对应。
+ NSHashTable可以对其对象是weak引用。
+ NSHashTable可以在输入（加入）的时候copy对象。
+ NSHashTable可以包含任意指针，使用指针去做相等或者hashing检查
  */
 - (BOOL)isEqual:(id)object {
     if (self == object) {
@@ -45,10 +53,11 @@
         return NO;
     }
     BOOL haveEqualFirstName = (!self.firstName && !MZPerson.firstName) || [self.firstName isEqualToString:MZPerson.firstName];
-    BOOL haveEqualLastName = (!self.lastName && !MZPerson.lastName) || [self.lastName isEqualToDate:MZPerson.lastName];
+    BOOL haveEqualLastName = (!self.lastName && !MZPerson.lastName) || [self.lastName isEqualToString:MZPerson.lastName];
     return haveEqualFirstName && haveEqualLastName;
 }
 
+//重写
 - (NSUInteger)hash
 {
     NSUInteger firstNameHash = [_firstName hash];

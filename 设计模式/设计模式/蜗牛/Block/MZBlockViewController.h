@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^GesturesVcSetBlock)(BOOL isSuccess,UIViewController * count);//设置
+
 @interface MZBlockViewController : UIViewController
+
+@property (nonatomic,copy) NSString *bStr; 
+
+@property (nonatomic, copy) GesturesVcSetBlock gesturesVcSetBlock;
 
 @end
 

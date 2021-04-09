@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		166C5724A49140C5959A8069 /* libPods-设计模式.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FA0275078A8AB4EDBC956 /* libPods-设计模式.a */; };
+		430AA7A4261EE9AE0039C996 /* MZPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430AA7A3261EE9AE0039C996 /* MZPersonViewController.m */; };
 		431E4ECB2611E52700861D2E /* NSObject+MZ_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */; };
 		431E4ED7261336AC00861D2E /* MZNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E4ED6261336AC00861D2E /* MZNSObject.m */; };
 		432EBC7123D1B86900FAB8CA /* MZAbstractFlyweight.m in Sources */ = {isa = PBXBuildFile; fileRef = 432EBC7023D1B86900FAB8CA /* MZAbstractFlyweight.m */; };
@@ -151,6 +152,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430AA7A2261EE9AE0039C996 /* MZPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPersonViewController.h; sourceTree = "<group>"; };
+		430AA7A3261EE9AE0039C996 /* MZPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPersonViewController.m; sourceTree = "<group>"; };
 		431E4EC92611E52700861D2E /* NSObject+MZ_KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MZ_KVO.h"; sourceTree = "<group>"; };
 		431E4ECA2611E52700861D2E /* NSObject+MZ_KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MZ_KVO.m"; sourceTree = "<group>"; };
 		431E4ED5261336AC00861D2E /* MZNSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZNSObject.h; sourceTree = "<group>"; };
@@ -717,6 +720,8 @@
 				4395C8D6250878CE0097F8C3 /* MZPerson.m */,
 				4395C8D8250878F80097F8C3 /* MZStudent.h */,
 				4395C8D9250878F80097F8C3 /* MZStudent.m */,
+				430AA7A2261EE9AE0039C996 /* MZPersonViewController.h */,
+				430AA7A3261EE9AE0039C996 /* MZPersonViewController.m */,
 			);
 			path = "weak测试";
 			sourceTree = "<group>";
@@ -1282,6 +1287,7 @@
 				E7BB5819260F85A800DF1A55 /* SemaphoreDemo.m in Sources */,
 				E783E82D24082A03008B2EAE /* MZUrgencyNotification.m in Sources */,
 				4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */,
+				430AA7A4261EE9AE0039C996 /* MZPersonViewController.m in Sources */,
 				E74D263223C4EFFA006E438B /* MZNumericInputValidator.m in Sources */,
 				E783E81324082086008B2EAE /* MZApiStatInfo.m in Sources */,
 				43F2CD0824FDFCE9006CAAA2 /* MOFTimerTool.m in Sources */,
