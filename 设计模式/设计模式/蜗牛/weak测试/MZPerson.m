@@ -27,8 +27,55 @@
 @implementation MZPerson
 
 /*
+ 1、当MZPerson强引用MZStudent时，MZStudentDelegate要weak修饰，不会循环引用
+ 2、当MZPerson为局部变量所引用MZStudent时，MZStudentDelegate可以weak或者strong修饰，都不会循环引用
+ 3、EXC_BAD_ACCESS 访问了一个已经被释放的内存区域
+ 4、KVO在主线程监听，在哪个线程触发，就在哪个线程回调
+ */
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        
+        _a = 1;
+        _b = 2;
+//        _c = @"c";
+        MZStudent *student = [[MZStudent alloc] init];//(2)
+        student.delegate = self;
+        
+        __block MZStudent *student1 = [[MZStudent alloc] init];//(3)
+        [student1 addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+        //        student1.name = @"mzz";
+        self.student = student1; //当有强引用延迟释放时不会崩溃
+        __weak typeof(student1) weakstudent1 = student1;
+        student1.block = ^{
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                MZLog([NSThread currentThread])
+                weakstudent1.name = @"mz";
+            });
+            
+            //            student1 = nil;
+        };
+        
+//        [student1 textMethod];
+        
+        
+    }
+    return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    self.firstName = self.firstName;
+    self.lastName = self.lastName;
+    return self;
+}
+
+/*
  实现isEqual
  先进行指针的判断：如果两个指针相等，那么就是指向一个对象，所以必定相等。然后在进行各个数据的判断
+ NSMutableSet当执行addObject会默认调用- (NSUInteger)hash方法
+ NSDictionary当执行setObject会默认调用- (NSUInteger)hash方法
  
  苹果为我们提供了相对于NSSet和NSDictionary更通用的两个类NSHashTable和NSMapTable。
  NSHashTable是比NSSet更通用的一个相似物。NSHashTable相对于NSSet/NSMutableSet有如下特征：
@@ -60,6 +107,8 @@
 //重写
 - (NSUInteger)hash
 {
+    [super hash];
+    
     NSUInteger firstNameHash = [_firstName hash];
     NSUInteger lastNameHash = [_lastName hash];
     NSUInteger ageHash = _age;
@@ -119,45 +168,6 @@
     NSLog(@"m = %d  n = %d z = %d", m,n,x);
     
 }
-
-/*
- 1、当MZPerson强引用MZStudent时，MZStudentDelegate要weak修饰，不会循环引用
- 2、当MZPerson为局部变量所引用MZStudent时，MZStudentDelegate可以weak或者strong修饰，都不会循环引用
- 3、EXC_BAD_ACCESS 访问了一个已经被释放的内存区域
- 4、KVO在主线程监听，在哪个线程触发，就在哪个线程回调
- */
-
-- (instancetype)init
-{
-    if (self = [super init]) {
-        
-        _a = 1;
-        _b = 2;
-//        _c = @"c";
-        MZStudent *student = [[MZStudent alloc] init];//(2)
-        student.delegate = self;
-        
-        __block MZStudent *student1 = [[MZStudent alloc] init];//(3)
-        [student1 addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
-        //        student1.name = @"mzz";
-        self.student = student1; //当有强引用延迟释放时不会崩溃
-        __weak typeof(student1) weakstudent1 = student1;
-        student1.block = ^{
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                MZLog([NSThread currentThread])
-                weakstudent1.name = @"mz";
-            });
-            
-            //            student1 = nil;
-        };
-        
-        [student1 textMethod];
-        
-        
-    }
-    return self;
-}
-
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {

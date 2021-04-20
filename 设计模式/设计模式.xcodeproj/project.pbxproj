@@ -59,6 +59,7 @@
 		433ACE63260B335D00A265D2 /* MZThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 433ACE62260B335D00A265D2 /* MZThreadTest.m */; };
 		4346DA672473925300538082 /* MZBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4346DA662473925300538082 /* MZBlockViewController.m */; };
 		4357DD43241B382200392749 /* MZDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4357DD42241B382200392749 /* MZDrawView.m */; };
+		436FCF6C262E8E1400C5498D /* MZSharedMooc.m in Sources */ = {isa = PBXBuildFile; fileRef = 436FCF6B262E8E1400C5498D /* MZSharedMooc.m */; };
 		4395C8D7250878CE0097F8C3 /* MZPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D6250878CE0097F8C3 /* MZPerson.m */; };
 		4395C8DA250878F80097F8C3 /* MZStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4395C8D9250878F80097F8C3 /* MZStudent.m */; };
 		43AB2675261BFC46007615B4 /* 极客-重构和规范.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43AB2672261BFC46007615B4 /* 极客-重构和规范.jpg */; };
@@ -263,6 +264,8 @@
 		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
+		436FCF6A262E8E1400C5498D /* MZSharedMooc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSharedMooc.h; sourceTree = "<group>"; };
+		436FCF6B262E8E1400C5498D /* MZSharedMooc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSharedMooc.m; sourceTree = "<group>"; };
 		4395C8D5250878CE0097F8C3 /* MZPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPerson.h; sourceTree = "<group>"; };
 		4395C8D6250878CE0097F8C3 /* MZPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPerson.m; sourceTree = "<group>"; };
 		4395C8D8250878F80097F8C3 /* MZStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZStudent.h; sourceTree = "<group>"; };
@@ -713,6 +716,15 @@
 			path = CGContextRef;
 			sourceTree = "<group>";
 		};
+		436FCF69262E8DC900C5498D /* 0_单例模式 */ = {
+			isa = PBXGroup;
+			children = (
+				436FCF6A262E8E1400C5498D /* MZSharedMooc.h */,
+				436FCF6B262E8E1400C5498D /* MZSharedMooc.m */,
+			);
+			path = "0_单例模式";
+			sourceTree = "<group>";
+		};
 		4395C8D4250878A80097F8C3 /* weak测试 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1078,7 @@
 			children = (
 				43307FC923C579F5003DEC4C /* Main */,
 				43307FFD23C5B93F003DEC4C /* 蜗牛 */,
+				436FCF69262E8DC900C5498D /* 0_单例模式 */,
 				E7C288F523C37D1E00ED74CA /* 1_责任链模式 */,
 				E7C288FA23C38F3D00ED74CA /* 2_模板模式 */,
 				E7C2890523C392F100ED74CA /* 3_代理模式 */,
@@ -1313,6 +1326,7 @@
 				43307FCF23C57A88003DEC4C /* MZAViewController.m in Sources */,
 				43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */,
 				E7C288EF23C37D0C00ED74CA /* main.m in Sources */,
+				436FCF6C262E8E1400C5498D /* MZSharedMooc.m in Sources */,
 				4338E907246D3AF10064062B /* MZReceiverB.m in Sources */,
 				4330804923CC43A7003DEC4C /* MZEncode.m in Sources */,
 				E7601D9D23CB764C00D2225D /* MZFacadeSubsystemA.m in Sources */,

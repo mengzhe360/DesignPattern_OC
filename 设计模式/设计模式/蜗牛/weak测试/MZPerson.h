@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZPerson : NSObject
+@interface MZPerson : NSObject <NSCopying>
 
 @property (nonatomic,assign) int age;
 @property (nonatomic,assign) int a;
