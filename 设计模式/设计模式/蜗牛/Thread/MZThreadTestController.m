@@ -8,6 +8,7 @@
 
 #import "MZThreadTestController.h"
 #import <pthread.h>
+#import "SemaphoreDemo.h"
 
 @interface MZThreadTestController ()
 {
@@ -20,6 +21,7 @@
 }
 
 @property (assign, nonatomic) pthread_rwlock_t lock;
+@property (nonatomic,strong) SemaphoreDemo *sm;
 
 @end
 
@@ -47,11 +49,12 @@
     // 创建数据容器
     _userCenterDic = [NSMutableDictionary dictionary];
     
+    self.sm = [[SemaphoreDemo alloc] init];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-   
     [self groupSync];
 }
 
@@ -101,7 +104,37 @@
 //3、信号 实现多读单写功能
 - (void)barrierTest
 {
+//    [[[NSThread alloc] initWithTarget:self selector:@selector(setText) object:nil] start];
+//    [[[NSThread alloc] initWithTarget:self selector:@selector(readText) object:nil] start];
     
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(queue, ^{
+            [self readText];
+        });
+        dispatch_async(queue, ^{
+            [self setText];
+        });
+    }
+}
+
+- (void)setText
+{
+    for (int i = 0; i < 100; i++) {
+        NSString *key = [NSString stringWithFormat:@"mz%d",i];
+        sleep(1);
+        [self objectForKey:key];
+    }
+}
+
+- (void)readText
+{
+    for (int i = 0; i < 100; i++) {
+        NSString *key = [NSString stringWithFormat:@"mz%d",i];
+        sleep(1);
+        [self setObject:key forKey:key];
+    }
 }
 
 //2、异步串行队列 开新线程
@@ -196,11 +229,18 @@
     
 }
 
+- (void)semaphoreDemo
+{
+//    [self.sm moneyTest];
+//    [self.sm ticketTest];
+    [self.sm otherTest];
+}
 - (id)objectForKey:(NSString *)key
 {
     __block id obj;
     // 同步读取指定数据
     dispatch_async(_concurrent_queue, ^{
+        NSLog(@"mz-1-get-barrier_async");
         obj = [self->_userCenterDic objectForKey:key];
     });
     
@@ -211,6 +251,7 @@
 {
     // 异步栅栏调用设置数据
     dispatch_barrier_async(_concurrent_queue, ^{
+        NSLog(@"mz-2-set-barrier_async");
         [self->_userCenterDic setObject:obj forKey:key];
     });
 }
