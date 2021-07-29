@@ -70,6 +70,7 @@
 
 
 #import "MZReusePoolViewController.h"
+#import "MZNode.h"
 
 
 /*
@@ -108,6 +109,16 @@ typedef void(^MZBlock)(NSString *mz);
 //    self.semaphore = dispatch_semaphore_create(1);
     
 }
+
+
+- (void)creatList
+{
+   
+    
+    
+    
+}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
