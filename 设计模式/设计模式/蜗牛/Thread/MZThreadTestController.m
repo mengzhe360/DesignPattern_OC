@@ -8,15 +8,20 @@
 
 #import "MZThreadTestController.h"
 #import <pthread.h>
+#import "SemaphoreDemo.h"
 
 @interface MZThreadTestController ()
 {
     dispatch_queue_t _concurrent_queue;
+    dispatch_queue_t _serial_queue;
+    dispatch_queue_t _serial_queue_1;
+    dispatch_queue_t _global_queue;
     NSMutableArray <NSURL *> *_arrayURLs;
     NSMutableDictionary *_userCenterDic;
 }
 
 @property (assign, nonatomic) pthread_rwlock_t lock;
+@property (nonatomic,strong) SemaphoreDemo *sm;
 
 @end
 
@@ -37,17 +42,20 @@
     
     // 创建并发队列
     _concurrent_queue = dispatch_queue_create("concurrent_queue", DISPATCH_QUEUE_CONCURRENT);
+    _serial_queue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_CONCURRENT);
+    _serial_queue_1 = dispatch_queue_create("serial_queue_1", DISPATCH_QUEUE_CONCURRENT);
+    _global_queue = dispatch_get_global_queue(0, 0);
     _arrayURLs = [NSMutableArray array];
     // 创建数据容器
     _userCenterDic = [NSMutableDictionary dictionary];
-   
+    
+    self.sm = [[SemaphoreDemo alloc] init];
     
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-   
-    [self rwlockTest];
+    [self groupSync];
 }
 
 //1、同步主队列 - 死锁
@@ -96,14 +104,143 @@
 //3、信号 实现多读单写功能
 - (void)barrierTest
 {
+//    [[[NSThread alloc] initWithTarget:self selector:@selector(setText) object:nil] start];
+//    [[[NSThread alloc] initWithTarget:self selector:@selector(readText) object:nil] start];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(queue, ^{
+            [self readText];
+        });
+        dispatch_async(queue, ^{
+            [self setText];
+        });
+    }
+}
+
+- (void)setText
+{
+    for (int i = 0; i < 100; i++) {
+        NSString *key = [NSString stringWithFormat:@"mz%d",i];
+        sleep(1);
+        [self objectForKey:key];
+    }
+}
+
+- (void)readText
+{
+    for (int i = 0; i < 100; i++) {
+        NSString *key = [NSString stringWithFormat:@"mz%d",i];
+        sleep(1);
+        [self setObject:key forKey:key];
+    }
+}
+
+//2、异步串行队列 开新线程
+- (void)serial_queue
+{
+    // 创建一个group
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_block_t block = dispatch_block_create(DISPATCH_BLOCK_BARRIER, ^{
+        
+    });
+    
+    for (int i = 0; i < 5; i++) {
+        // 异步组分派到并发队列当中
+        
+        dispatch_group_async(group, _concurrent_queue, ^{
+            NSLog(@"_concurrent_queue:%@",[NSThread currentThread]);
+        });
+        
+//        sleep(2);
+        
+        MZLog(@"--------1----------");
+        
+        dispatch_group_async(group, _serial_queue, ^{
+            NSLog(@"_serial_queue:%@",[NSThread currentThread]);
+        });
+        
+//        sleep(2);
+        
+        MZLog(@"---------2---------");
+        
+        dispatch_group_async(group, _serial_queue_1, ^{
+            NSLog(@"_serial_queue_1:%@",[NSThread currentThread]);
+        });
+        
+        dispatch_group_async(group,  dispatch_get_main_queue(), ^{
+            NSLog(@"dispatch_get_main_queue:%@",[NSThread currentThread]);
+        });
+        
+    }
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        MZLog([NSThread currentThread]);
+    });
     
 }
 
+- (void)groupSync
+{
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_enter(group);
+    dispatch_async(_global_queue, ^{
+       
+        sleep(1);
+        NSLog(@"任务一完成");
+        dispatch_group_leave(group);
+    });
+    
+    dispatch_group_enter(group);
+    dispatch_async(_global_queue, ^{
+        
+        sleep(2);
+        NSLog(@"任务二完成");
+        dispatch_group_leave(group);
+    });
+    dispatch_group_notify(group, _global_queue, ^{
+        
+        NSLog(@"任务完成");
+    });
+}
+
+- (void)groupSync_wait
+{
+    dispatch_group_t disgroup = dispatch_group_create();
+    dispatch_group_async(disgroup, _concurrent_queue, ^{
+//        sleep(1);
+        NSLog(@"任务一完成");
+    });
+    
+    dispatch_group_async(disgroup, _concurrent_queue, ^{
+        sleep(6);
+        NSLog(@"任务二完成");
+    });
+    
+    dispatch_async(_concurrent_queue, ^{
+        dispatch_group_wait(disgroup, dispatch_time(DISPATCH_TIME_NOW, 15 * NSEC_PER_SEC));
+        NSLog(@"dispatch_group_wait 结束");
+    });
+    
+    dispatch_group_notify(disgroup, _concurrent_queue, ^{
+        NSLog(@"dispatch_group_notify 执行");
+    });
+    
+}
+
+- (void)semaphoreDemo
+{
+//    [self.sm moneyTest];
+//    [self.sm ticketTest];
+    [self.sm otherTest];
+}
 - (id)objectForKey:(NSString *)key
 {
     __block id obj;
     // 同步读取指定数据
     dispatch_async(_concurrent_queue, ^{
+        NSLog(@"mz-1-get-barrier_async");
         obj = [self->_userCenterDic objectForKey:key];
     });
     
@@ -114,6 +251,7 @@
 {
     // 异步栅栏调用设置数据
     dispatch_barrier_async(_concurrent_queue, ^{
+        NSLog(@"mz-2-set-barrier_async");
         [self->_userCenterDic setObject:obj forKey:key];
     });
 }

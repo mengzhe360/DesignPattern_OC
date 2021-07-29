@@ -34,7 +34,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    [self viewLayerTest];
+    [self hashAndIsequeal];
     
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
@@ -56,7 +56,7 @@
        
 //    });
 
-    _person.age += 1;
+//    _person.age += 1;
  
 }
 
@@ -89,7 +89,7 @@
     [mapTable setObject:delegate forKey:@"foo"];
     [mapTable setObject:delegate forKey:@"fo1"];
     NSLog(@"Keys: %@", [[mapTable keyEnumerator] allObjects]);
-    NSLog(@"Keys: %@", [[mapTable objectEnumerator] allObjects]);
+    NSLog(@"Objects: %@", [[mapTable objectEnumerator] allObjects]);
     
     NSMutableSet *set = [[NSMutableSet alloc] init];
     [set addObject:delegate];
@@ -97,16 +97,16 @@
     [set addObject:delegate];
    
     MZPerson *p1 = [[MZPerson alloc] init];
-    p1.firstName = @"1111";
+    p1.firstName = @"111";
     p1.lastName = @"222";
     MZPerson *p2 = [[MZPerson alloc] init];
     p2.firstName = @"111";
     p2.lastName = @"222";
     [set addObject:p1];
     [set addObject:p2];
-    NSLog(@"isEqual: %d", [p1 isEqual:p2]);
+    NSLog(@"p1 isEqual p2 = %d", [p1 isEqual:p2]);
     
-    NSLog(@"Keys: %@", [[set objectEnumerator] allObjects]);
+    NSLog(@"NSSetObject: %@", [[set objectEnumerator] allObjects]);
     
     NSHashTable *hashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsCopyIn];
     [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality|NSHashTableWeakMemory];
