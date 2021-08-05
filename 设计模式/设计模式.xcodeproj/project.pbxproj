@@ -392,6 +392,13 @@
 		E783E83B24083286008B2EAE /* MZBridgeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBridgeManager.m; sourceTree = "<group>"; };
 		E783E83D24083310008B2EAE /* MZAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAlert.h; sourceTree = "<group>"; };
 		E783E83E24083310008B2EAE /* MZAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAlert.m; sourceTree = "<group>"; };
+		E79E30FC26BC4B6C00976A58 /* BaseConfigurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseConfigurations.xcconfig; sourceTree = "<group>"; };
+		E79E30FD26BC4B8C00976A58 /* CompilerAndLanguage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CompilerAndLanguage.xcconfig; sourceTree = "<group>"; };
+		E79E30FF26BC4BAE00976A58 /* SDKAndDeviceSupport.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SDKAndDeviceSupport.xcconfig; sourceTree = "<group>"; };
+		E79E310126BC4C3700976A58 /* MZ_BaseProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_BaseProject.xcconfig; sourceTree = "<group>"; };
+		E79E310226BC4C6200976A58 /* MZ_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Debug.xcconfig; sourceTree = "<group>"; };
+		E79E310326BC4C7300976A58 /* MZ_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Release.xcconfig; sourceTree = "<group>"; };
+		E79E310426BC4C8A00976A58 /* MZ_Adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Adhoc.xcconfig; sourceTree = "<group>"; };
 		E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectProtocol.h; sourceTree = "<group>"; };
 		E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZObserverProtocol.h; sourceTree = "<group>"; };
 		E79F5B0923C77DCC00257841 /* MZSubjectClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClass.h; sourceTree = "<group>"; };
@@ -577,7 +584,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = "5_工厂模式";
+			name = "5_工厂模式";
+			path = "../5_工厂模式";
 			sourceTree = "<group>";
 		};
 		4330802123C84A71003DEC4C /* SubServiceCenter */ = {
@@ -1012,6 +1020,67 @@
 			path = "13_桥接模式";
 			sourceTree = "<group>";
 		};
+		E79E30F726BC499000976A58 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E79E30F926BC4AF400976A58 /* Base */,
+				E79E30FB26BC4AFD00976A58 /* Project */,
+				E79E30FA26BC4AF900976A58 /* Targets */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E79E30F826BC49E200976A58 /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				436FCF69262E8DC900C5498D /* 0_单例模式 */,
+				E7C288F523C37D1E00ED74CA /* 1_责任链模式 */,
+				E7C288FA23C38F3D00ED74CA /* 2_模板模式 */,
+				E7C2890523C392F100ED74CA /* 3_代理模式 */,
+				E74D262623C4EF96006E438B /* 4_策略模式 */,
+				4330801D23C73848003DEC4C /* 5_工厂模式 */,
+				E79F5B0623C779D100257841 /* 6_观察者模式 */,
+				E76C491F23C8D52D00F7F98B /* 7_组合模式 */,
+				E7601D9723CB756500D2225D /* 8_门面模式 */,
+				4330804A23CC6439003DEC4C /* 9_状态模式 */,
+				E71A087023CCD3370053BF69 /* 10_备忘率模式 */,
+				4331A17323CEC5B000ABD720 /* 11_访问者模式 */,
+				432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */,
+				E783E81024081EE6008B2EAE /* 13_桥接模式 */,
+				43CE07AD246C00A800AB3FE0 /* 14_命令模式 */,
+				4338E90E246E34DA0064062B /* 15_中介者模式 */,
+			);
+			path = DesignPattern;
+			sourceTree = "<group>";
+		};
+		E79E30F926BC4AF400976A58 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E79E30FC26BC4B6C00976A58 /* BaseConfigurations.xcconfig */,
+				E79E30FD26BC4B8C00976A58 /* CompilerAndLanguage.xcconfig */,
+				E79E30FF26BC4BAE00976A58 /* SDKAndDeviceSupport.xcconfig */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E79E30FA26BC4AF900976A58 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		E79E30FB26BC4AFD00976A58 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				E79E310126BC4C3700976A58 /* MZ_BaseProject.xcconfig */,
+				E79E310226BC4C6200976A58 /* MZ_Debug.xcconfig */,
+				E79E310326BC4C7300976A58 /* MZ_Release.xcconfig */,
+				E79E310426BC4C8A00976A58 /* MZ_Adhoc.xcconfig */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		E79F5B0623C779D100257841 /* 6_观察者模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,22 +1148,8 @@
 			children = (
 				43307FC923C579F5003DEC4C /* Main */,
 				43307FFD23C5B93F003DEC4C /* 蜗牛 */,
-				436FCF69262E8DC900C5498D /* 0_单例模式 */,
-				E7C288F523C37D1E00ED74CA /* 1_责任链模式 */,
-				E7C288FA23C38F3D00ED74CA /* 2_模板模式 */,
-				E7C2890523C392F100ED74CA /* 3_代理模式 */,
-				E74D262623C4EF96006E438B /* 4_策略模式 */,
-				4330801D23C73848003DEC4C /* 5_工厂模式 */,
-				E79F5B0623C779D100257841 /* 6_观察者模式 */,
-				E76C491F23C8D52D00F7F98B /* 7_组合模式 */,
-				E7601D9723CB756500D2225D /* 8_门面模式 */,
-				4330804A23CC6439003DEC4C /* 9_状态模式 */,
-				E71A087023CCD3370053BF69 /* 10_备忘率模式 */,
-				4331A17323CEC5B000ABD720 /* 11_访问者模式 */,
-				432EBC6E23D1B6D100FAB8CA /* 12_享元模式 */,
-				E783E81024081EE6008B2EAE /* 13_桥接模式 */,
-				43CE07AD246C00A800AB3FE0 /* 14_命令模式 */,
-				4338E90E246E34DA0064062B /* 15_中介者模式 */,
+				E79E30F826BC49E200976A58 /* DesignPattern */,
+				E79E30F726BC499000976A58 /* Configurations */,
 				E7C288DC23C37D0B00ED74CA /* AppDelegate.h */,
 				E7C288DD23C37D0B00ED74CA /* AppDelegate.m */,
 				43307FC523C5718F003DEC4C /* SceneDelegate.h */,
