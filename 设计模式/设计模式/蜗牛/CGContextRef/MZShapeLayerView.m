@@ -33,7 +33,7 @@
         //创建出CAShapeLayer
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         shapeLayer.frame = CGRectMake(0, 0, 200, 200);//设置shapeLayer的尺寸和位置
-        shapeLayer.backgroundColor = [UIColor greenColor].CGColor; 
+        shapeLayer.backgroundColor = [UIColor greenColor].CGColor;
         shapeLayer.position = self.center;
         shapeLayer.fillColor = [UIColor grayColor].CGColor;//填充颜色为ClearColor
            
@@ -102,8 +102,6 @@
         pathAnima.removedOnCompletion = NO;
         [shapeLayer addAnimation:pathAnima forKey:nil];
         
-        
-
         UIBezierPath *path1 = [UIBezierPath bezierPath];
         
         path1.lineWidth = 5.0;
@@ -130,7 +128,7 @@
         moveAnimation.repeatCount = MAXFLOAT;
         moveAnimation.duration = 2;
         
-        [_shapeLine addAnimation:moveAnimation forKey:@"sf"];
+        [_shapeLine addAnimation:moveAnimation forKey:@"position"];
         
     }
     return self;

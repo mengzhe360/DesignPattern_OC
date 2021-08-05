@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
  1、首先UIView继承UIResponder类可以响应事件，Layer不可以.
  2、一个 Layer 的 frame 是由它的 anchorPoint（特有）,position,bounds,和 transform 共同决定的，而一个 View 的 frame 只是简单的返回 Layer的 frame
  3、UIView主要是对显示内容的管理而 CALayer 主要侧重显示内容的绘制
+ 4、CLayer的anchorPoint和position属性共同决定图层相对父图层的位置,即frame的x,y
+    a、锚点使用单位坐标来描述,范围为左上角{0, 0}到右下角{1, 1},默认坐标是{0.5, 0.5}.
+    b、anchorPoint在图层旋转时的固定点
  5、CALayer 内部并没有属性，当调用属性方法时，它内部是通过运行时 resolveInstanceMethod 为对象临时添加一个方法，并把对应属性值保存到内部的一个 Dictionary 里，同时还会通知 delegate、创建动画等等，非常消耗资源
  6、为了避免离屏渲染，你应当尽量避免使用 layer 的 border、corner、shadow、mask 等技术
  7、离屏渲染，指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作，离屏耗时原因主要有创建缓冲区和上下文切换
