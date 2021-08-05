@@ -40,28 +40,37 @@
         _a = 1;
         _b = 2;
 //        _c = @"c";
-        MZStudent *student = [[MZStudent alloc] init];//(2)
-        student.delegate = self;
+//        MZStudent *student = [[MZStudent alloc] init];//(2)
+//        student.delegate = self;
         
-        __block MZStudent *student1 = [[MZStudent alloc] init];//(3)
+       __block  MZStudent *student1 = [[MZStudent alloc] init];//(3)
         [student1 addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
-        //        student1.name = @"mzz";
-        self.student = student1; //当有强引用延迟释放时不会崩溃
+    
+//        self.student = student1; //当有强引用延迟释放时不会崩溃
+        __weak typeof(self) weakself = self;
         __weak typeof(student1) weakstudent1 = student1;
         student1.block = ^{
+            
+            MZLog(weakself);
+            
+//            student1 = nil;
+            
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                MZLog([NSThread currentThread])
                 weakstudent1.name = @"mz";
             });
-            
-            //            student1 = nil;
+           
         };
         
-//        [student1 textMethod];
+        [student1 textMethod];
         
         
     }
     return self;
+}
+
+- (void)action
+{
+    [self.student textMethod];
 }
 
 - (id)copyWithZone:(NSZone *)zone

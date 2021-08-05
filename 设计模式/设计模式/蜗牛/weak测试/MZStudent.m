@@ -21,8 +21,11 @@
 - (void)textMethod
 {
     MZMLog
+    
     if (self.block) {
-        self.block();
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.block();
+        });
     }
     
     MZLog(self)//EXC_BAD_ACCESS 访问了一个已经被释放的内存区域

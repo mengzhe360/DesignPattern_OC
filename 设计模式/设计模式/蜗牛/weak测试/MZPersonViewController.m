@@ -13,8 +13,8 @@
 
 @interface MZPersonViewController ()
 
-@property(nonatomic,strong)NSArray *arr;
-@property(nonatomic,strong)NSMutableArray *mutArray;
+@property (nonatomic,strong) NSArray *arr;
+@property (nonatomic,strong) NSMutableArray *mutArray;
 @property (nonatomic,strong) NSHashTable *hashTable;
 @property (nonatomic,strong) MZPerson *person;
 @property (nonatomic,strong) FBKVOController *fbKVO;
@@ -28,13 +28,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.orangeColor;
     self.navigationItem.title = @"MZPersonViewController";
-    [self kvoTest];
+//    [self kvoTest];
+   
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self hashAndIsequeal];
+//    [self hashAndIsequeal];
+    [self weakCrach];
     
 //    MZReusePoolViewController *blockVc = [[MZReusePoolViewController alloc] init];
 //
@@ -58,6 +60,15 @@
 
 //    _person.age += 1;
  
+}
+
+
+- (void)weakCrach
+{
+    MZPerson *_person = [[MZPerson alloc] init];
+    _person.lastName = @"weakCrach";
+    
+//    [_person action];
 }
 
 - (void)kvoTest

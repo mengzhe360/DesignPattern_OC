@@ -112,7 +112,7 @@ typedef void(^MZBlock)(NSString *mz);
     NSLog(@"进去之后responderA:%@",responderA.name);
     __weak typeof(self) weakself = self;
     self.mzBlock = ^(NSString *m, NSString *n) {
-        //使用__weak，也会有一个隐患，在block内部如果调用了延时函数还使用弱指针会娶不到该指针，因为已经被销毁了，为了保证在block内不会被释放，我们添加__strong
+        //使用__weak，也会有一个隐患，在block内部如果调用了延时函数，当前对象被回收了还使用弱指针指着被销毁的对象(野指针)时会造成崩溃，为了保证在block内的对象不会被释放，我们添加__strong
         MZBlockViewController __strong *strongself = weakself;
 //        iOS的GCD中如何关闭或者杀死一个还没执行完的后台线程?
         if(!strongself) return;//防止释放后崩溃

@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isEqual:(id)object;
 
+- (void)action;
+
 @end
 
 NS_ASSUME_NONNULL_END
