@@ -22,7 +22,6 @@
 		43307FD523C57A9A003DEC4C /* MZCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43307FD423C57A9A003DEC4C /* MZCViewController.m */; };
 		4330800123C5B9C7003DEC4C /* UIWebView+MZHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330800023C5B9C7003DEC4C /* UIWebView+MZHook.m */; };
 		4330800A23C7069E003DEC4C /* UIResponder+MZRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330800923C7069E003DEC4C /* UIResponder+MZRouter.m */; };
-		4330800D23C706FF003DEC4C /* NSObject+MZPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330800C23C706FF003DEC4C /* NSObject+MZPerformSelector.m */; };
 		4330801B23C72B7F003DEC4C /* MZRouterEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330801923C72B7F003DEC4C /* MZRouterEventViewController.m */; };
 		4330801C23C72B7F003DEC4C /* MZRouterEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */; };
 		4330802523C84AF6003DEC4C /* MZSubscriptionServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4330802423C84AF6003DEC4C /* MZSubscriptionServiceCenter.m */; };
@@ -73,6 +72,7 @@
 		43CE07A4246BD57800AB3FE0 /* MZChessPieceUnitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A3246BD57800AB3FE0 /* MZChessPieceUnitFactory.m */; };
 		43CE07A7246BDBF500AB3FE0 /* MZChessPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */; };
 		43CE07AA246BDD4B00AB3FE0 /* MZChessBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */; };
+		43E6696826B9469D000D2B65 /* MZShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E6696726B9469D000D2B65 /* MZShapeLayerView.m */; };
 		43F2CCF524FA3B8F006CAAA2 /* MZPermanentThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */; };
 		43F2CD0824FDFCE9006CAAA2 /* MOFTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */; };
 		E70D3A4626495D2D002F2231 /* MZNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E70D3A4526495D2D002F2231 /* MZNode.m */; };
@@ -184,8 +184,6 @@
 		4330800223C5D279003DEC4C /* MJClassInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJClassInfo.h; sourceTree = "<group>"; };
 		4330800823C7069E003DEC4C /* UIResponder+MZRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+MZRouter.h"; sourceTree = "<group>"; };
 		4330800923C7069E003DEC4C /* UIResponder+MZRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+MZRouter.m"; sourceTree = "<group>"; };
-		4330800B23C706FF003DEC4C /* NSObject+MZPerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MZPerformSelector.h"; sourceTree = "<group>"; };
-		4330800C23C706FF003DEC4C /* NSObject+MZPerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MZPerformSelector.m"; sourceTree = "<group>"; };
 		4330801823C72B7F003DEC4C /* MZRouterEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZRouterEventViewController.h; sourceTree = "<group>"; };
 		4330801923C72B7F003DEC4C /* MZRouterEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZRouterEventViewController.m; sourceTree = "<group>"; };
 		4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MZRouterEventViewController.xib; sourceTree = "<group>"; };
@@ -290,6 +288,8 @@
 		43CE07A6246BDBF500AB3FE0 /* MZChessPiece.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessPiece.m; sourceTree = "<group>"; };
 		43CE07A8246BDD4B00AB3FE0 /* MZChessBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZChessBoard.h; sourceTree = "<group>"; };
 		43CE07A9246BDD4B00AB3FE0 /* MZChessBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZChessBoard.m; sourceTree = "<group>"; };
+		43E6696626B9469D000D2B65 /* MZShapeLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZShapeLayerView.h; sourceTree = "<group>"; };
+		43E6696726B9469D000D2B65 /* MZShapeLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZShapeLayerView.m; sourceTree = "<group>"; };
 		43F2CCF324FA3B8F006CAAA2 /* MZPermanentThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPermanentThread.h; sourceTree = "<group>"; };
 		43F2CCF424FA3B8F006CAAA2 /* MZPermanentThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPermanentThread.m; sourceTree = "<group>"; };
 		43F2CD0624FDFCE9006CAAA2 /* MOFTimerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOFTimerTool.m; sourceTree = "<group>"; };
@@ -526,7 +526,6 @@
 				E783E8042407B031008B2EAE /* TableViewPool */,
 				4330804623CC4374003DEC4C /* Encode */,
 				4330803323C9A98A003DEC4C /* UIView和CALayer */,
-				4330801723C7285F003DEC4C /* Perform */,
 				43307FFE23C5B981003DEC4C /* HOOK */,
 			);
 			path = "蜗牛";
@@ -570,15 +569,6 @@
 				4330801A23C72B7F003DEC4C /* MZRouterEventViewController.xib */,
 			);
 			path = MZRouterEvent;
-			sourceTree = "<group>";
-		};
-		4330801723C7285F003DEC4C /* Perform */ = {
-			isa = PBXGroup;
-			children = (
-				4330800B23C706FF003DEC4C /* NSObject+MZPerformSelector.h */,
-				4330800C23C706FF003DEC4C /* NSObject+MZPerformSelector.m */,
-			);
-			path = Perform;
 			sourceTree = "<group>";
 		};
 		4330801D23C73848003DEC4C /* 5_工厂模式 */ = {
@@ -717,6 +707,8 @@
 			children = (
 				4357DD41241B382200392749 /* MZDrawView.h */,
 				4357DD42241B382200392749 /* MZDrawView.m */,
+				43E6696626B9469D000D2B65 /* MZShapeLayerView.h */,
+				43E6696726B9469D000D2B65 /* MZShapeLayerView.m */,
 			);
 			path = CGContextRef;
 			sourceTree = "<group>";
@@ -1304,6 +1296,7 @@
 				E7BB57EA260F7A1B00DF1A55 /* MZGCDTimer.m in Sources */,
 				E79F5B0B23C77DCC00257841 /* MZSubjectClass.m in Sources */,
 				E7BB5819260F85A800DF1A55 /* SemaphoreDemo.m in Sources */,
+				43E6696826B9469D000D2B65 /* MZShapeLayerView.m in Sources */,
 				E783E82D24082A03008B2EAE /* MZUrgencyNotification.m in Sources */,
 				4338E91E246E66B30064062B /* MZSubjectClassB.m in Sources */,
 				430AA7A4261EE9AE0039C996 /* MZPersonViewController.m in Sources */,
@@ -1369,7 +1362,6 @@
 				E783E83624082FA4008B2EAE /* MZTpsAlertHandler.m in Sources */,
 				4330804D23CC6ACC003DEC4C /* MZAbstractState.m in Sources */,
 				E7BB581D260F85A800DF1A55 /* NSConditionLockDemo.m in Sources */,
-				4330800D23C706FF003DEC4C /* NSObject+MZPerformSelector.m in Sources */,
 				E74D262223C4E0F7006E438B /* MZNormalTest.m in Sources */,
 				E7BB5821260F85A800DF1A55 /* SerialQueueDemo.m in Sources */,
 				E76C492223C8DDA100F7F98B /* MZComponent.m in Sources */,

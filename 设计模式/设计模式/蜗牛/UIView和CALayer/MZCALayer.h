@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nullable, weak) id <MZCALayerDelegate> delegate;
 
 @property(nonatomic) CGRect frame;
+@property CGRect bounds;
+@property CGPoint position;
+@property CGPoint anchorPoint;//特有
 
 - (void)addSublayer:(MZCALayer *)layer;
 

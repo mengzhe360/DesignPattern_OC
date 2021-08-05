@@ -2,6 +2,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
+def internal_pods
+  pod 'MZPublibs', :path => './Frameworks/MZPublibs', :inhibit_warnings => false
+end
+
 target "设计模式" do 
  
 pod 'Aspects'
@@ -16,5 +20,6 @@ pod 'YYWebImage'
 pod 'YYModel'
 pod 'YYText'
 pod 'YYAsyncLayer'
+internal_pods
 
 end
