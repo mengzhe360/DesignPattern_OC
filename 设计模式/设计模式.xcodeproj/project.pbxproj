@@ -264,6 +264,16 @@
 		4346DA662473925300538082 /* MZBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZBlockViewController.m; sourceTree = "<group>"; };
 		4357DD41241B382200392749 /* MZDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDrawView.h; sourceTree = "<group>"; };
 		4357DD42241B382200392749 /* MZDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDrawView.m; sourceTree = "<group>"; };
+		4359F10A26BD32570022C550 /* MZ_Tar_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Tar_Debug.xcconfig; sourceTree = "<group>"; };
+		4359F10B26BD32700022C550 /* MZ_Tar_Adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Tar_Adhoc.xcconfig; sourceTree = "<group>"; };
+		4359F10C26BD327F0022C550 /* MZ_Tar_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Tar_Release.xcconfig; sourceTree = "<group>"; };
+		4359F10D26BD32920022C550 /* MZ_Tar_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Tar_Base.xcconfig; sourceTree = "<group>"; };
+		4359F10F26BD32E20022C550 /* MZ_Scheme_A.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Scheme_A.xcconfig; sourceTree = "<group>"; };
+		4359F11026BD32F60022C550 /* MZ_Scheme_B.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Scheme_B.xcconfig; sourceTree = "<group>"; };
+		4359F11126BD332A0022C550 /* MZ_Pro_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Pro_Base.xcconfig; sourceTree = "<group>"; };
+		4359F11226BD333D0022C550 /* MZ_Pro_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Pro_Debug.xcconfig; sourceTree = "<group>"; };
+		4359F11326BD33500022C550 /* MZ_Pro_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Pro_Release.xcconfig; sourceTree = "<group>"; };
+		4359F11426BD335C0022C550 /* MZ_Pro_Adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Pro_Adhoc.xcconfig; sourceTree = "<group>"; };
 		436FCF6A262E8E1400C5498D /* MZSharedMooc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSharedMooc.h; sourceTree = "<group>"; };
 		436FCF6B262E8E1400C5498D /* MZSharedMooc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSharedMooc.m; sourceTree = "<group>"; };
 		4395C8D5250878CE0097F8C3 /* MZPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPerson.h; sourceTree = "<group>"; };
@@ -395,10 +405,6 @@
 		E79E30FC26BC4B6C00976A58 /* BaseConfigurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BaseConfigurations.xcconfig; sourceTree = "<group>"; };
 		E79E30FD26BC4B8C00976A58 /* CompilerAndLanguage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CompilerAndLanguage.xcconfig; sourceTree = "<group>"; };
 		E79E30FF26BC4BAE00976A58 /* SDKAndDeviceSupport.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SDKAndDeviceSupport.xcconfig; sourceTree = "<group>"; };
-		E79E310126BC4C3700976A58 /* MZ_BaseProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_BaseProject.xcconfig; sourceTree = "<group>"; };
-		E79E310226BC4C6200976A58 /* MZ_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Debug.xcconfig; sourceTree = "<group>"; };
-		E79E310326BC4C7300976A58 /* MZ_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Release.xcconfig; sourceTree = "<group>"; };
-		E79E310426BC4C8A00976A58 /* MZ_Adhoc.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MZ_Adhoc.xcconfig; sourceTree = "<group>"; };
 		E79F5B0723C77AAC00257841 /* MZSubjectProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectProtocol.h; sourceTree = "<group>"; };
 		E79F5B0823C77B5C00257841 /* MZObserverProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZObserverProtocol.h; sourceTree = "<group>"; };
 		E79F5B0923C77DCC00257841 /* MZSubjectClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSubjectClass.h; sourceTree = "<group>"; };
@@ -723,6 +729,26 @@
 			path = CGContextRef;
 			sourceTree = "<group>";
 		};
+		4359F10826BD2ED40022C550 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				4359F10D26BD32920022C550 /* MZ_Tar_Base.xcconfig */,
+				4359F10A26BD32570022C550 /* MZ_Tar_Debug.xcconfig */,
+				4359F10B26BD32700022C550 /* MZ_Tar_Adhoc.xcconfig */,
+				4359F10C26BD327F0022C550 /* MZ_Tar_Release.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		4359F10E26BD32A00022C550 /* Scheme */ = {
+			isa = PBXGroup;
+			children = (
+				4359F10F26BD32E20022C550 /* MZ_Scheme_A.xcconfig */,
+				4359F11026BD32F60022C550 /* MZ_Scheme_B.xcconfig */,
+			);
+			path = Scheme;
+			sourceTree = "<group>";
+		};
 		436FCF69262E8DC900C5498D /* 0_单例模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1024,8 +1050,9 @@
 			isa = PBXGroup;
 			children = (
 				E79E30F926BC4AF400976A58 /* Base */,
+				4359F10E26BD32A00022C550 /* Scheme */,
 				E79E30FB26BC4AFD00976A58 /* Project */,
-				E79E30FA26BC4AF900976A58 /* Targets */,
+				4359F10826BD2ED40022C550 /* Targets */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -1063,20 +1090,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		E79E30FA26BC4AF900976A58 /* Targets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Targets;
-			sourceTree = "<group>";
-		};
 		E79E30FB26BC4AFD00976A58 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				E79E310126BC4C3700976A58 /* MZ_BaseProject.xcconfig */,
-				E79E310226BC4C6200976A58 /* MZ_Debug.xcconfig */,
-				E79E310326BC4C7300976A58 /* MZ_Release.xcconfig */,
-				E79E310426BC4C8A00976A58 /* MZ_Adhoc.xcconfig */,
+				4359F11126BD332A0022C550 /* MZ_Pro_Base.xcconfig */,
+				4359F11226BD333D0022C550 /* MZ_Pro_Debug.xcconfig */,
+				4359F11326BD33500022C550 /* MZ_Pro_Release.xcconfig */,
+				4359F11426BD335C0022C550 /* MZ_Pro_Adhoc.xcconfig */,
 			);
 			path = Project;
 			sourceTree = "<group>";
