@@ -119,11 +119,11 @@ void setAge(id self,SEL _cmd,int age){
 }
 
 struct objc_ivar {
-    char * _Nullable ivar_name                               OBJC2_UNAVAILABLE;
-    char * _Nullable ivar_type                               OBJC2_UNAVAILABLE;
-    int ivar_offset                                          OBJC2_UNAVAILABLE;
-#ifdef __LP64__
-    int space                                                OBJC2_UNAVAILABLE;
-#endif
+//    char * _Nullable ivar_name                               OBJC2_UNAVAILABLE;
+//    char * _Nullable ivar_type                               OBJC2_UNAVAILABLE;
+//    int ivar_offset                                          OBJC2_UNAVAILABLE;
+//#ifdef __LP64__
+//    int space                                                OBJC2_UNAVAILABLE;
+//#endif
 };
 @end
