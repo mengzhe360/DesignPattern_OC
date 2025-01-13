@@ -9,7 +9,7 @@ end
 target "设计模式" do 
  
 pod 'Aspects'
-pod 'MLeaksFinder'
+#pod 'MLeaksFinder'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'CTMediator'
@@ -19,7 +19,7 @@ pod 'ZFPlayer', '~> 4.0'
 pod 'YYWebImage'
 pod 'YYModel'
 pod 'YYText'
-pod 'YYAsyncLayer'
+#pod 'YYAsyncLayer'
 internal_pods
 
 end
